@@ -11,6 +11,10 @@
 		C11D71D82A454DFF00B31C26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D71D72A454DFF00B31C26 /* SceneDelegate.swift */; };
 		C11D71DF2A454E0100B31C26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11D71DE2A454E0100B31C26 /* Assets.xcassets */; };
 		C11D71E22A454E0100B31C26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11D71E02A454E0100B31C26 /* LaunchScreen.storyboard */; };
+		C15654532A4E3F3100E6E42A /* ULService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15654522A4E3F3100E6E42A /* ULService.swift */; };
+		C15654552A4E3F3F00E6E42A /* ULEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15654542A4E3F3F00E6E42A /* ULEndpoint.swift */; };
+		C15654572A4E3F4D00E6E42A /* ULRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15654562A4E3F4D00E6E42A /* ULRequest.swift */; };
+		C156545A2A4E403600E6E42A /* ULAPICacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15654592A4E403600E6E42A /* ULAPICacheManager.swift */; };
 		C1B1513B2A4BF4110011620D /* ULTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513A2A4BF4110011620D /* ULTabBarViewController.swift */; };
 		C1B1513D2A4BF4220011620D /* ULHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513C2A4BF4220011620D /* ULHomeViewController.swift */; };
 		C1B1513F2A4BF4320011620D /* ULMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513E2A4BF4320011620D /* ULMessageViewController.swift */; };
@@ -24,6 +28,10 @@
 		C11D71DE2A454E0100B31C26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C11D71E12A454E0100B31C26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C11D71E32A454E0100B31C26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C15654522A4E3F3100E6E42A /* ULService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULService.swift; sourceTree = "<group>"; };
+		C15654542A4E3F3F00E6E42A /* ULEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULEndpoint.swift; sourceTree = "<group>"; };
+		C15654562A4E3F4D00E6E42A /* ULRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULRequest.swift; sourceTree = "<group>"; };
+		C15654592A4E403600E6E42A /* ULAPICacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULAPICacheManager.swift; sourceTree = "<group>"; };
 		C1B1513A2A4BF4110011620D /* ULTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULTabBarViewController.swift; sourceTree = "<group>"; };
 		C1B1513C2A4BF4220011620D /* ULHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULHomeViewController.swift; sourceTree = "<group>"; };
 		C1B1513E2A4BF4320011620D /* ULMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULMessageViewController.swift; sourceTree = "<group>"; };
@@ -60,9 +68,9 @@
 		C11D71D42A454DFF00B31C26 /* ulearning_app_ios */ = {
 			isa = PBXGroup;
 			children = (
-				C15654502A4E3E3200E6E42A /* New Group */,
+				C15654582A4E3FCB00E6E42A /* Managers */,
+				C15654512A4E3F1600E6E42A /* APIClient */,
 				C1B151422A4BF4480011620D /* Resources */,
-				C1B151392A4BF3AC0011620D /* Managers */,
 				C1B151372A4BF3910011620D /* Views */,
 				C1B151362A4BF3850011620D /* Controllers */,
 				C11D71E32A454E0100B31C26 /* Info.plist */,
@@ -70,11 +78,22 @@
 			path = ulearning_app_ios;
 			sourceTree = "<group>";
 		};
-		C15654502A4E3E3200E6E42A /* New Group */ = {
+		C15654512A4E3F1600E6E42A /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
+				C15654522A4E3F3100E6E42A /* ULService.swift */,
+				C15654542A4E3F3F00E6E42A /* ULEndpoint.swift */,
+				C15654562A4E3F4D00E6E42A /* ULRequest.swift */,
 			);
-			path = "New Group";
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		C15654582A4E3FCB00E6E42A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C15654592A4E403600E6E42A /* ULAPICacheManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		C1B151362A4BF3850011620D /* Controllers */ = {
@@ -93,13 +112,6 @@
 			children = (
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		C1B151392A4BF3AC0011620D /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		C1B151422A4BF4480011620D /* Resources */ = {
@@ -183,10 +195,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C15654532A4E3F3100E6E42A /* ULService.swift in Sources */,
 				C1B151412A4BF43D0011620D /* ULProfileViewController.swift in Sources */,
 				C11D71D62A454DFF00B31C26 /* AppDelegate.swift in Sources */,
 				C11D71D82A454DFF00B31C26 /* SceneDelegate.swift in Sources */,
+				C15654572A4E3F4D00E6E42A /* ULRequest.swift in Sources */,
 				C1B1513D2A4BF4220011620D /* ULHomeViewController.swift in Sources */,
+				C156545A2A4E403600E6E42A /* ULAPICacheManager.swift in Sources */,
+				C15654552A4E3F3F00E6E42A /* ULEndpoint.swift in Sources */,
 				C1B1513B2A4BF4110011620D /* ULTabBarViewController.swift in Sources */,
 				C1B1513F2A4BF4320011620D /* ULMessageViewController.swift in Sources */,
 			);
