@@ -9,7 +9,7 @@ import Foundation
 
 
 /// Object that represents a singlet API call
-final class RMRequest {
+final class ULRequest {
     /// API Constants
     private struct Constants {
         static let baseUrl = "https://www.sandbox.api.ulearning.com.pe/api/"
@@ -133,8 +133,8 @@ final class RMRequest {
 
 // MARK: - Request convenience
 
-extension RMRequest {
-    static let listCharactersRequests = RMRequest(endpoint: .character)
-    static let listEpisodesRequest = RMRequest(endpoint: .episode)
-    static let listLocationsRequest = RMRequest(endpoint: .location)
+extension ULRequest {
+    static let listCharactersRequests = ULRequest(endpoint: .character)
+    static let listEpisodesRequest = ULRequest(endpoint: .episode)
+    static let listLocationsRequest = ULRequest(endpoint: .location)
 }

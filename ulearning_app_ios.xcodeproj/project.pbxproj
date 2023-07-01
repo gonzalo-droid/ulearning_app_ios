@@ -15,13 +15,19 @@
 		C15654552A4E3F3F00E6E42A /* ULEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15654542A4E3F3F00E6E42A /* ULEndpoint.swift */; };
 		C15654572A4E3F4D00E6E42A /* ULRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15654562A4E3F4D00E6E42A /* ULRequest.swift */; };
 		C156545A2A4E403600E6E42A /* ULAPICacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15654592A4E403600E6E42A /* ULAPICacheManager.swift */; };
+		C156545C2A4E911400E6E42A /* ULAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C156545B2A4E911400E6E42A /* ULAPIConfig.swift */; };
+		C156545E2A4E924F00E6E42A /* ULAPICourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C156545D2A4E924F00E6E42A /* ULAPICourse.swift */; };
+		C15654612A4EA03600E6E42A /* CourseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15654602A4EA03600E6E42A /* CourseService.swift */; };
 		C1B1513B2A4BF4110011620D /* ULTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513A2A4BF4110011620D /* ULTabBarViewController.swift */; };
 		C1B1513D2A4BF4220011620D /* ULHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513C2A4BF4220011620D /* ULHomeViewController.swift */; };
 		C1B1513F2A4BF4320011620D /* ULMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513E2A4BF4320011620D /* ULMessageViewController.swift */; };
 		C1B151412A4BF43D0011620D /* ULProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B151402A4BF43D0011620D /* ULProfileViewController.swift */; };
+		D83A367848C93B9BDAFB7753 /* Pods_ulearning_app_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5ABA8A5D058F62C90973FA /* Pods_ulearning_app_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D5ABA8A5D058F62C90973FA /* Pods_ulearning_app_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ulearning_app_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B103172CECAD34908AB77C21 /* Pods-ulearning_app_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ulearning_app_ios.debug.xcconfig"; path = "Target Support Files/Pods-ulearning_app_ios/Pods-ulearning_app_ios.debug.xcconfig"; sourceTree = "<group>"; };
 		C11D71D22A454DFF00B31C26 /* ulearning_app_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ulearning_app_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11D71D52A454DFF00B31C26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C11D71D72A454DFF00B31C26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,10 +38,14 @@
 		C15654542A4E3F3F00E6E42A /* ULEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULEndpoint.swift; sourceTree = "<group>"; };
 		C15654562A4E3F4D00E6E42A /* ULRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULRequest.swift; sourceTree = "<group>"; };
 		C15654592A4E403600E6E42A /* ULAPICacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULAPICacheManager.swift; sourceTree = "<group>"; };
+		C156545B2A4E911400E6E42A /* ULAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULAPIConfig.swift; sourceTree = "<group>"; };
+		C156545D2A4E924F00E6E42A /* ULAPICourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULAPICourse.swift; sourceTree = "<group>"; };
+		C15654602A4EA03600E6E42A /* CourseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseService.swift; sourceTree = "<group>"; };
 		C1B1513A2A4BF4110011620D /* ULTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULTabBarViewController.swift; sourceTree = "<group>"; };
 		C1B1513C2A4BF4220011620D /* ULHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULHomeViewController.swift; sourceTree = "<group>"; };
 		C1B1513E2A4BF4320011620D /* ULMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULMessageViewController.swift; sourceTree = "<group>"; };
 		C1B151402A4BF43D0011620D /* ULProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULProfileViewController.swift; sourceTree = "<group>"; };
+		EAB641E195F443132E92CA7A /* Pods-ulearning_app_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ulearning_app_ios.release.xcconfig"; path = "Target Support Files/Pods-ulearning_app_ios/Pods-ulearning_app_ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +53,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D83A367848C93B9BDAFB7753 /* Pods_ulearning_app_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06C8F2173AF3663E7052DA90 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B103172CECAD34908AB77C21 /* Pods-ulearning_app_ios.debug.xcconfig */,
+				EAB641E195F443132E92CA7A /* Pods-ulearning_app_ios.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C11D71C92A454DFF00B31C26 = {
 			isa = PBXGroup;
 			children = (
 				C11D71D42A454DFF00B31C26 /* ulearning_app_ios */,
 				C11D71D32A454DFF00B31C26 /* Products */,
+				06C8F2173AF3663E7052DA90 /* Pods */,
+				F365887DF479009651DE7ACA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,9 +103,12 @@
 		C15654512A4E3F1600E6E42A /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
+				C156545F2A4EA01300E6E42A /* Services */,
 				C15654522A4E3F3100E6E42A /* ULService.swift */,
 				C15654542A4E3F3F00E6E42A /* ULEndpoint.swift */,
 				C15654562A4E3F4D00E6E42A /* ULRequest.swift */,
+				C156545B2A4E911400E6E42A /* ULAPIConfig.swift */,
+				C156545D2A4E924F00E6E42A /* ULAPICourse.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -94,6 +119,14 @@
 				C15654592A4E403600E6E42A /* ULAPICacheManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		C156545F2A4EA01300E6E42A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C15654602A4EA03600E6E42A /* CourseService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		C1B151362A4BF3850011620D /* Controllers */ = {
@@ -125,6 +158,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		F365887DF479009651DE7ACA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D5ABA8A5D058F62C90973FA /* Pods_ulearning_app_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C11D71E62A454E0100B31C26 /* Build configuration list for PBXNativeTarget "ulearning_app_ios" */;
 			buildPhases = (
+				041D4D78565A5AF15B2D295B /* [CP] Check Pods Manifest.lock */,
 				C11D71CE2A454DFF00B31C26 /* Sources */,
 				C11D71CF2A454DFF00B31C26 /* Frameworks */,
 				C11D71D02A454DFF00B31C26 /* Resources */,
+				A688FDCC41B332B00F68D996 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,21 +233,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		041D4D78565A5AF15B2D295B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ulearning_app_ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A688FDCC41B332B00F68D996 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ulearning_app_ios/Pods-ulearning_app_ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ulearning_app_ios/Pods-ulearning_app_ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ulearning_app_ios/Pods-ulearning_app_ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C11D71CE2A454DFF00B31C26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C156545E2A4E924F00E6E42A /* ULAPICourse.swift in Sources */,
 				C15654532A4E3F3100E6E42A /* ULService.swift in Sources */,
 				C1B151412A4BF43D0011620D /* ULProfileViewController.swift in Sources */,
 				C11D71D62A454DFF00B31C26 /* AppDelegate.swift in Sources */,
 				C11D71D82A454DFF00B31C26 /* SceneDelegate.swift in Sources */,
+				C156545C2A4E911400E6E42A /* ULAPIConfig.swift in Sources */,
 				C15654572A4E3F4D00E6E42A /* ULRequest.swift in Sources */,
 				C1B1513D2A4BF4220011620D /* ULHomeViewController.swift in Sources */,
 				C156545A2A4E403600E6E42A /* ULAPICacheManager.swift in Sources */,
 				C15654552A4E3F3F00E6E42A /* ULEndpoint.swift in Sources */,
 				C1B1513B2A4BF4110011620D /* ULTabBarViewController.swift in Sources */,
 				C1B1513F2A4BF4320011620D /* ULMessageViewController.swift in Sources */,
+				C15654612A4EA03600E6E42A /* CourseService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +426,7 @@
 		};
 		C11D71E72A454E0100B31C26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B103172CECAD34908AB77C21 /* Pods-ulearning_app_ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -365,6 +454,7 @@
 		};
 		C11D71E82A454E0100B31C26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAB641E195F443132E92CA7A /* Pods-ulearning_app_ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

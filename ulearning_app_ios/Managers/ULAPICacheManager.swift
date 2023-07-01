@@ -14,7 +14,7 @@ final class ULAPICacheManager {
 
     /// Cache map
     private var cacheDictionary: [
-        RMEndpoint: NSCache<NSString, NSData>
+        ULEndpoint: NSCache<NSString, NSData>
     ] = [:]
 
     /// Constructor
@@ -29,7 +29,7 @@ final class ULAPICacheManager {
     ///   - endpoint: Endpoiint to cahce for
     ///   - url: Url key
     /// - Returns: Nullable data
-    public func cachedResponse(for endpoint: RMEndpoint, url: URL?) -> Data? {
+    public func cachedResponse(for endpoint: ULEndpoint, url: URL?) -> Data? {
         guard let targetCache = cacheDictionary[endpoint], let url = url else {
             return nil
         }
@@ -42,7 +42,7 @@ final class ULAPICacheManager {
     ///   - endpoint: Endpoint to cache for
     ///   - url: Url string
     ///   - data: Data to set in cache
-    public func setCache(for endpoint: RMEndpoint, url: URL?, data: Data) {
+    public func setCache(for endpoint: ULEndpoint, url: URL?, data: Data) {
         guard let targetCache = cacheDictionary[endpoint], let url = url else {
             return
         }
@@ -54,7 +54,7 @@ final class ULAPICacheManager {
 
     /// Set up dictionary
     private func setUpCache() {
-        RMEndpoint.allCases.forEach({ endpoint in
+        ULEndpoint.allCases.forEach({ endpoint in
             cacheDictionary[endpoint] = NSCache<NSString, NSData>()
         })
     }

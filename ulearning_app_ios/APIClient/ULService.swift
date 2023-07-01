@@ -30,7 +30,7 @@ final class ULService {
     ///   - type: The type of object we expect to get back
     ///   - completion: Callback with data or error
     public func execute<T: Codable>(
-        _ request: RMRequest,
+        _ request: ULRequest,
         expecting type: T.Type,
         completion: @escaping (Result<T, Error>) -> Void
     ) {
@@ -78,7 +78,7 @@ final class ULService {
 
     // MARK: - Private
 
-    private func request(from rmRequest: RMRequest) -> URLRequest? {
+    private func request(from rmRequest: ULRequest) -> URLRequest? {
         guard let url = rmRequest.url else {
             return nil
         }
