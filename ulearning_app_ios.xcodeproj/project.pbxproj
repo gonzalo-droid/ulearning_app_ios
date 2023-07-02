@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C11BCA822A50881100AEC3AB /* ULBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA812A50881100AEC3AB /* ULBaseResponse.swift */; };
+		C11BCA842A5110BF00AEC3AB /* ULUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA832A5110BF00AEC3AB /* ULUser.swift */; };
+		C11BCA882A5110D800AEC3AB /* ULCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA872A5110D800AEC3AB /* ULCourse.swift */; };
+		C11BCA8A2A51148500AEC3AB /* ULCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA892A51148500AEC3AB /* ULCategory.swift */; };
+		C11BCA8C2A51163A00AEC3AB /* ULImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA8B2A51163A00AEC3AB /* ULImage.swift */; };
+		C11BCA8E2A511A2800AEC3AB /* ULGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA8D2A511A2800AEC3AB /* ULGroup.swift */; };
+		C11BCA902A511BF400AEC3AB /* ULTeacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA8F2A511BF400AEC3AB /* ULTeacher.swift */; };
+		C11BCA922A511DB300AEC3AB /* ULSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA912A511DB300AEC3AB /* ULSubscription.swift */; };
+		C11BCA942A511E0A00AEC3AB /* ULLearningPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA932A511E0A00AEC3AB /* ULLearningPackage.swift */; };
+		C11BCA962A511F3E00AEC3AB /* ULLearningPackageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA952A511F3E00AEC3AB /* ULLearningPackageItem.swift */; };
 		C11D71D62A454DFF00B31C26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D71D52A454DFF00B31C26 /* AppDelegate.swift */; };
 		C11D71D82A454DFF00B31C26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D71D72A454DFF00B31C26 /* SceneDelegate.swift */; };
 		C11D71DF2A454E0100B31C26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11D71DE2A454E0100B31C26 /* Assets.xcassets */; };
@@ -28,6 +38,16 @@
 /* Begin PBXFileReference section */
 		8D5ABA8A5D058F62C90973FA /* Pods_ulearning_app_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ulearning_app_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B103172CECAD34908AB77C21 /* Pods-ulearning_app_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ulearning_app_ios.debug.xcconfig"; path = "Target Support Files/Pods-ulearning_app_ios/Pods-ulearning_app_ios.debug.xcconfig"; sourceTree = "<group>"; };
+		C11BCA812A50881100AEC3AB /* ULBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULBaseResponse.swift; sourceTree = "<group>"; };
+		C11BCA832A5110BF00AEC3AB /* ULUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULUser.swift; sourceTree = "<group>"; };
+		C11BCA872A5110D800AEC3AB /* ULCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULCourse.swift; sourceTree = "<group>"; };
+		C11BCA892A51148500AEC3AB /* ULCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULCategory.swift; sourceTree = "<group>"; };
+		C11BCA8B2A51163A00AEC3AB /* ULImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULImage.swift; sourceTree = "<group>"; };
+		C11BCA8D2A511A2800AEC3AB /* ULGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULGroup.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		C11BCA8F2A511BF400AEC3AB /* ULTeacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULTeacher.swift; sourceTree = "<group>"; };
+		C11BCA912A511DB300AEC3AB /* ULSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULSubscription.swift; sourceTree = "<group>"; };
+		C11BCA932A511E0A00AEC3AB /* ULLearningPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULLearningPackage.swift; sourceTree = "<group>"; };
+		C11BCA952A511F3E00AEC3AB /* ULLearningPackageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULLearningPackageItem.swift; sourceTree = "<group>"; };
 		C11D71D22A454DFF00B31C26 /* ulearning_app_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ulearning_app_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11D71D52A454DFF00B31C26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C11D71D72A454DFF00B31C26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +89,55 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C11BCA7C2A50860300AEC3AB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C11BCA802A5087F400AEC3AB /* DataTypes */,
+				C11BCA7F2A5087E200AEC3AB /* APIRequest */,
+				C11BCA7E2A5087D100AEC3AB /* APIResponse */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C11BCA7E2A5087D100AEC3AB /* APIResponse */ = {
+			isa = PBXGroup;
+			children = (
+				C11BCA812A50881100AEC3AB /* ULBaseResponse.swift */,
+			);
+			path = APIResponse;
+			sourceTree = "<group>";
+		};
+		C11BCA7F2A5087E200AEC3AB /* APIRequest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIRequest;
+			sourceTree = "<group>";
+		};
+		C11BCA802A5087F400AEC3AB /* DataTypes */ = {
+			isa = PBXGroup;
+			children = (
+				C11BCA832A5110BF00AEC3AB /* ULUser.swift */,
+				C11BCA872A5110D800AEC3AB /* ULCourse.swift */,
+				C11BCA892A51148500AEC3AB /* ULCategory.swift */,
+				C11BCA8B2A51163A00AEC3AB /* ULImage.swift */,
+				C11BCA8D2A511A2800AEC3AB /* ULGroup.swift */,
+				C11BCA8F2A511BF400AEC3AB /* ULTeacher.swift */,
+				C11BCA912A511DB300AEC3AB /* ULSubscription.swift */,
+				C11BCA932A511E0A00AEC3AB /* ULLearningPackage.swift */,
+				C11BCA952A511F3E00AEC3AB /* ULLearningPackageItem.swift */,
+			);
+			path = DataTypes;
+			sourceTree = "<group>";
+		};
+		C11BCA982A51229300AEC3AB /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C156545D2A4E924F00E6E42A /* ULAPICourse.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		C11D71C92A454DFF00B31C26 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +159,7 @@
 		C11D71D42A454DFF00B31C26 /* ulearning_app_ios */ = {
 			isa = PBXGroup;
 			children = (
+				C11BCA7C2A50860300AEC3AB /* Models */,
 				C15654582A4E3FCB00E6E42A /* Managers */,
 				C15654512A4E3F1600E6E42A /* APIClient */,
 				C1B151422A4BF4480011620D /* Resources */,
@@ -103,12 +173,12 @@
 		C15654512A4E3F1600E6E42A /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
+				C11BCA982A51229300AEC3AB /* API */,
 				C156545F2A4EA01300E6E42A /* Services */,
 				C15654522A4E3F3100E6E42A /* ULService.swift */,
 				C15654542A4E3F3F00E6E42A /* ULEndpoint.swift */,
 				C15654562A4E3F4D00E6E42A /* ULRequest.swift */,
 				C156545B2A4E911400E6E42A /* ULAPIConfig.swift */,
-				C156545D2A4E924F00E6E42A /* ULAPICourse.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -283,15 +353,25 @@
 				C156545E2A4E924F00E6E42A /* ULAPICourse.swift in Sources */,
 				C15654532A4E3F3100E6E42A /* ULService.swift in Sources */,
 				C1B151412A4BF43D0011620D /* ULProfileViewController.swift in Sources */,
+				C11BCA902A511BF400AEC3AB /* ULTeacher.swift in Sources */,
+				C11BCA962A511F3E00AEC3AB /* ULLearningPackageItem.swift in Sources */,
 				C11D71D62A454DFF00B31C26 /* AppDelegate.swift in Sources */,
+				C11BCA8C2A51163A00AEC3AB /* ULImage.swift in Sources */,
 				C11D71D82A454DFF00B31C26 /* SceneDelegate.swift in Sources */,
+				C11BCA8E2A511A2800AEC3AB /* ULGroup.swift in Sources */,
 				C156545C2A4E911400E6E42A /* ULAPIConfig.swift in Sources */,
 				C15654572A4E3F4D00E6E42A /* ULRequest.swift in Sources */,
 				C1B1513D2A4BF4220011620D /* ULHomeViewController.swift in Sources */,
+				C11BCA942A511E0A00AEC3AB /* ULLearningPackage.swift in Sources */,
+				C11BCA822A50881100AEC3AB /* ULBaseResponse.swift in Sources */,
+				C11BCA842A5110BF00AEC3AB /* ULUser.swift in Sources */,
 				C156545A2A4E403600E6E42A /* ULAPICacheManager.swift in Sources */,
+				C11BCA882A5110D800AEC3AB /* ULCourse.swift in Sources */,
 				C15654552A4E3F3F00E6E42A /* ULEndpoint.swift in Sources */,
+				C11BCA922A511DB300AEC3AB /* ULSubscription.swift in Sources */,
 				C1B1513B2A4BF4110011620D /* ULTabBarViewController.swift in Sources */,
 				C1B1513F2A4BF4320011620D /* ULMessageViewController.swift in Sources */,
+				C11BCA8A2A51148500AEC3AB /* ULCategory.swift in Sources */,
 				C15654612A4EA03600E6E42A /* CourseService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

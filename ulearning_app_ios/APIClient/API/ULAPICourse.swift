@@ -5,35 +5,35 @@
 //  Created by Gonzalo López on 29/06/23.
 //
 
-import Foundation
 import Alamofire
+import SwiftyJSON
 
 enum ULAPICourse: ApiConfig {
         
     var urlBase: String {
-        return ""
+        return "https://www.sandbox.api.ulearning.com.pe/api/"
     }
     /// GET
 
-    case subscriptions(
+    case getSubscriptions(
         perPage: Int,
         page: Int,
         isFinished: Bool
     )
     
-    case subscriptionsPackage(
+    case getSubscriptionsPackage(
         perPage: Int,
         page: Int,
         classification: String,
         includes: String = "learning_package"
     )
 
-    case learningPackage(
+    case getLearningPackage(
         learningPackageId: Int,
         includes: String = "learning_package,learning_package_items,course"
     )
 
-    case coursePercentage(
+    case getCoursePercentage(
         courseIds: String
     )
     
@@ -68,7 +68,7 @@ enum ULAPICourse: ApiConfig {
 
     var queryItems: [URLQueryItem]? {
         switch self {
-        case .subscriptions(let perPage, let page, let isFinished):
+        case .getSubscriptions(let perPage, let page, let isFinished):
             var urlComponents = URLComponents()
              urlComponents.queryItems = [
                  URLQueryItem(name: "per_page", value: "\(perPage)"),
@@ -86,22 +86,22 @@ enum ULAPICourse: ApiConfig {
     var path: String {
         switch self {
         
-        case .subscriptions(perPage: let perPage, page: let page, isFinished: let isFinished):
+        case .getSubscriptions(perPage: let perPage, page: let page, isFinished: let isFinished):
             var urlComponents = URLComponents()
              urlComponents.queryItems = [
                  URLQueryItem(name: "per_page", value: "\(perPage)"),
                  URLQueryItem(name: "page", value: "\(page)"),
                  URLQueryItem(name: "is_finished", value: "\(isFinished)")
              ]
-            return "subscriptions?\(String(describing: urlComponents.string))"
+            return "subscriptions\(urlComponents.string!)"
             
-        case .subscriptionsPackage(perPage: let perPage, page: let page, classification: let classification, includes: let includes):
+        case .getSubscriptionsPackage(perPage: let perPage, page: let page, classification: let classification, includes: let includes):
             return "subscriptions?per_page=\(perPage)&page=\(page)&classification=\(classification)&includes=\(includes)"
 
-        case .learningPackage(learningPackageId: let learningPackageId, includes: let includes):
+        case .getLearningPackage(learningPackageId: let learningPackageId, includes: let includes):
             return "learning-packages/\(learningPackageId)/subscriptions?&includes=\(includes)"
         
-        case .coursePercentage(courseIds: let courseIds):
+        case .getCoursePercentage(courseIds: let courseIds):
             return "courses-advances?&course_ids=\(courseIds)"
         
         case .myCertificates(subscriptionId: let subscriptionId):

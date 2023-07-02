@@ -8,7 +8,6 @@
 import Foundation
 import Alamofire
 
-var domain = ".talana.com"
 
 protocol ApiConfig: URLRequestConvertible {
     var urlBase: String { get }
@@ -50,8 +49,7 @@ extension ApiConfig {
         
     }
 
-    private func setAuthorizationHeader(in urlRequest: inout URLRequest,
-                                        addAuthCookies: Bool = false) {
+    private func setAuthorizationHeader(in urlRequest: inout URLRequest) {
         
     }
 
@@ -84,7 +82,7 @@ extension ApiConfig {
         }
 
         setAPIKey(in: &urlRequest)
-        setAuthorizationHeader(in: &urlRequest, addAuthCookies: !urlBase.contains("api"))
+        setAuthorizationHeader(in: &urlRequest)
 
         if let encodedURLRequest = try? encoding?.encode(urlRequest, with: parameters), parameters != nil {
             return encodedURLRequest
