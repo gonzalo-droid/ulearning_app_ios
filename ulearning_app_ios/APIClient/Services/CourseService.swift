@@ -26,11 +26,15 @@ class CourseService {
         
         AF.request(pathUrl).validate(statusCode: 200..<205).responseObject {
             (response: DataResponse<BaseResponseSubscription, AFError>) in
-    
+            
             switch response.result {
             case .success(let value):
-                if let subs = value.data {
-                    successBlock(subs)
+                if value.message == nil {
+                    if let subs = value.data {
+                        successBlock(subs)
+                    } else {
+                        errorBlock("Subscriptions data is nil")
+                    }
                 } else {
                     errorBlock(value.message ?? "ERROR AQUI")
                 }

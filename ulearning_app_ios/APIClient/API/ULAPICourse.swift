@@ -8,7 +8,7 @@
 import Alamofire
 import SwiftyJSON
 
-enum ULAPICourse: ApiConfig {
+enum ULAPICourse: ULAPIConfig {
         
     var urlBase: String {
         return "https://www.sandbox.api.ulearning.com.pe/api/"

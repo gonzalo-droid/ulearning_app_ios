@@ -39,7 +39,6 @@ class ULGroup:Mappable{
         membersCount <- map["members_count"]
         name <- map["name"]
         studentsCount <- map["students_count"]
-        suspendedAt <- map["suspended_at"]
         teachers <- map["teachers"]
         teachersCount <- map["teachers_count"]
         vacancies <- map["vacancies"]

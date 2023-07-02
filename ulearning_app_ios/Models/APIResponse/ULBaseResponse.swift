@@ -10,7 +10,7 @@ import ObjectMapper
 
 
 class BaseResponseSubscription: Mappable {
-    var data: [ULSubscription] = []
+    var data: [ULSubscription]?
     var code: String?
     var message: String?
 

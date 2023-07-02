@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 
-protocol ApiConfig: URLRequestConvertible {
+protocol ULAPIConfig: URLRequestConvertible {
     var urlBase: String { get }
     var method: Alamofire.HTTPMethod { get }
     var path: String { get }
@@ -18,7 +18,7 @@ protocol ApiConfig: URLRequestConvertible {
     var queryItems: [URLQueryItem]? { get }
 }
 
-extension ApiConfig {
+extension ULAPIConfig {
 
     // Defaults
     var urlBase: String {
@@ -32,7 +32,7 @@ extension ApiConfig {
     var queryItems: [URLQueryItem]? { return nil }
 }
 
-extension ApiConfig {
+extension ULAPIConfig {
 
     /// Serializes an HTTP dictionary to a JSON Data Object
     /// - Parameter params: HTTP Parameters dictionary
@@ -50,7 +50,9 @@ extension ApiConfig {
     }
 
     private func setAuthorizationHeader(in urlRequest: inout URLRequest) {
+        let token = "16|6BPxCb4lhSAdc6zONuZ1QRZWGaG8iRD34BRKMbHa"
         
+        urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
     }
 
     /// Transforms a Request into a standard URL request

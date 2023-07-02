@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '12.0'
+platform :ios, '13.0'
 
 
 target 'ulearning_app_ios' do
@@ -7,8 +7,8 @@ target 'ulearning_app_ios' do
   use_frameworks!
 
   # Pods for ulearning_app_ios
-  pod 'Alamofire', '~> 5.0'
+  pod 'Alamofire'
   pod 'AlamofireObjectMapper'
-  pod 'ObjectMapper', '~> 3.5'
   pod 'SwiftyJSON'
+  pod 'ObjectMapper'
 end
