@@ -9,18 +9,59 @@ import UIKit
 
 class ULHomeViewController: UIViewController {
 
+    
+    @IBOutlet weak var userLabel: UILabel!{
+        didSet {
+            userLabel.font = UIFont.boldSystemFont(ofSize: 15)
+            userLabel.textColor = .blackUL
+        }
+    }
+    
+    @IBOutlet weak var titleLabel: UILabel!{
+        didSet {
+            titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
+            titleLabel.textColor = .blueUL
+        }
+    }
+    
+    
+    
+    @IBOutlet weak var subtitleLabel: UILabel!{
+        didSet {
+            subtitleLabel.font = UIFont.boldSystemFont(ofSize: 14)
+            subtitleLabel.textColor = .blueUL
+        }
+    }
+    
+    
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var containerIconView: UIView! {
+        didSet {
+            containerIconView.layer.cornerRadius = 10
+            containerIconView.backgroundColor = .blueA100UL
+        }
+    }
+        
+    @IBOutlet weak var containerCardView: UIView! {
+        didSet {
+            containerCardView.layer.cornerRadius = 20
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .systemBackground
-        title = "Home"
-        
+  
         CourseService.getSubscriptions(
             page: 1,
             isFinished: false,
             successBlock: { [weak self] subscriptions in
             guard let self = self else { return }
-                print(subscriptions.count)
+            print(subscriptions.count)
             
         }, errorBlock: { [weak self] error in
             guard let self = self else { return }

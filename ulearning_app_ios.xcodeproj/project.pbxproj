@@ -17,6 +17,7 @@
 		C11BCA922A511DB300AEC3AB /* ULSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA912A511DB300AEC3AB /* ULSubscription.swift */; };
 		C11BCA942A511E0A00AEC3AB /* ULLearningPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA932A511E0A00AEC3AB /* ULLearningPackage.swift */; };
 		C11BCA962A511F3E00AEC3AB /* ULLearningPackageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA952A511F3E00AEC3AB /* ULLearningPackageItem.swift */; };
+		C11BCAAC2A516AC900AEC3AB /* ULHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C11BCAAB2A516AC900AEC3AB /* ULHomeViewController.xib */; };
 		C11D71D62A454DFF00B31C26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D71D52A454DFF00B31C26 /* AppDelegate.swift */; };
 		C11D71D82A454DFF00B31C26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D71D72A454DFF00B31C26 /* SceneDelegate.swift */; };
 		C11D71DF2A454E0100B31C26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11D71DE2A454E0100B31C26 /* Assets.xcassets */; };
@@ -32,6 +33,8 @@
 		C1B1513D2A4BF4220011620D /* ULHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513C2A4BF4220011620D /* ULHomeViewController.swift */; };
 		C1B1513F2A4BF4320011620D /* ULMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513E2A4BF4320011620D /* ULMessageViewController.swift */; };
 		C1B151412A4BF43D0011620D /* ULProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B151402A4BF43D0011620D /* ULProfileViewController.swift */; };
+		C1E8BBFE2A536C31005CCA51 /* ULConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8BBFD2A536C31005CCA51 /* ULConstant.swift */; };
+		C1E8BC002A536D74005CCA51 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8BBFF2A536D74005CCA51 /* UIUtils.swift */; };
 		D83A367848C93B9BDAFB7753 /* Pods_ulearning_app_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5ABA8A5D058F62C90973FA /* Pods_ulearning_app_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +51,7 @@
 		C11BCA912A511DB300AEC3AB /* ULSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULSubscription.swift; sourceTree = "<group>"; };
 		C11BCA932A511E0A00AEC3AB /* ULLearningPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULLearningPackage.swift; sourceTree = "<group>"; };
 		C11BCA952A511F3E00AEC3AB /* ULLearningPackageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULLearningPackageItem.swift; sourceTree = "<group>"; };
+		C11BCAAB2A516AC900AEC3AB /* ULHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULHomeViewController.xib; sourceTree = "<group>"; };
 		C11D71D22A454DFF00B31C26 /* ulearning_app_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ulearning_app_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11D71D52A454DFF00B31C26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C11D71D72A454DFF00B31C26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 		C1B1513C2A4BF4220011620D /* ULHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULHomeViewController.swift; sourceTree = "<group>"; };
 		C1B1513E2A4BF4320011620D /* ULMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULMessageViewController.swift; sourceTree = "<group>"; };
 		C1B151402A4BF43D0011620D /* ULProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULProfileViewController.swift; sourceTree = "<group>"; };
+		C1E8BBFD2A536C31005CCA51 /* ULConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULConstant.swift; sourceTree = "<group>"; };
+		C1E8BBFF2A536D74005CCA51 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
 		EAB641E195F443132E92CA7A /* Pods-ulearning_app_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ulearning_app_ios.release.xcconfig"; path = "Target Support Files/Pods-ulearning_app_ios/Pods-ulearning_app_ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +144,14 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		C11BCAAA2A51682A00AEC3AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C11BCAAB2A516AC900AEC3AB /* ULHomeViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C11D71C92A454DFF00B31C26 = {
 			isa = PBXGroup;
 			children = (
@@ -159,11 +173,12 @@
 		C11D71D42A454DFF00B31C26 /* ulearning_app_ios */ = {
 			isa = PBXGroup;
 			children = (
+				C15BEBB92A5256F600B9B0A3 /* ViewModels */,
+				C11BCAAA2A51682A00AEC3AB /* Views */,
 				C11BCA7C2A50860300AEC3AB /* Models */,
 				C15654582A4E3FCB00E6E42A /* Managers */,
 				C15654512A4E3F1600E6E42A /* APIClient */,
 				C1B151422A4BF4480011620D /* Resources */,
-				C1B151372A4BF3910011620D /* Views */,
 				C1B151362A4BF3850011620D /* Controllers */,
 				C11D71E32A454E0100B31C26 /* Info.plist */,
 			);
@@ -199,6 +214,13 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		C15BEBB92A5256F600B9B0A3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		C1B151362A4BF3850011620D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,13 +232,6 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		C1B151372A4BF3910011620D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		C1B151422A4BF4480011620D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +239,8 @@
 				C11D71E02A454E0100B31C26 /* LaunchScreen.storyboard */,
 				C11D71D52A454DFF00B31C26 /* AppDelegate.swift */,
 				C11D71D72A454DFF00B31C26 /* SceneDelegate.swift */,
+				C1E8BBFD2A536C31005CCA51 /* ULConstant.swift */,
+				C1E8BBFF2A536D74005CCA51 /* UIUtils.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -297,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C11D71E22A454E0100B31C26 /* LaunchScreen.storyboard in Resources */,
+				C11BCAAC2A516AC900AEC3AB /* ULHomeViewController.xib in Resources */,
 				C11D71DF2A454E0100B31C26 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,7 +373,9 @@
 				C1B151412A4BF43D0011620D /* ULProfileViewController.swift in Sources */,
 				C11BCA902A511BF400AEC3AB /* ULTeacher.swift in Sources */,
 				C11BCA962A511F3E00AEC3AB /* ULLearningPackageItem.swift in Sources */,
+				C1E8BC002A536D74005CCA51 /* UIUtils.swift in Sources */,
 				C11D71D62A454DFF00B31C26 /* AppDelegate.swift in Sources */,
+				C1E8BBFE2A536C31005CCA51 /* ULConstant.swift in Sources */,
 				C11BCA8C2A51163A00AEC3AB /* ULImage.swift in Sources */,
 				C11D71D82A454DFF00B31C26 /* SceneDelegate.swift in Sources */,
 				C11BCA8E2A511A2800AEC3AB /* ULGroup.swift in Sources */,
