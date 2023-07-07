@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C10535462A584A7D00F10139 /* ULCompletedCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10535442A584A7D00F10139 /* ULCompletedCourseViewController.swift */; };
+		C10535472A584A7D00F10139 /* ULCompletedCourseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C10535452A584A7D00F10139 /* ULCompletedCourseViewController.xib */; };
+		C105354C2A584AED00F10139 /* ULRouteCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C105354A2A584AED00F10139 /* ULRouteCourseViewController.swift */; };
+		C105354D2A584AED00F10139 /* ULRouteCourseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C105354B2A584AED00F10139 /* ULRouteCourseViewController.xib */; };
+		C10535502A584B4400F10139 /* ULProgressCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C105354E2A584B4400F10139 /* ULProgressCourseViewController.swift */; };
+		C10535512A584B4400F10139 /* ULProgressCourseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C105354F2A584B4400F10139 /* ULProgressCourseViewController.xib */; };
+		C10535542A584B5800F10139 /* ULPackageCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10535522A584B5800F10139 /* ULPackageCourseViewController.swift */; };
+		C10535552A584B5800F10139 /* ULPackageCourseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C10535532A584B5800F10139 /* ULPackageCourseViewController.xib */; };
 		C11BCA822A50881100AEC3AB /* ULBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA812A50881100AEC3AB /* ULBaseResponse.swift */; };
 		C11BCA842A5110BF00AEC3AB /* ULUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA832A5110BF00AEC3AB /* ULUser.swift */; };
 		C11BCA882A5110D800AEC3AB /* ULCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA872A5110D800AEC3AB /* ULCourse.swift */; };
@@ -19,7 +27,6 @@
 		C11BCA962A511F3E00AEC3AB /* ULLearningPackageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA952A511F3E00AEC3AB /* ULLearningPackageItem.swift */; };
 		C11BCAAC2A516AC900AEC3AB /* ULHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C11BCAAB2A516AC900AEC3AB /* ULHomeViewController.xib */; };
 		C11D71D62A454DFF00B31C26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D71D52A454DFF00B31C26 /* AppDelegate.swift */; };
-		C11D71D82A454DFF00B31C26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D71D72A454DFF00B31C26 /* SceneDelegate.swift */; };
 		C11D71DF2A454E0100B31C26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11D71DE2A454E0100B31C26 /* Assets.xcassets */; };
 		C11D71E22A454E0100B31C26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11D71E02A454E0100B31C26 /* LaunchScreen.storyboard */; };
 		C15654532A4E3F3100E6E42A /* ULService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15654522A4E3F3100E6E42A /* ULService.swift */; };
@@ -31,8 +38,6 @@
 		C15654612A4EA03600E6E42A /* CourseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15654602A4EA03600E6E42A /* CourseService.swift */; };
 		C1720D322A55435F003DCC4E /* ULLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1720D302A55435F003DCC4E /* ULLoginViewController.swift */; };
 		C1720D332A55435F003DCC4E /* ULLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1720D312A55435F003DCC4E /* ULLoginViewController.xib */; };
-		C190C72F2A568842003249C2 /* ULProgressCouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190C72D2A568842003249C2 /* ULProgressCouseViewController.swift */; };
-		C190C7302A568842003249C2 /* ULProgressCouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C190C72E2A568842003249C2 /* ULProgressCouseViewController.xib */; };
 		C1B1513B2A4BF4110011620D /* ULTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513A2A4BF4110011620D /* ULTabBarViewController.swift */; };
 		C1B1513D2A4BF4220011620D /* ULHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513C2A4BF4220011620D /* ULHomeViewController.swift */; };
 		C1B1513F2A4BF4320011620D /* ULMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513E2A4BF4320011620D /* ULMessageViewController.swift */; };
@@ -45,6 +50,14 @@
 /* Begin PBXFileReference section */
 		8D5ABA8A5D058F62C90973FA /* Pods_ulearning_app_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ulearning_app_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B103172CECAD34908AB77C21 /* Pods-ulearning_app_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ulearning_app_ios.debug.xcconfig"; path = "Target Support Files/Pods-ulearning_app_ios/Pods-ulearning_app_ios.debug.xcconfig"; sourceTree = "<group>"; };
+		C10535442A584A7D00F10139 /* ULCompletedCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULCompletedCourseViewController.swift; sourceTree = "<group>"; };
+		C10535452A584A7D00F10139 /* ULCompletedCourseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULCompletedCourseViewController.xib; sourceTree = "<group>"; };
+		C105354A2A584AED00F10139 /* ULRouteCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULRouteCourseViewController.swift; sourceTree = "<group>"; };
+		C105354B2A584AED00F10139 /* ULRouteCourseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULRouteCourseViewController.xib; sourceTree = "<group>"; };
+		C105354E2A584B4400F10139 /* ULProgressCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULProgressCourseViewController.swift; sourceTree = "<group>"; };
+		C105354F2A584B4400F10139 /* ULProgressCourseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ULProgressCourseViewController.xib; path = ../../Controllers/Course/ULProgressCourseViewController.xib; sourceTree = "<group>"; };
+		C10535522A584B5800F10139 /* ULPackageCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULPackageCourseViewController.swift; sourceTree = "<group>"; };
+		C10535532A584B5800F10139 /* ULPackageCourseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULPackageCourseViewController.xib; sourceTree = "<group>"; };
 		C11BCA812A50881100AEC3AB /* ULBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULBaseResponse.swift; sourceTree = "<group>"; };
 		C11BCA832A5110BF00AEC3AB /* ULUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULUser.swift; sourceTree = "<group>"; };
 		C11BCA872A5110D800AEC3AB /* ULCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULCourse.swift; sourceTree = "<group>"; };
@@ -58,7 +71,6 @@
 		C11BCAAB2A516AC900AEC3AB /* ULHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULHomeViewController.xib; sourceTree = "<group>"; };
 		C11D71D22A454DFF00B31C26 /* ulearning_app_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ulearning_app_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11D71D52A454DFF00B31C26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C11D71D72A454DFF00B31C26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C11D71DE2A454E0100B31C26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C11D71E12A454E0100B31C26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C11D71E32A454E0100B31C26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,8 +83,6 @@
 		C15654602A4EA03600E6E42A /* CourseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseService.swift; sourceTree = "<group>"; };
 		C1720D302A55435F003DCC4E /* ULLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULLoginViewController.swift; sourceTree = "<group>"; };
 		C1720D312A55435F003DCC4E /* ULLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULLoginViewController.xib; sourceTree = "<group>"; };
-		C190C72D2A568842003249C2 /* ULProgressCouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULProgressCouseViewController.swift; sourceTree = "<group>"; };
-		C190C72E2A568842003249C2 /* ULProgressCouseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULProgressCouseViewController.xib; sourceTree = "<group>"; };
 		C1B1513A2A4BF4110011620D /* ULTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULTabBarViewController.swift; sourceTree = "<group>"; };
 		C1B1513C2A4BF4220011620D /* ULHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULHomeViewController.swift; sourceTree = "<group>"; };
 		C1B1513E2A4BF4320011620D /* ULMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULMessageViewController.swift; sourceTree = "<group>"; };
@@ -251,7 +261,10 @@
 		C1720D282A554267003DCC4E /* Course */ = {
 			isa = PBXGroup;
 			children = (
-				C190C72E2A568842003249C2 /* ULProgressCouseViewController.xib */,
+				C10535532A584B5800F10139 /* ULPackageCourseViewController.xib */,
+				C105354F2A584B4400F10139 /* ULProgressCourseViewController.xib */,
+				C105354B2A584AED00F10139 /* ULRouteCourseViewController.xib */,
+				C10535452A584A7D00F10139 /* ULCompletedCourseViewController.xib */,
 			);
 			path = Course;
 			sourceTree = "<group>";
@@ -307,7 +320,10 @@
 		C1720D2F2A554300003DCC4E /* Course */ = {
 			isa = PBXGroup;
 			children = (
-				C190C72D2A568842003249C2 /* ULProgressCouseViewController.swift */,
+				C10535442A584A7D00F10139 /* ULCompletedCourseViewController.swift */,
+				C105354A2A584AED00F10139 /* ULRouteCourseViewController.swift */,
+				C105354E2A584B4400F10139 /* ULProgressCourseViewController.swift */,
+				C10535522A584B5800F10139 /* ULPackageCourseViewController.swift */,
 			);
 			path = Course;
 			sourceTree = "<group>";
@@ -330,7 +346,6 @@
 				C11D71DE2A454E0100B31C26 /* Assets.xcassets */,
 				C11D71E02A454E0100B31C26 /* LaunchScreen.storyboard */,
 				C11D71D52A454DFF00B31C26 /* AppDelegate.swift */,
-				C11D71D72A454DFF00B31C26 /* SceneDelegate.swift */,
 				C1E8BBFD2A536C31005CCA51 /* ULConstant.swift */,
 				C1E8BBFF2A536D74005CCA51 /* UIUtils.swift */,
 			);
@@ -405,9 +420,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C190C7302A568842003249C2 /* ULProgressCouseViewController.xib in Resources */,
+				C105354D2A584AED00F10139 /* ULRouteCourseViewController.xib in Resources */,
 				C11D71E22A454E0100B31C26 /* LaunchScreen.storyboard in Resources */,
+				C10535472A584A7D00F10139 /* ULCompletedCourseViewController.xib in Resources */,
 				C11BCAAC2A516AC900AEC3AB /* ULHomeViewController.xib in Resources */,
+				C10535512A584B4400F10139 /* ULProgressCourseViewController.xib in Resources */,
+				C10535552A584B5800F10139 /* ULPackageCourseViewController.xib in Resources */,
 				C11D71DF2A454E0100B31C26 /* Assets.xcassets in Resources */,
 				C1720D332A55435F003DCC4E /* ULLoginViewController.xib in Resources */,
 			);
@@ -466,15 +484,16 @@
 				C15654532A4E3F3100E6E42A /* ULService.swift in Sources */,
 				C1B151412A4BF43D0011620D /* ULProfileViewController.swift in Sources */,
 				C11BCA902A511BF400AEC3AB /* ULTeacher.swift in Sources */,
-				C190C72F2A568842003249C2 /* ULProgressCouseViewController.swift in Sources */,
 				C11BCA962A511F3E00AEC3AB /* ULLearningPackageItem.swift in Sources */,
+				C10535502A584B4400F10139 /* ULProgressCourseViewController.swift in Sources */,
 				C1E8BC002A536D74005CCA51 /* UIUtils.swift in Sources */,
 				C11D71D62A454DFF00B31C26 /* AppDelegate.swift in Sources */,
 				C1E8BBFE2A536C31005CCA51 /* ULConstant.swift in Sources */,
+				C105354C2A584AED00F10139 /* ULRouteCourseViewController.swift in Sources */,
 				C11BCA8C2A51163A00AEC3AB /* ULImage.swift in Sources */,
-				C11D71D82A454DFF00B31C26 /* SceneDelegate.swift in Sources */,
 				C11BCA8E2A511A2800AEC3AB /* ULGroup.swift in Sources */,
 				C156545C2A4E911400E6E42A /* ULAPIConfig.swift in Sources */,
+				C10535542A584B5800F10139 /* ULPackageCourseViewController.swift in Sources */,
 				C15654572A4E3F4D00E6E42A /* ULRequest.swift in Sources */,
 				C1B1513D2A4BF4220011620D /* ULHomeViewController.swift in Sources */,
 				C11BCA942A511E0A00AEC3AB /* ULLearningPackage.swift in Sources */,
@@ -485,6 +504,7 @@
 				C15654552A4E3F3F00E6E42A /* ULEndpoint.swift in Sources */,
 				C11BCA922A511DB300AEC3AB /* ULSubscription.swift in Sources */,
 				C1B1513B2A4BF4110011620D /* ULTabBarViewController.swift in Sources */,
+				C10535462A584A7D00F10139 /* ULCompletedCourseViewController.swift in Sources */,
 				C1B1513F2A4BF4320011620D /* ULMessageViewController.swift in Sources */,
 				C11BCA8A2A51148500AEC3AB /* ULCategory.swift in Sources */,
 				C15654612A4EA03600E6E42A /* CourseService.swift in Sources */,
@@ -633,8 +653,8 @@
 				INFOPLIST_FILE = ulearning_app_ios/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -642,9 +662,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.gonzcode.ulearning-app-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -661,8 +684,8 @@
 				INFOPLIST_FILE = ulearning_app_ios/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -670,9 +693,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.gonzcode.ulearning-app-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

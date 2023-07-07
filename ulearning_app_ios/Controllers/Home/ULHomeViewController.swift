@@ -137,8 +137,8 @@ class ULHomeViewController: UIViewController {
         }
     }
     @IBAction func goToProgressCourse(_ sender: UIButton) {
-        let homeTab = ULProgressCouseViewController()
-        self.present(homeTab, animated: true)
+        let controller =  ULProgressCourseViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBOutlet weak var completedCourseButtonView: UIButton!{
@@ -148,8 +148,8 @@ class ULHomeViewController: UIViewController {
     }
     
     @IBAction func goToCompletedCourse(_ sender: UIButton){
-        let homeTab = ULProgressCouseViewController()
-        self.present(homeTab, animated: true)
+        let controller = ULCompletedCourseViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBOutlet weak var packageCourseButtonView: UIButton!{
@@ -159,8 +159,8 @@ class ULHomeViewController: UIViewController {
     }
     
     @IBAction func goToPackageCourse(_ sender: UIButton) {
-        let homeTab = ULProgressCouseViewController()
-        self.present(homeTab, animated: true)
+        let controller =  ULPackageCourseViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBOutlet weak var routeCourseButtonView: UIButton!{
@@ -170,8 +170,8 @@ class ULHomeViewController: UIViewController {
     }
     
     @IBAction func goToRouteButtonView(_ sender: UIButton) {
-        let homeTab = ULProgressCouseViewController()
-        self.present(homeTab, animated: true)
+        let controller =  ULRouteCourseViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     override func viewDidLoad() {
