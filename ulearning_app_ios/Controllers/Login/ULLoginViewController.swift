@@ -10,7 +10,9 @@ import UIKit
 class ULLoginViewController: UIViewController {
 
     @IBAction func doLoginButton(_ sender: UIButton) {
-        
+        let homeTab = ULTabBarViewController()
+        self.present(homeTab, animated: true)
+
     }
     
     override func viewDidLoad() {
@@ -18,16 +20,5 @@ class ULLoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

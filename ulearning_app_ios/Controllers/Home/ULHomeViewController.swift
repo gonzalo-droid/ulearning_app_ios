@@ -131,6 +131,49 @@ class ULHomeViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var progressCourseButtonView: UIButton!{
+        didSet {
+            progressCourseButtonView.setTitle("", for: .normal)
+        }
+    }
+    @IBAction func goToProgressCourse(_ sender: UIButton) {
+        let homeTab = ULProgressCouseViewController()
+        self.present(homeTab, animated: true)
+    }
+    
+    @IBOutlet weak var completedCourseButtonView: UIButton!{
+        didSet {
+            completedCourseButtonView.setTitle("", for: .normal)
+        }
+    }
+    
+    @IBAction func goToCompletedCourse(_ sender: UIButton){
+        let homeTab = ULProgressCouseViewController()
+        self.present(homeTab, animated: true)
+    }
+    
+    @IBOutlet weak var packageCourseButtonView: UIButton!{
+        didSet {
+            packageCourseButtonView.setTitle("", for: .normal)
+        }
+    }
+    
+    @IBAction func goToPackageCourse(_ sender: UIButton) {
+        let homeTab = ULProgressCouseViewController()
+        self.present(homeTab, animated: true)
+    }
+    
+    @IBOutlet weak var routeCourseButtonView: UIButton!{
+        didSet {
+            routeCourseButtonView.setTitle("", for: .normal)
+        }
+    }
+    
+    @IBAction func goToRouteButtonView(_ sender: UIButton) {
+        let homeTab = ULProgressCouseViewController()
+        self.present(homeTab, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -150,16 +193,4 @@ class ULHomeViewController: UIViewController {
         
         
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
