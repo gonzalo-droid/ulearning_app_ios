@@ -11,7 +11,7 @@ import SwiftyJSON
 enum ULAPICourse: ULAPIConfig {
         
     var urlBase: String {
-        return "https://www.sandbox.api.ulearning.com.pe/api/"
+        return ""// "https://sandbox.api.ulearning.com.pe/api/"
     }
     /// GET
 
@@ -66,23 +66,6 @@ enum ULAPICourse: ULAPIConfig {
         }
     }
 
-    var queryItems: [URLQueryItem]? {
-        switch self {
-        case .getSubscriptions(let perPage, let page, let isFinished):
-            var urlComponents = URLComponents()
-             urlComponents.queryItems = [
-                 URLQueryItem(name: "per_page", value: "\(perPage)"),
-                 URLQueryItem(name: "page", value: "\(page)"),
-                 URLQueryItem(name: "is_finished", value: "\(isFinished)")
-             ]
-            return urlComponents.queryItems
-
-        default:
-            return nil
-        }
-    }
-    
-
     var path: String {
         switch self {
         
@@ -93,7 +76,7 @@ enum ULAPICourse: ULAPIConfig {
                  URLQueryItem(name: "page", value: "\(page)"),
                  URLQueryItem(name: "is_finished", value: "\(isFinished)")
              ]
-            return "subscriptions\(urlComponents.string!)"
+            return "https://demo1784653.mockable.io/subscription" // subscriptions\(urlComponents.string!)"
             
         case .getSubscriptionsPackage(perPage: let perPage, page: let page, classification: let classification, includes: let includes):
             return "subscriptions?per_page=\(perPage)&page=\(page)&classification=\(classification)&includes=\(includes)"

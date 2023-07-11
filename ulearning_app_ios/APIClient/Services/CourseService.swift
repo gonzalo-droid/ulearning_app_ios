@@ -14,7 +14,7 @@ class CourseService {
     static func getSubscriptions(
         page: Int,
         isFinished: Bool,
-        successBlock: @escaping(_ subscriptions: [ULSubscription]) -> Void,
+        successBlock: @escaping(_ subscriptions: [ULSubscription]?) -> Void,
         errorBlock: @escaping(_ error:  String?) -> Void
     ) {
         

@@ -184,7 +184,7 @@ class ULHomeViewController: UIViewController {
             isFinished: false,
             successBlock: { [weak self] subscriptions in
                 guard let self = self else { return }
-                print(subscriptions.count)
+                print(subscriptions?.count)
                 
             }, errorBlock: { [weak self] error in
                 guard let self = self else { return }

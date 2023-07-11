@@ -42,6 +42,13 @@
 		C1B1513D2A4BF4220011620D /* ULHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513C2A4BF4220011620D /* ULHomeViewController.swift */; };
 		C1B1513F2A4BF4320011620D /* ULMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513E2A4BF4320011620D /* ULMessageViewController.swift */; };
 		C1B151412A4BF43D0011620D /* ULProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B151402A4BF43D0011620D /* ULProfileViewController.swift */; };
+		C1C6585B2A5CF30400077E84 /* ULProgressCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C6585A2A5CF30400077E84 /* ULProgressCourseViewModel.swift */; };
+		C1C6585D2A5CFCBC00077E84 /* ULObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C6585C2A5CFCBC00077E84 /* ULObservable.swift */; };
+		C1C6585F2A5CFE2300077E84 /* ULCourseTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C6585E2A5CFE2300077E84 /* ULCourseTableCellViewModel.swift */; };
+		C1C658682A5D28C800077E84 /* ULCourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C658662A5D28C800077E84 /* ULCourseTableViewCell.swift */; };
+		C1C658692A5D28C800077E84 /* ULCourseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1C658672A5D28C800077E84 /* ULCourseTableViewCell.xib */; };
+		C1C6586B2A5D303000077E84 /* ULExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C6586A2A5D303000077E84 /* ULExtensionView.swift */; };
+		C1C6586D2A5D391900077E84 /* ULCompletedCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C6586C2A5D391900077E84 /* ULCompletedCourseViewModel.swift */; };
 		C1E8BBFE2A536C31005CCA51 /* ULConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8BBFD2A536C31005CCA51 /* ULConstant.swift */; };
 		C1E8BC002A536D74005CCA51 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8BBFF2A536D74005CCA51 /* UIUtils.swift */; };
 		D83A367848C93B9BDAFB7753 /* Pods_ulearning_app_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5ABA8A5D058F62C90973FA /* Pods_ulearning_app_ios.framework */; };
@@ -87,6 +94,13 @@
 		C1B1513C2A4BF4220011620D /* ULHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULHomeViewController.swift; sourceTree = "<group>"; };
 		C1B1513E2A4BF4320011620D /* ULMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULMessageViewController.swift; sourceTree = "<group>"; };
 		C1B151402A4BF43D0011620D /* ULProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULProfileViewController.swift; sourceTree = "<group>"; };
+		C1C6585A2A5CF30400077E84 /* ULProgressCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULProgressCourseViewModel.swift; sourceTree = "<group>"; };
+		C1C6585C2A5CFCBC00077E84 /* ULObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULObservable.swift; sourceTree = "<group>"; };
+		C1C6585E2A5CFE2300077E84 /* ULCourseTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULCourseTableCellViewModel.swift; sourceTree = "<group>"; };
+		C1C658662A5D28C800077E84 /* ULCourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULCourseTableViewCell.swift; sourceTree = "<group>"; };
+		C1C658672A5D28C800077E84 /* ULCourseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULCourseTableViewCell.xib; sourceTree = "<group>"; };
+		C1C6586A2A5D303000077E84 /* ULExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULExtensionView.swift; sourceTree = "<group>"; };
+		C1C6586C2A5D391900077E84 /* ULCompletedCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULCompletedCourseViewModel.swift; sourceTree = "<group>"; };
 		C1E8BBFD2A536C31005CCA51 /* ULConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULConstant.swift; sourceTree = "<group>"; };
 		C1E8BBFF2A536D74005CCA51 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
 		EAB641E195F443132E92CA7A /* Pods-ulearning_app_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ulearning_app_ios.release.xcconfig"; path = "Target Support Files/Pods-ulearning_app_ios/Pods-ulearning_app_ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +184,7 @@
 				C1720D282A554267003DCC4E /* Course */,
 				C1720D272A554257003DCC4E /* Profile */,
 				C1720D262A554247003DCC4E /* Login */,
+				C1C6586A2A5D303000077E84 /* ULExtensionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,6 +231,7 @@
 				C15654542A4E3F3F00E6E42A /* ULEndpoint.swift */,
 				C15654562A4E3F4D00E6E42A /* ULRequest.swift */,
 				C156545B2A4E911400E6E42A /* ULAPIConfig.swift */,
+				C1C6585C2A5CFCBC00077E84 /* ULObservable.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -239,6 +255,9 @@
 		C15BEBB92A5256F600B9B0A3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C1C6585A2A5CF30400077E84 /* ULProgressCourseViewModel.swift */,
+				C1C6585E2A5CFE2300077E84 /* ULCourseTableCellViewModel.swift */,
+				C1C6586C2A5D391900077E84 /* ULCompletedCourseViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -261,6 +280,7 @@
 		C1720D282A554267003DCC4E /* Course */ = {
 			isa = PBXGroup;
 			children = (
+				C1C658602A5D17C700077E84 /* Components */,
 				C10535532A584B5800F10139 /* ULPackageCourseViewController.xib */,
 				C105354F2A584B4400F10139 /* ULProgressCourseViewController.xib */,
 				C105354B2A584AED00F10139 /* ULRouteCourseViewController.xib */,
@@ -320,6 +340,7 @@
 		C1720D2F2A554300003DCC4E /* Course */ = {
 			isa = PBXGroup;
 			children = (
+				C1C658652A5D270200077E84 /* Components */,
 				C10535442A584A7D00F10139 /* ULCompletedCourseViewController.swift */,
 				C105354A2A584AED00F10139 /* ULRouteCourseViewController.swift */,
 				C105354E2A584B4400F10139 /* ULProgressCourseViewController.swift */,
@@ -350,6 +371,22 @@
 				C1E8BBFF2A536D74005CCA51 /* UIUtils.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C1C658602A5D17C700077E84 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C1C658672A5D28C800077E84 /* ULCourseTableViewCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C1C658652A5D270200077E84 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C1C658662A5D28C800077E84 /* ULCourseTableViewCell.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		F365887DF479009651DE7ACA /* Frameworks */ = {
@@ -420,6 +457,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1C658692A5D28C800077E84 /* ULCourseTableViewCell.xib in Resources */,
 				C105354D2A584AED00F10139 /* ULRouteCourseViewController.xib in Resources */,
 				C11D71E22A454E0100B31C26 /* LaunchScreen.storyboard in Resources */,
 				C10535472A584A7D00F10139 /* ULCompletedCourseViewController.xib in Resources */,
@@ -482,6 +520,7 @@
 			files = (
 				C156545E2A4E924F00E6E42A /* ULAPICourse.swift in Sources */,
 				C15654532A4E3F3100E6E42A /* ULService.swift in Sources */,
+				C1C6585F2A5CFE2300077E84 /* ULCourseTableCellViewModel.swift in Sources */,
 				C1B151412A4BF43D0011620D /* ULProfileViewController.swift in Sources */,
 				C11BCA902A511BF400AEC3AB /* ULTeacher.swift in Sources */,
 				C11BCA962A511F3E00AEC3AB /* ULLearningPackageItem.swift in Sources */,
@@ -489,14 +528,19 @@
 				C1E8BC002A536D74005CCA51 /* UIUtils.swift in Sources */,
 				C11D71D62A454DFF00B31C26 /* AppDelegate.swift in Sources */,
 				C1E8BBFE2A536C31005CCA51 /* ULConstant.swift in Sources */,
+				C1C6585B2A5CF30400077E84 /* ULProgressCourseViewModel.swift in Sources */,
 				C105354C2A584AED00F10139 /* ULRouteCourseViewController.swift in Sources */,
 				C11BCA8C2A51163A00AEC3AB /* ULImage.swift in Sources */,
+				C1C6586B2A5D303000077E84 /* ULExtensionView.swift in Sources */,
 				C11BCA8E2A511A2800AEC3AB /* ULGroup.swift in Sources */,
 				C156545C2A4E911400E6E42A /* ULAPIConfig.swift in Sources */,
 				C10535542A584B5800F10139 /* ULPackageCourseViewController.swift in Sources */,
 				C15654572A4E3F4D00E6E42A /* ULRequest.swift in Sources */,
 				C1B1513D2A4BF4220011620D /* ULHomeViewController.swift in Sources */,
+				C1C6585D2A5CFCBC00077E84 /* ULObservable.swift in Sources */,
+				C1C658682A5D28C800077E84 /* ULCourseTableViewCell.swift in Sources */,
 				C11BCA942A511E0A00AEC3AB /* ULLearningPackage.swift in Sources */,
+				C1C6586D2A5D391900077E84 /* ULCompletedCourseViewModel.swift in Sources */,
 				C11BCA822A50881100AEC3AB /* ULBaseResponse.swift in Sources */,
 				C11BCA842A5110BF00AEC3AB /* ULUser.swift in Sources */,
 				C156545A2A4E403600E6E42A /* ULAPICacheManager.swift in Sources */,
