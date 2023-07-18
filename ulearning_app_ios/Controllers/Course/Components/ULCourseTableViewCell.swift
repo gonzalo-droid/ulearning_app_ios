@@ -23,11 +23,14 @@ class ULCourseTableViewCell: UITableViewCell {
         }
     }
     
-    @IBOutlet weak var courseImageVire: UIImageView!
+    @IBOutlet weak var courseImageView: UIImageView!
     
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var containerView: UIView! {
+        didSet {
+        }
+    }
     
-    
+               
     static var identifier: String {
         get {
             "ULCourseTableViewCell"
@@ -37,17 +40,17 @@ class ULCourseTableViewCell: UITableViewCell {
     static func register() -> UINib {
         UINib(nibName: "ULCourseTableViewCell", bundle: nil)
     }
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         containerView.round()
         
     }
-
+    
     func setupCell(viewModel: ULCourseTableCellViewModel) {
         self.categoryLabel.text = viewModel.title
         self.titleCourseLabel.text = viewModel.category
-        // self.courseImageVire.sd_setImage(with: viewModel.image)
+        // self.courseImageView.sd_setImage(with: viewModel.image)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

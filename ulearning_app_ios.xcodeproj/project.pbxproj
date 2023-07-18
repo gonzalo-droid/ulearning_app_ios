@@ -29,6 +29,10 @@
 		C11D71D62A454DFF00B31C26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D71D52A454DFF00B31C26 /* AppDelegate.swift */; };
 		C11D71DF2A454E0100B31C26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11D71DE2A454E0100B31C26 /* Assets.xcassets */; };
 		C11D71E22A454E0100B31C26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11D71E02A454E0100B31C26 /* LaunchScreen.storyboard */; };
+		C13218352A65CC59009B2DB8 /* ULLearningPackageTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13218342A65CC59009B2DB8 /* ULLearningPackageTableCellViewModel.swift */; };
+		C13218372A65CD04009B2DB8 /* ULPackageCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13218362A65CD04009B2DB8 /* ULPackageCourseViewModel.swift */; };
+		C155633D2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C155633B2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.swift */; };
+		C155633E2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C155633C2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.xib */; };
 		C15654532A4E3F3100E6E42A /* ULService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15654522A4E3F3100E6E42A /* ULService.swift */; };
 		C15654552A4E3F3F00E6E42A /* ULEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15654542A4E3F3F00E6E42A /* ULEndpoint.swift */; };
 		C15654572A4E3F4D00E6E42A /* ULRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15654562A4E3F4D00E6E42A /* ULRequest.swift */; };
@@ -81,6 +85,10 @@
 		C11D71DE2A454E0100B31C26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C11D71E12A454E0100B31C26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C11D71E32A454E0100B31C26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C13218342A65CC59009B2DB8 /* ULLearningPackageTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULLearningPackageTableCellViewModel.swift; sourceTree = "<group>"; };
+		C13218362A65CD04009B2DB8 /* ULPackageCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULPackageCourseViewModel.swift; sourceTree = "<group>"; };
+		C155633B2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULLearningPackageTableViewCell.swift; sourceTree = "<group>"; };
+		C155633C2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULLearningPackageTableViewCell.xib; sourceTree = "<group>"; };
 		C15654522A4E3F3100E6E42A /* ULService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULService.swift; sourceTree = "<group>"; };
 		C15654542A4E3F3F00E6E42A /* ULEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULEndpoint.swift; sourceTree = "<group>"; };
 		C15654562A4E3F4D00E6E42A /* ULRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULRequest.swift; sourceTree = "<group>"; };
@@ -258,6 +266,8 @@
 				C1C6585A2A5CF30400077E84 /* ULProgressCourseViewModel.swift */,
 				C1C6585E2A5CFE2300077E84 /* ULCourseTableCellViewModel.swift */,
 				C1C6586C2A5D391900077E84 /* ULCompletedCourseViewModel.swift */,
+				C13218342A65CC59009B2DB8 /* ULLearningPackageTableCellViewModel.swift */,
+				C13218362A65CD04009B2DB8 /* ULPackageCourseViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -376,6 +386,7 @@
 		C1C658602A5D17C700077E84 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C155633C2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.xib */,
 				C1C658672A5D28C800077E84 /* ULCourseTableViewCell.xib */,
 			);
 			path = Components;
@@ -385,6 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				C1C658662A5D28C800077E84 /* ULCourseTableViewCell.swift */,
+				C155633B2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -466,6 +478,7 @@
 				C10535552A584B5800F10139 /* ULPackageCourseViewController.xib in Resources */,
 				C11D71DF2A454E0100B31C26 /* Assets.xcassets in Resources */,
 				C1720D332A55435F003DCC4E /* ULLoginViewController.xib in Resources */,
+				C155633E2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +537,7 @@
 				C1B151412A4BF43D0011620D /* ULProfileViewController.swift in Sources */,
 				C11BCA902A511BF400AEC3AB /* ULTeacher.swift in Sources */,
 				C11BCA962A511F3E00AEC3AB /* ULLearningPackageItem.swift in Sources */,
+				C13218352A65CC59009B2DB8 /* ULLearningPackageTableCellViewModel.swift in Sources */,
 				C10535502A584B4400F10139 /* ULProgressCourseViewController.swift in Sources */,
 				C1E8BC002A536D74005CCA51 /* UIUtils.swift in Sources */,
 				C11D71D62A454DFF00B31C26 /* AppDelegate.swift in Sources */,
@@ -532,11 +546,13 @@
 				C105354C2A584AED00F10139 /* ULRouteCourseViewController.swift in Sources */,
 				C11BCA8C2A51163A00AEC3AB /* ULImage.swift in Sources */,
 				C1C6586B2A5D303000077E84 /* ULExtensionView.swift in Sources */,
+				C13218372A65CD04009B2DB8 /* ULPackageCourseViewModel.swift in Sources */,
 				C11BCA8E2A511A2800AEC3AB /* ULGroup.swift in Sources */,
 				C156545C2A4E911400E6E42A /* ULAPIConfig.swift in Sources */,
 				C10535542A584B5800F10139 /* ULPackageCourseViewController.swift in Sources */,
 				C15654572A4E3F4D00E6E42A /* ULRequest.swift in Sources */,
 				C1B1513D2A4BF4220011620D /* ULHomeViewController.swift in Sources */,
+				C155633D2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.swift in Sources */,
 				C1C6585D2A5CFCBC00077E84 /* ULObservable.swift in Sources */,
 				C1C658682A5D28C800077E84 /* ULCourseTableViewCell.swift in Sources */,
 				C11BCA942A511E0A00AEC3AB /* ULLearningPackage.swift in Sources */,

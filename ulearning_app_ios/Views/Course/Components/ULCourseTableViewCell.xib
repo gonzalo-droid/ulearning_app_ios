@@ -71,7 +71,7 @@
             <connections>
                 <outlet property="categoryLabel" destination="pB4-dn-WXv" id="yzi-pk-Xms"/>
                 <outlet property="containerView" destination="xRB-bo-DXI" id="ZzG-xx-aRy"/>
-                <outlet property="courseImageVire" destination="0e2-Cx-uFK" id="up1-hc-bwg"/>
+                <outlet property="courseImageView" destination="0e2-Cx-uFK" id="cif-8E-UQ5"/>
                 <outlet property="titleCourseLabel" destination="pkC-2M-3dI" id="CeL-pM-3Xl"/>
             </connections>
             <point key="canvasLocation" x="112.97709923664122" y="22.183098591549296"/>
