@@ -31,6 +31,7 @@
 		C11D71E22A454E0100B31C26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11D71E02A454E0100B31C26 /* LaunchScreen.storyboard */; };
 		C13218352A65CC59009B2DB8 /* ULLearningPackageTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13218342A65CC59009B2DB8 /* ULLearningPackageTableCellViewModel.swift */; };
 		C13218372A65CD04009B2DB8 /* ULPackageCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13218362A65CD04009B2DB8 /* ULPackageCourseViewModel.swift */; };
+		C13218392A6618A4009B2DB8 /* ULProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C13218382A6618A4009B2DB8 /* ULProfileViewController.xib */; };
 		C155633D2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C155633B2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.swift */; };
 		C155633E2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C155633C2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.xib */; };
 		C15654532A4E3F3100E6E42A /* ULService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15654522A4E3F3100E6E42A /* ULService.swift */; };
@@ -87,6 +88,7 @@
 		C11D71E32A454E0100B31C26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C13218342A65CC59009B2DB8 /* ULLearningPackageTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULLearningPackageTableCellViewModel.swift; sourceTree = "<group>"; };
 		C13218362A65CD04009B2DB8 /* ULPackageCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULPackageCourseViewModel.swift; sourceTree = "<group>"; };
+		C13218382A6618A4009B2DB8 /* ULProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULProfileViewController.xib; sourceTree = "<group>"; };
 		C155633B2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULLearningPackageTableViewCell.swift; sourceTree = "<group>"; };
 		C155633C2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULLearningPackageTableViewCell.xib; sourceTree = "<group>"; };
 		C15654522A4E3F3100E6E42A /* ULService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULService.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 		C1720D272A554257003DCC4E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				C13218382A6618A4009B2DB8 /* ULProfileViewController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 			files = (
 				C1C658692A5D28C800077E84 /* ULCourseTableViewCell.xib in Resources */,
 				C105354D2A584AED00F10139 /* ULRouteCourseViewController.xib in Resources */,
+				C13218392A6618A4009B2DB8 /* ULProfileViewController.xib in Resources */,
 				C11D71E22A454E0100B31C26 /* LaunchScreen.storyboard in Resources */,
 				C10535472A584A7D00F10139 /* ULCompletedCourseViewController.xib in Resources */,
 				C11BCAAC2A516AC900AEC3AB /* ULHomeViewController.xib in Resources */,
