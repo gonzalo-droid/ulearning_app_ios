@@ -396,7 +396,6 @@
                         <constraint firstAttribute="trailing" secondItem="l06-kf-a5f" secondAttribute="trailing" constant="20" symbolic="YES" id="7rT-fH-Ihn"/>
                         <constraint firstItem="l06-kf-a5f" firstAttribute="top" secondItem="OW1-Fc-zbH" secondAttribute="bottom" constant="4" id="87V-7k-eZN"/>
                         <constraint firstAttribute="trailing" secondItem="OW1-Fc-zbH" secondAttribute="trailing" constant="30" id="JLW-cy-eCj"/>
-                        <constraint firstItem="OW1-Fc-zbH" firstAttribute="top" secondItem="N2a-Sk-B6i" secondAttribute="top" id="OTe-xp-orV"/>
                         <constraint firstItem="OW1-Fc-zbH" firstAttribute="leading" secondItem="N2a-Sk-B6i" secondAttribute="leading" constant="313" id="bBk-Pt-xc2"/>
                         <constraint firstItem="Jgb-Aq-Eb9" firstAttribute="leading" secondItem="l06-kf-a5f" secondAttribute="leading" id="kXg-NU-NOi"/>
                         <constraint firstItem="Jgb-Aq-Eb9" firstAttribute="top" secondItem="l06-kf-a5f" secondAttribute="bottom" constant="14" id="mCv-Gf-yp3"/>
@@ -408,6 +407,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="OW1-Fc-zbH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="YaU-CL-sRt"/>
                 <constraint firstItem="N2a-Sk-B6i" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="eRA-8M-TkN"/>
                 <constraint firstItem="N2a-Sk-B6i" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="lUj-lI-ZFU"/>
                 <constraint firstItem="N2a-Sk-B6i" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vi6-4Y-AwT"/>

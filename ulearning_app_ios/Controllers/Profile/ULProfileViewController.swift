@@ -9,22 +9,58 @@ import UIKit
 
 class ULProfileViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        view.backgroundColor = .systemBackground
-        title = "Perfil"
+    
+    @IBOutlet weak var nameUserLabel: UILabel!
+    
+    @IBOutlet weak var dniLabel: UILabel!
+    
+    @IBOutlet weak var numberDocumentLabel: UILabel!
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var fatherLastnameTextField: UITextField!
+    
+    @IBOutlet weak var motherLastnameTextField: UITextField!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var phoneTextField: UITextField!
+    
+    @IBOutlet weak var birthdateTextField: UITextField!
+    
+    @IBOutlet weak var containerScanQRView: UIView!{
+        didSet {
+            containerScanQRView.layer.cornerRadius = 8
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var containerPaymentsView: UIView!{
+        didSet {
+            containerPaymentsView.layer.cornerRadius = 8
+        }
     }
-    */
-
+    
+    @IBOutlet weak var containerLogoutView: UIView!{
+        didSet {
+            containerLogoutView.layer.cornerRadius = 8
+        }
+    }
+    
+    @IBAction func goToLogoutButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func goToPaymentsButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func goToScanQRButton(_ sender: UIButton) {
+    }
+    
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemBackground
+    
+    }
 }
