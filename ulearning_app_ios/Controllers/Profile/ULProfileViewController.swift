@@ -9,6 +9,15 @@ import UIKit
 
 class ULProfileViewController: UIViewController {
     
+    @IBOutlet weak var indicatorProgress: UIActivityIndicatorView!{
+        didSet {
+            indicatorProgress.hidesWhenStopped = true
+        }
+    }
+    
+    var viewModel: ULProfileViewModel = ULProfileViewModel()
+    
+    var profileDataSource: ULProfile?
     
     @IBOutlet weak var nameUserLabel: UILabel!
     
@@ -56,13 +65,69 @@ class ULProfileViewController: UIViewController {
     }
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        
+        bindViewModel()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.getData()
+    }
+    
+    func bindViewModel() {
+        
+        viewModel.isLoadingData.bind { [weak self] isLoading in
+            guard let isLoading = isLoading else {
+                return
+            }
+            DispatchQueue.main.async {
+                if isLoading {
+                    self?.indicatorProgress.startAnimating()
+                } else {
+                    self?.indicatorProgress.stopAnimating()
+                }
+            }
+        }
+        
+        viewModel.profile.bind { [weak self] profile in
+            guard let self = self,
+                  let profile = profile else {
+                      return
+                  }
+            debugPrint("data?.name")
+            self.profileDataSource = profile
+            setProfileData(data: self.profileDataSource)
+        }
+    }
+    
+    func setProfileData(data : ULProfile?){
+        if(data != nil){
+            numberDocumentLabel.text = data?.documentNumber ?? "--"
+            dniLabel.text = "DNI"
+            nameUserLabel.text = data?.name ?? ""
+            
+            nameTextField.text = data?.name ?? ""
+            nameTextField.isUserInteractionEnabled = false
+            
+            fatherLastnameTextField.text = data?.lastName ?? ""
+            fatherLastnameTextField.isUserInteractionEnabled = false
+            
+            motherLastnameTextField.text = data?.secondLastName ?? ""
+            motherLastnameTextField.isUserInteractionEnabled = false
+            
+            emailTextField.text = data?.email ?? ""
+            emailTextField.isUserInteractionEnabled = false
+            
+            phoneTextField.text = data?.phone ?? ""
+            phoneTextField.isUserInteractionEnabled = false
+            
+            birthdateTextField.text = data?.dateOfBirth ?? ""
+            birthdateTextField.isUserInteractionEnabled = false
+        }
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

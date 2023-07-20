@@ -104,8 +104,6 @@ class ULProgressCourseViewController: UIViewController {
             self.reloadTableView()
         }
     }
-    
-    
 }
 
 

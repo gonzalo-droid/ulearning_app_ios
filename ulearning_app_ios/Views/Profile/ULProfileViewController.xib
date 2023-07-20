@@ -18,6 +18,7 @@
                 <outlet property="dniLabel" destination="nKp-u9-X9z" id="fdS-ES-mED"/>
                 <outlet property="emailTextField" destination="EWw-AP-khe" id="Qof-yp-4Z6"/>
                 <outlet property="fatherLastnameTextField" destination="Lsc-Ut-mqY" id="FDq-A4-tqj"/>
+                <outlet property="indicatorProgress" destination="cqy-jT-s5R" id="Mgb-2D-XKF"/>
                 <outlet property="motherLastnameTextField" destination="Ykh-jc-06d" id="ENB-WW-q0G"/>
                 <outlet property="nameTextField" destination="KXf-yw-5jK" id="vgh-PE-DGx"/>
                 <outlet property="nameUserLabel" destination="nNQ-SF-7oW" id="85u-m1-k4W"/>
@@ -394,14 +395,22 @@
                                 <constraint firstItem="7JU-eD-OhT" firstAttribute="top" secondItem="Lsc-Ut-mqY" secondAttribute="bottom" constant="20" id="ySv-DP-0so"/>
                             </constraints>
                         </view>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="cqy-jT-s5R">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                            <color key="color" systemColor="systemGrayColor"/>
+                        </activityIndicatorView>
                     </subviews>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="cqy-jT-s5R" secondAttribute="bottom" id="708-HM-H2b"/>
                         <constraint firstItem="vag-2z-UE9" firstAttribute="top" secondItem="hwh-V3-fqM" secondAttribute="top" id="Cvu-AZ-qUs"/>
+                        <constraint firstItem="cqy-jT-s5R" firstAttribute="leading" secondItem="hwh-V3-fqM" secondAttribute="leading" id="EX4-29-0kx"/>
                         <constraint firstAttribute="trailing" secondItem="vag-2z-UE9" secondAttribute="trailing" id="F5d-73-PHp"/>
                         <constraint firstItem="vag-2z-UE9" firstAttribute="centerY" secondItem="hwh-V3-fqM" secondAttribute="centerY" id="TVV-TL-X6u"/>
                         <constraint firstItem="vag-2z-UE9" firstAttribute="centerX" secondItem="hwh-V3-fqM" secondAttribute="centerX" id="ass-dd-sng"/>
+                        <constraint firstAttribute="trailing" secondItem="cqy-jT-s5R" secondAttribute="trailing" id="bj8-p9-Ehs"/>
                         <constraint firstAttribute="bottom" secondItem="vag-2z-UE9" secondAttribute="bottom" id="fay-dN-QE9"/>
                         <constraint firstItem="vag-2z-UE9" firstAttribute="leading" secondItem="hwh-V3-fqM" secondAttribute="leading" id="wSD-wG-ZmR"/>
+                        <constraint firstItem="cqy-jT-s5R" firstAttribute="top" secondItem="hwh-V3-fqM" secondAttribute="top" id="xaj-TX-vsE"/>
                     </constraints>
                 </scrollView>
             </subviews>
@@ -426,6 +435,9 @@
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

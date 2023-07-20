@@ -27,6 +27,7 @@ class ULProgressCourseViewModel {
         }
         
         isLoadingData.value = true
+        
         CourseService.getSubscriptions(page: 1, isFinished: false, successBlock: { [weak self] subscriptions in
             guard let self = self else { return }
             self.dataSource = subscriptions

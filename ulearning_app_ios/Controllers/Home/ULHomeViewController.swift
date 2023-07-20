@@ -176,22 +176,9 @@ class ULHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = .systemBackground
-        
-        CourseService.getSubscriptions(
-            page: 1,
-            isFinished: false,
-            successBlock: { [weak self] subscriptions in
-                guard let self = self else { return }
-                print(subscriptions?.count)
-                
-            }, errorBlock: { [weak self] error in
-                guard let self = self else { return }
-                print(error!)
-            })
-        
-        
+
+            
     }
     
     override func viewWillAppear(_ animated: Bool) {
