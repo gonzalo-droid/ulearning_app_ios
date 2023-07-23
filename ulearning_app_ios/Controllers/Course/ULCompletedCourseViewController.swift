@@ -16,7 +16,7 @@ class ULCompletedCourseViewController: UIViewController {
         }
     }
     
-    var viewModel: ULProgressCourseViewModel = ULProgressCourseViewModel()
+    var viewModel: ULCompletedCourseViewModel = ULCompletedCourseViewModel()
     
     var subscriptionsDataSource: [ULCourseTableCellViewModel] = []
 

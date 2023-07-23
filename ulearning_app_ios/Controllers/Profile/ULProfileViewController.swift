@@ -9,12 +9,6 @@ import UIKit
 
 class ULProfileViewController: UIViewController {
     
-    @IBOutlet weak var indicatorProgress: UIActivityIndicatorView!{
-        didSet {
-            indicatorProgress.hidesWhenStopped = true
-        }
-    }
-    
     var viewModel: ULProfileViewModel = ULProfileViewModel()
     
     var profileDataSource: ULProfile?
@@ -77,20 +71,7 @@ class ULProfileViewController: UIViewController {
     }
     
     func bindViewModel() {
-        
-        viewModel.isLoadingData.bind { [weak self] isLoading in
-            guard let isLoading = isLoading else {
-                return
-            }
-            DispatchQueue.main.async {
-                if isLoading {
-                    self?.indicatorProgress.startAnimating()
-                } else {
-                    self?.indicatorProgress.stopAnimating()
-                }
-            }
-        }
-        
+                
         viewModel.profile.bind { [weak self] profile in
             guard let self = self,
                   let profile = profile else {

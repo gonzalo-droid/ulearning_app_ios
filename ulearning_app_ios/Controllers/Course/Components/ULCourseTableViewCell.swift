@@ -48,8 +48,8 @@ class ULCourseTableViewCell: UITableViewCell {
     }
     
     func setupCell(viewModel: ULCourseTableCellViewModel) {
-        self.categoryLabel.text = viewModel.title
-        self.titleCourseLabel.text = viewModel.category
+        self.categoryLabel.text = viewModel.category
+        self.titleCourseLabel.text = viewModel.title
         // self.courseImageView.sd_setImage(with: viewModel.image)
     }
     
