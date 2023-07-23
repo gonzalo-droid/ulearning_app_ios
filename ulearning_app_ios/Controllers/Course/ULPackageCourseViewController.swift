@@ -8,8 +8,7 @@
 import UIKit
 
 class ULPackageCourseViewController: UIViewController {
-    
-    
+        
     @IBOutlet weak var coursesTableView: UITableView!
     
     @IBOutlet weak var progressIndicator: UIActivityIndicatorView!{
@@ -31,7 +30,6 @@ class ULPackageCourseViewController: UIViewController {
     }
     
     func configView() {
-        title = "Paquetes de cursos"
         self.view.backgroundColor = .systemBackground
         self.setupTableView()
     }
@@ -52,12 +50,14 @@ class ULPackageCourseViewController: UIViewController {
                 action: #selector(back(_:))
             )
             
+            navigationItem.title = "Paquetes de cursos"
+            
             if #available(iOS 13.0, *) {
                 let appearance = UINavigationBarAppearance(idiom: .phone)
                 // For normal title.
                 appearance.titleTextAttributes = [
                     .foregroundColor: UIColor.black,
-                    .font: UIFont.boldSystemFont(ofSize: 14)
+                    .font: UIFont.boldSystemFont(ofSize: 16)
                 ]
                 
                 appearance.backgroundColor = .white
@@ -67,7 +67,7 @@ class ULPackageCourseViewController: UIViewController {
                 // For normal title.
                 let atrr2 = [
                     NSAttributedString.Key.foregroundColor: UIColor.black,
-                    NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)
+                    NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)
                 ]
                 nav.navigationBar.titleTextAttributes = atrr2
             }

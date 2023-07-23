@@ -30,8 +30,7 @@ class ULProgressCourseViewController: UIViewController {
     }
     
     func configView() {
-        title = "En progreso"
-        self.view.backgroundColor = .systemBackground        
+        self.view.backgroundColor = .systemBackground
         self.setupTableView()
     }
     
@@ -45,6 +44,7 @@ class ULProgressCourseViewController: UIViewController {
         if let nav = self.navigationController {
             let backButtonImage = UIImage(systemName: "arrow.backward")
             // navigationItem.hidesBackButton = true
+
             navigationItem.leftBarButtonItem = UIBarButtonItem(
                 image: backButtonImage,
                 style: .plain,
@@ -52,12 +52,14 @@ class ULProgressCourseViewController: UIViewController {
                 action: #selector(back(_:))
             )
             
+            navigationItem.title = "En prorgeso"
+            
             if #available(iOS 13.0, *) {
                 let appearance = UINavigationBarAppearance(idiom: .phone)
                 // For normal title.
                 appearance.titleTextAttributes = [
                     .foregroundColor: UIColor.black,
-                    .font: UIFont.boldSystemFont(ofSize: 14)
+                    .font: UIFont.boldSystemFont(ofSize: 16)
                 ]
                 
                 appearance.backgroundColor = .white
@@ -67,10 +69,13 @@ class ULProgressCourseViewController: UIViewController {
                 // For normal title.
                 let atrr2 = [
                     NSAttributedString.Key.foregroundColor: UIColor.black,
-                    NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)
+                    NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)
                 ]
                 nav.navigationBar.titleTextAttributes = atrr2
             }
+            
+            
+        
         }
         
     }
@@ -79,7 +84,7 @@ class ULProgressCourseViewController: UIViewController {
         self.navigationController?.popViewController(animated:true)
     }
     
-
+    
     func bindViewModel() {
         
         viewModel.isLoadingData.bind { [weak self] isLoading in

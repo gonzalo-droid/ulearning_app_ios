@@ -30,7 +30,6 @@ class ULRouteCourseViewController: UIViewController {
         bindViewModel()
     }
     func configView() {
-        title = "Rutas de aprendizaje"
         self.view.backgroundColor = .systemBackground
         self.setupTableView()
     }
@@ -51,13 +50,14 @@ class ULRouteCourseViewController: UIViewController {
                 target: self,
                 action: #selector(back(_:))
             )
+            navigationItem.title = "Rutas de aprendizaje"
             
             if #available(iOS 13.0, *) {
                 let appearance = UINavigationBarAppearance(idiom: .phone)
                 // For normal title.
                 appearance.titleTextAttributes = [
                     .foregroundColor: UIColor.black,
-                    .font: UIFont.boldSystemFont(ofSize: 14)
+                    .font: UIFont.boldSystemFont(ofSize: 16)
                 ]
                 
                 appearance.backgroundColor = .white
@@ -67,7 +67,7 @@ class ULRouteCourseViewController: UIViewController {
                 // For normal title.
                 let atrr2 = [
                     NSAttributedString.Key.foregroundColor: UIColor.black,
-                    NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)
+                    NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)
                 ]
                 nav.navigationBar.titleTextAttributes = atrr2
             }

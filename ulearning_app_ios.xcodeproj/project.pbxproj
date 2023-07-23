@@ -775,6 +775,7 @@
 				DEVELOPMENT_TEAM = 2436FLG37H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ulearning_app_ios/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "U-Learning";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -806,6 +807,7 @@
 				DEVELOPMENT_TEAM = 2436FLG37H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ulearning_app_ios/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "U-Learning";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

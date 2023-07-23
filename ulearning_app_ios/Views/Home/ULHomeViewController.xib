@@ -42,6 +42,28 @@
                 <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2a-Sk-B6i">
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OW1-Fc-zbH">
+                            <rect key="frame" x="313" y="0.0" width="50" height="46"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoHome" translatesAutoresizingMaskIntoConstraints="NO" id="jTI-Zz-M9x">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="46"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="46" id="cYz-Rd-nxA"/>
+                                        <constraint firstAttribute="width" constant="50" id="nlI-EA-HPv"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="ARc-vF-2BB"/>
+                                <constraint firstItem="jTI-Zz-M9x" firstAttribute="top" secondItem="OW1-Fc-zbH" secondAttribute="top" id="Uwz-jd-vEV"/>
+                                <constraint firstAttribute="height" constant="46" id="VrM-Qo-GRp"/>
+                                <constraint firstItem="jTI-Zz-M9x" firstAttribute="leading" secondItem="OW1-Fc-zbH" secondAttribute="leading" id="ZQx-l9-1iZ"/>
+                                <constraint firstAttribute="trailing" secondItem="jTI-Zz-M9x" secondAttribute="trailing" id="qOQ-pe-QD4"/>
+                                <constraint firstAttribute="bottom" secondItem="jTI-Zz-M9x" secondAttribute="bottom" id="r2d-NR-dQ2"/>
+                            </constraints>
+                        </view>
                         <view contentMode="left" translatesAutoresizingMaskIntoConstraints="NO" id="l06-kf-a5f">
                             <rect key="frame" x="20" y="50" width="353" height="59"/>
                             <subviews>
@@ -383,19 +405,14 @@
                                 <constraint firstItem="4JF-yZ-uzq" firstAttribute="leading" secondItem="Jgb-Aq-Eb9" secondAttribute="leading" id="yMk-Me-b8g"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OW1-Fc-zbH">
-                            <rect key="frame" x="313" y="0.0" width="50" height="46"/>
-                            <color key="backgroundColor" systemColor="systemBlueColor"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="50" id="ARc-vF-2BB"/>
-                            </constraints>
-                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="l06-kf-a5f" secondAttribute="trailing" constant="20" symbolic="YES" id="7rT-fH-Ihn"/>
-                        <constraint firstItem="l06-kf-a5f" firstAttribute="top" secondItem="OW1-Fc-zbH" secondAttribute="bottom" constant="4" id="87V-7k-eZN"/>
+                        <constraint firstAttribute="bottom" secondItem="OW1-Fc-zbH" secondAttribute="bottom" constant="713" id="E6I-fJ-aja"/>
                         <constraint firstAttribute="trailing" secondItem="OW1-Fc-zbH" secondAttribute="trailing" constant="30" id="JLW-cy-eCj"/>
+                        <constraint firstItem="OW1-Fc-zbH" firstAttribute="top" secondItem="N2a-Sk-B6i" secondAttribute="top" id="NXo-Lh-TdZ"/>
+                        <constraint firstItem="l06-kf-a5f" firstAttribute="top" secondItem="N2a-Sk-B6i" secondAttribute="top" constant="50" id="Ypl-fm-krI"/>
                         <constraint firstItem="OW1-Fc-zbH" firstAttribute="leading" secondItem="N2a-Sk-B6i" secondAttribute="leading" constant="313" id="bBk-Pt-xc2"/>
                         <constraint firstItem="Jgb-Aq-Eb9" firstAttribute="leading" secondItem="l06-kf-a5f" secondAttribute="leading" id="kXg-NU-NOi"/>
                         <constraint firstItem="Jgb-Aq-Eb9" firstAttribute="top" secondItem="l06-kf-a5f" secondAttribute="bottom" constant="14" id="mCv-Gf-yp3"/>
@@ -418,14 +435,12 @@
     </objects>
     <resources>
         <image name="circles.hexagonpath.fill" catalog="system" width="128" height="115"/>
+        <image name="logoHome" width="199" height="141"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="point.fill.topleft.down.curvedto.point.fill.bottomright.up" catalog="system" width="119" height="128"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
