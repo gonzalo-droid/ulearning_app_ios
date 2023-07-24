@@ -52,7 +52,7 @@ class ULProgressCourseViewController: UIViewController {
                 action: #selector(back(_:))
             )
             
-            navigationItem.title = "En prorgeso"
+            navigationItem.title = "En progreso"
             
             if #available(iOS 13.0, *) {
                 let appearance = UINavigationBarAppearance(idiom: .phone)

@@ -10,9 +10,6 @@ import SwiftyJSON
 
 enum ULAPIAuth: ULAPIConfig {
         
-    var urlBase: String {
-        return "https://sandbox.api.ulearning.com.pe/api/"
-    }
     
     /// GET
 
@@ -22,11 +19,13 @@ enum ULAPIAuth: ULAPIConfig {
     
     /// POST
     
-    case login
-    
+    case login(
+        params: Parameters
+    )
+
     var method: Alamofire.HTTPMethod {
         switch self {
-        case  .login:
+        case .login:
             return .post
         default:
             return .get
@@ -36,7 +35,6 @@ enum ULAPIAuth: ULAPIConfig {
 
     var path: String {
         switch self {
-                
         case .getProfile:
             return "profile"
         case .login:
@@ -44,6 +42,15 @@ enum ULAPIAuth: ULAPIConfig {
         }
     }
 
+    var parameters: Parameters? {
+           switch self {
+           case .login(let parameters):
+               return parameters
+           default:
+               return nil
+           }
+       }
+    
     var encoding: Alamofire.ParameterEncoding? {
           switch self {
           case .login:

@@ -1,40 +1,47 @@
 //
-//  ULProfileViewModel.swift
+//  ULLoginViewModel.swift
 //  ulearning_app_ios
 //
-//  Created by Gonzalo López on 20/07/23.
+//  Created by Gonzalo López on 23/07/23.
 //
 
 import Foundation
 
-class ULProfileViewModel {
+class ULLoginViewmodel {
     
     var isLoadingData: ULObservable<Bool> = ULObservable(false)
-    var dataSource: ULProfile?
-    var profile: ULObservable<ULProfile> = ULObservable(nil)
+    var dataSource: String?
+    var tokenLogin: ULObservable<String> = ULObservable(nil)
     
-    func getData() {
+    
+    func sendLogin(username:String, password:String) {
         if isLoadingData.value ?? true {
             return
         }
         
         isLoadingData.value = true
         
-        AuthService.getProfile(successBlock: { [weak self] profile in
+        let params: [String:Any] = [
+            "email":username,
+            "password": password,
+        ]
+        
+        
+        AuthService.login(params, successBlock: { [weak self] tokenLogin, expiredAt in
             guard let self = self else { return }
-            self.dataSource = profile
+            self.dataSource = tokenLogin
             self.mapData()
             isLoadingData.value = false
             
         }, errorBlock: { [weak self] error in
             guard let self = self else { return }
-            
             isLoadingData.value = false
         })
+        
     }
     
     private func mapData() {
-        profile.value = self.dataSource
+        tokenLogin.value = self.dataSource
     }
     
 }

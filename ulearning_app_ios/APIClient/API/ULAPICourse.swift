@@ -10,9 +10,7 @@ import SwiftyJSON
 
 enum ULAPICourse: ULAPIConfig {
         
-    var urlBase: String {
-        return "https://sandbox.api.ulearning.com.pe/api/"
-    }
+    
     /// GET
 
     case getSubscriptions(

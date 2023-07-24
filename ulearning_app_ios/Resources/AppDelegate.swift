@@ -16,16 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let status = false
-        if status {
-            let vc = UINavigationController(rootViewController: ULLoginViewController())
-            window.rootViewController = vc
-
-        } else {
+        
+        if let _ = ULUserStore().getToken() {
             let vc = UINavigationController(rootViewController: ULTabBarViewController())
             window.rootViewController = vc
+        } else {
+            let vc = UINavigationController(rootViewController: ULLoginViewController())
+            window.rootViewController = vc
         }
-        
+    
         window.makeKeyAndVisible()
         
         self.window = window

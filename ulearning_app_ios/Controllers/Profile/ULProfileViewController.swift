@@ -50,12 +50,18 @@ class ULProfileViewController: UIViewController {
     }
     
     @IBAction func goToLogoutButton(_ sender: UIButton) {
+        ULUserStore().logout{
+            let login = ULLoginViewController()
+            self.present(login, animated: true)
+        }
     }
     
     @IBAction func goToPaymentsButton(_ sender: UIButton) {
+        
     }
     
     @IBAction func goToScanQRButton(_ sender: UIButton) {
+        
     }
     
     
@@ -77,7 +83,6 @@ class ULProfileViewController: UIViewController {
                   let profile = profile else {
                       return
                   }
-            debugPrint("data?.name")
             self.profileDataSource = profile
             setProfileData(data: self.profileDataSource)
         }
