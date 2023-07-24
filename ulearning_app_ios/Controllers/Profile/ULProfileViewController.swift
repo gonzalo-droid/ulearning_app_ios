@@ -52,7 +52,8 @@ class ULProfileViewController: UIViewController {
     @IBAction func goToLogoutButton(_ sender: UIButton) {
         ULUserStore().logout{
             let login = ULLoginViewController()
-            self.present(login, animated: true)
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.changeRootViewController(login)
         }
     }
     

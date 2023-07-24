@@ -82,7 +82,11 @@ class ULLoginViewController: UIViewController {
     
     func goToHome() {
         let homeTab = ULTabBarViewController()
-        self.present(homeTab, animated: true)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.changeRootViewController(homeTab)
+        
+        //self.navigationController?.popToViewController(ULTabBarViewController(), animated: true)
+        
     }
     
     func showErrorLoginEmpty() {

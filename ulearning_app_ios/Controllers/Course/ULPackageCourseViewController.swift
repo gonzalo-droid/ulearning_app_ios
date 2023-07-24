@@ -36,7 +36,7 @@ class ULPackageCourseViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewModel.getData(type: "package")
+        viewModel.getData(classification: "package")
     }
     
     private func setupNav() {

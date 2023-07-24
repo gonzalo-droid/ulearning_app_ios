@@ -21,13 +21,13 @@ class ULPackageCourseViewModel {
         return dataSource?.count ?? 0
     }
     
-    func getData(type: String) {
+    func getData(classification: String) {
         if isLoadingData.value ?? true {
             return
         }
         
         isLoadingData.value = true
-        CourseService.getSubscriptions(page: 1, isFinished: true, successBlock: { [weak self] subscriptions in
+        CourseService.getSubscriptionsPackage(classification:classification, successBlock: { [weak self] subscriptions in
             guard let self = self else { return }
             self.dataSource = subscriptions
             self.mapData()

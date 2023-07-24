@@ -36,7 +36,7 @@ class ULRouteCourseViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewModel.getData(type: "path")
+        viewModel.getData(classification: "path")
     }
     
     

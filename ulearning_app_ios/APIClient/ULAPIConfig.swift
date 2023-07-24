@@ -47,9 +47,10 @@ extension ULAPIConfig {
     }
 
     private func setAuthorizationHeader(in urlRequest: inout URLRequest) {
-        let token = "16|6BPxCb4lhSAdc6zONuZ1QRZWGaG8iRD34BRKMbHa"
-        
-        //urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        if let token = ULUserStore().getToken() {
+            debugPrint("Bearer \(String(describing: token))")
+            urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        }
     }
 
     /// Transforms a Request into a standard URL request

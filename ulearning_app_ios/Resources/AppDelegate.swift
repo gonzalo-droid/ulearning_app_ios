@@ -31,6 +31,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func changeRootViewController(_ viewcontroller: UIViewController) {
+        let desiredViewController = viewcontroller
+
+        let snapshot:UIView = (self.window?.snapshotView(afterScreenUpdates: true))!
+        desiredViewController.view.addSubview(snapshot)
+
+        self.window?.rootViewController = desiredViewController
+
+        UIView.animate(withDuration: 0.3, animations: {() in
+            snapshot.layer.opacity = 0;
+            snapshot.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5);
+        }, completion: {
+            (value: Bool) in
+            snapshot.removeFromSuperview();
+        })
+    }
 
 }
 

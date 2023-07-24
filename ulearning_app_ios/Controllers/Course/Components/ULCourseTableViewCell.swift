@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Kingfisher
+
 
 class ULCourseTableViewCell: UITableViewCell {
     
@@ -30,7 +32,7 @@ class ULCourseTableViewCell: UITableViewCell {
         }
     }
     
-               
+    
     static var identifier: String {
         get {
             "ULCourseTableViewCell"
@@ -50,7 +52,14 @@ class ULCourseTableViewCell: UITableViewCell {
     func setupCell(viewModel: ULCourseTableCellViewModel) {
         self.categoryLabel.text = viewModel.category
         self.titleCourseLabel.text = viewModel.title
-        // self.courseImageView.sd_setImage(with: viewModel.image)
+        
+        if let imageUrl = viewModel.image {
+            debugPrint("imageUrl \(String(describing: imageUrl))")
+            self.courseImageView.kf.setImage(with: imageUrl)
+            
+        } else {
+            self.courseImageView.kf.setImage(with: <#T##Source?#>)
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

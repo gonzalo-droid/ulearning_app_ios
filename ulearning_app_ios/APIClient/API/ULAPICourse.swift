@@ -20,8 +20,8 @@ enum ULAPICourse: ULAPIConfig {
     )
     
     case getSubscriptionsPackage(
-        perPage: Int,
-        page: Int,
+        perPage: Int = 50,
+        page: Int = 1,
         classification: String,
         includes: String = "learning_package"
     )
@@ -72,7 +72,8 @@ enum ULAPICourse: ULAPIConfig {
              urlComponents.queryItems = [
                  URLQueryItem(name: "per_page", value: "\(perPage)"),
                  URLQueryItem(name: "page", value: "\(page)"),
-                 URLQueryItem(name: "is_finished", value: "\(isFinished)")
+                 URLQueryItem(name: "is_finished", value: "\(isFinished)"),
+                 URLQueryItem(name: "classification", value: "course")
              ]
             return "subscriptions\(urlComponents.string!)" // "https://demo1784653.mockable.io/subscription" //
             
