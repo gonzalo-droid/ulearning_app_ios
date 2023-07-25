@@ -57,9 +57,7 @@ class ULCourseTableViewCell: UITableViewCell {
             debugPrint("imageUrl \(String(describing: imageUrl))")
             self.courseImageView.kf.setImage(with: imageUrl)
             
-        } else {
-            self.courseImageView.kf.setImage(with: <#T##Source?#>)
-        }
+        } 
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

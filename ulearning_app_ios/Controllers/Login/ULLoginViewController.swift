@@ -11,20 +11,20 @@ class ULLoginViewController: UIViewController {
     
     var viewModel: ULLoginViewmodel = ULLoginViewmodel()
     
-    
+    @IBOutlet weak var eyeButton: UIButton!
+        
     @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var inputEmailTextField: UITextField!{
         didSet {
+            inputEmailTextField.textContentType = .emailAddress
             inputEmailTextField.autocorrectionType = .no
+            inputEmailTextField.delegate = self
+            
         }
     }
     
-    @IBOutlet weak var inputPasswordTextField: UITextField!{
-        didSet {
-            inputPasswordTextField.autocorrectionType = .no
-        }
-    }
+    @IBOutlet weak var inputPasswordTextField: UITextField!
     
     @IBOutlet weak var doLoginButton: UIButton!{
         didSet {
@@ -34,10 +34,34 @@ class ULLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupPasswordField()
         progressIndicator.isHidden = true
         view.backgroundColor = .systemBackground
         bindViewModel()
     }
+    
+    func setupPasswordField() {
+        inputPasswordTextField.textContentType = .password
+        inputPasswordTextField.isSecureTextEntry = true
+        inputPasswordTextField.autocorrectionType = .no
+        inputPasswordTextField.delegate = self
+        inputPasswordTextField.rightViewMode = .always
+        
+        let eyeButtonSize = CGRect(x: 0, y: 0, width: 24, height: 24)
+        eyeButton.frame = eyeButtonSize
+        eyeButton.setImage(UIImage(named: "eye.slash"), for: .normal)
+        eyeButton.addTarget(self, action: #selector(eyeButtonTapped), for: .touchUpInside)
+        
+        inputPasswordTextField.rightView = eyeButton
+    }
+    
+    @objc func eyeButtonTapped() {
+        inputPasswordTextField.isSecureTextEntry.toggle()
+        
+        let eyeImage = inputPasswordTextField.isSecureTextEntry ? UIImage(named: "eye.slash") : UIImage(named: "eye")
+        eyeButton.setImage(eyeImage, for: .normal)
+    }
+    
     
     func bindViewModel() {
         
@@ -85,8 +109,6 @@ class ULLoginViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.changeRootViewController(homeTab)
         
-        //self.navigationController?.popToViewController(ULTabBarViewController(), animated: true)
-        
     }
     
     func showErrorLoginEmpty() {
@@ -117,5 +139,12 @@ class ULLoginViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+}
+
+extension ULLoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // Ocultar el teclado cuando se presiona "Return"
+        return true
     }
 }
