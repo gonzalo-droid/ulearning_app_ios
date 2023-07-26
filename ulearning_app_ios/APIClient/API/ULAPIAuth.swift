@@ -22,10 +22,12 @@ enum ULAPIAuth: ULAPIConfig {
     case login(
         params: Parameters
     )
+    
+    case selfAuthToken
 
     var method: Alamofire.HTTPMethod {
         switch self {
-        case .login:
+        case .login, .selfAuthToken:
             return .post
         default:
             return .get
@@ -39,6 +41,8 @@ enum ULAPIAuth: ULAPIConfig {
             return "profile"
         case .login:
             return "login"
+        case .selfAuthToken:
+            return "self-auth-token"
         }
     }
 

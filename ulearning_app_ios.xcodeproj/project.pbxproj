@@ -16,7 +16,7 @@
 		C10535542A584B5800F10139 /* ULPackageCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10535522A584B5800F10139 /* ULPackageCourseViewController.swift */; };
 		C10535552A584B5800F10139 /* ULPackageCourseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C10535532A584B5800F10139 /* ULPackageCourseViewController.xib */; };
 		C11310EF2A6DC1FA004DAAD8 /* ULLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11310EE2A6DC1FA004DAAD8 /* ULLoginResponse.swift */; };
-		C11BCA822A50881100AEC3AB /* ULBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA812A50881100AEC3AB /* ULBaseResponse.swift */; };
+		C11BCA822A50881100AEC3AB /* ULBaseResponseSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA812A50881100AEC3AB /* ULBaseResponseSubscription.swift */; };
 		C11BCA842A5110BF00AEC3AB /* ULUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA832A5110BF00AEC3AB /* ULUser.swift */; };
 		C11BCA882A5110D800AEC3AB /* ULCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA872A5110D800AEC3AB /* ULCourse.swift */; };
 		C11BCA8A2A51148500AEC3AB /* ULCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11BCA892A51148500AEC3AB /* ULCategory.swift */; };
@@ -42,6 +42,7 @@
 		C156545C2A4E911400E6E42A /* ULAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C156545B2A4E911400E6E42A /* ULAPIConfig.swift */; };
 		C156545E2A4E924F00E6E42A /* ULAPICourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C156545D2A4E924F00E6E42A /* ULAPICourse.swift */; };
 		C15654612A4EA03600E6E42A /* CourseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15654602A4EA03600E6E42A /* CourseService.swift */; };
+		C15CB7F32A70D06B008500F4 /* ULTokenWebResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15CB7F22A70D06B008500F4 /* ULTokenWebResponse.swift */; };
 		C1720D322A55435F003DCC4E /* ULLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1720D302A55435F003DCC4E /* ULLoginViewController.swift */; };
 		C1720D332A55435F003DCC4E /* ULLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1720D312A55435F003DCC4E /* ULLoginViewController.xib */; };
 		C1B1513B2A4BF4110011620D /* ULTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513A2A4BF4110011620D /* ULTabBarViewController.swift */; };
@@ -79,7 +80,7 @@
 		C10535522A584B5800F10139 /* ULPackageCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULPackageCourseViewController.swift; sourceTree = "<group>"; };
 		C10535532A584B5800F10139 /* ULPackageCourseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULPackageCourseViewController.xib; sourceTree = "<group>"; };
 		C11310EE2A6DC1FA004DAAD8 /* ULLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULLoginResponse.swift; sourceTree = "<group>"; };
-		C11BCA812A50881100AEC3AB /* ULBaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULBaseResponse.swift; sourceTree = "<group>"; };
+		C11BCA812A50881100AEC3AB /* ULBaseResponseSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULBaseResponseSubscription.swift; sourceTree = "<group>"; };
 		C11BCA832A5110BF00AEC3AB /* ULUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULUser.swift; sourceTree = "<group>"; };
 		C11BCA872A5110D800AEC3AB /* ULCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULCourse.swift; sourceTree = "<group>"; };
 		C11BCA892A51148500AEC3AB /* ULCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULCategory.swift; sourceTree = "<group>"; };
@@ -107,6 +108,7 @@
 		C156545B2A4E911400E6E42A /* ULAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULAPIConfig.swift; sourceTree = "<group>"; };
 		C156545D2A4E924F00E6E42A /* ULAPICourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULAPICourse.swift; sourceTree = "<group>"; };
 		C15654602A4EA03600E6E42A /* CourseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseService.swift; sourceTree = "<group>"; };
+		C15CB7F22A70D06B008500F4 /* ULTokenWebResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULTokenWebResponse.swift; sourceTree = "<group>"; };
 		C1720D302A55435F003DCC4E /* ULLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULLoginViewController.swift; sourceTree = "<group>"; };
 		C1720D312A55435F003DCC4E /* ULLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULLoginViewController.xib; sourceTree = "<group>"; };
 		C1B1513A2A4BF4110011620D /* ULTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULTabBarViewController.swift; sourceTree = "<group>"; };
@@ -167,9 +169,10 @@
 		C11BCA7E2A5087D100AEC3AB /* APIResponse */ = {
 			isa = PBXGroup;
 			children = (
-				C11BCA812A50881100AEC3AB /* ULBaseResponse.swift */,
+				C11BCA812A50881100AEC3AB /* ULBaseResponseSubscription.swift */,
 				C1BA3F6C2A69072700695D31 /* ULBaseResponseProfile.swift */,
 				C11310EE2A6DC1FA004DAAD8 /* ULLoginResponse.swift */,
+				C15CB7F22A70D06B008500F4 /* ULTokenWebResponse.swift */,
 			);
 			path = APIResponse;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				C156545E2A4E924F00E6E42A /* ULAPICourse.swift in Sources */,
 				C15654532A4E3F3100E6E42A /* ULService.swift in Sources */,
 				C1DC2F842A6DACA000542F7A /* ULLoginViewModel.swift in Sources */,
+				C15CB7F32A70D06B008500F4 /* ULTokenWebResponse.swift in Sources */,
 				C1C6585F2A5CFE2300077E84 /* ULCourseTableCellViewModel.swift in Sources */,
 				C1B151412A4BF43D0011620D /* ULProfileViewController.swift in Sources */,
 				C11BCA902A511BF400AEC3AB /* ULTeacher.swift in Sources */,
@@ -629,7 +633,7 @@
 				C1C658682A5D28C800077E84 /* ULCourseTableViewCell.swift in Sources */,
 				C11BCA942A511E0A00AEC3AB /* ULLearningPackage.swift in Sources */,
 				C1C6586D2A5D391900077E84 /* ULCompletedCourseViewModel.swift in Sources */,
-				C11BCA822A50881100AEC3AB /* ULBaseResponse.swift in Sources */,
+				C11BCA822A50881100AEC3AB /* ULBaseResponseSubscription.swift in Sources */,
 				C11BCA842A5110BF00AEC3AB /* ULUser.swift in Sources */,
 				C156545A2A4E403600E6E42A /* ULAPICacheManager.swift in Sources */,
 				C1DC2F862A6DAE0E00542F7A /* ULUserStore.swift in Sources */,

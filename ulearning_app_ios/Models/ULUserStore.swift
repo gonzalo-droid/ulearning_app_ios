@@ -46,7 +46,6 @@ class ULUserStore {
 
     public func getToken() -> String?{
         let defaults = UserDefaults.standard
-        debugPrint("Token \(defaults.object(forKey: "token") ?? "")")
         return defaults.object(forKey: "token") as? String
     }
 

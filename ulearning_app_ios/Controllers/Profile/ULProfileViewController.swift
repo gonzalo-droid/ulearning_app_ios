@@ -12,6 +12,8 @@ class ULProfileViewController: UIViewController {
     var viewModel: ULProfileViewModel = ULProfileViewModel()
     
     var profileDataSource: ULProfile?
+    var urlPayment: String?
+
     
     @IBOutlet weak var nameUserLabel: UILabel!
     
@@ -58,7 +60,7 @@ class ULProfileViewController: UIViewController {
     }
     
     @IBAction func goToPaymentsButton(_ sender: UIButton) {
-        
+        viewModel.getTokenWeb()
     }
     
     @IBAction func goToScanQRButton(_ sender: UIButton) {
@@ -86,6 +88,22 @@ class ULProfileViewController: UIViewController {
                   }
             self.profileDataSource = profile
             setProfileData(data: self.profileDataSource)
+        }
+        
+        viewModel.webPayment.bind { [weak self] urlPayment in
+            guard let self = self,
+                  let urlPayment = urlPayment else {
+                      return
+                  }
+            self.urlPayment = urlPayment
+            goToPayemts(web: self.urlPayment)
+        }
+    }
+    
+    func goToPayemts(web: String?) {
+
+        if let url = URL(string: web ?? viewModel.urlStudent) {
+            UIApplication.shared.open(url, options: [:])
         }
     }
     

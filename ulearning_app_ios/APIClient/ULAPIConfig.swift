@@ -67,9 +67,6 @@ extension ULAPIConfig {
         urlRequest.timeoutInterval = 30
         urlRequest.setValue(contentType, forHTTPHeaderField: "Content-Type")
         urlRequest.setValue(acceptHeader, forHTTPHeaderField: "Accept")
-
-        debugPrint("urlRequest:\(urlRequest.headers)")
-        debugPrint("urlRequest:\(String(describing: urlRequest.httpMethod))")
         debugPrint("urlRequest:\(urlRequest)")
 
         if let querys = queryItems {

@@ -49,7 +49,7 @@ class AuthService {
         
         AF.request(pathUrl).validate(statusCode: 200..<205).responseObject {
             (response: DataResponse<ULLoginResponse, AFError>) in
-            debugPrint("Response Data: \(response)")
+            debugPrint("Response Data: \(response.data)")
             switch response.result {
             case .success(let value):
                 if let tokenLogin = value.token {
@@ -58,6 +58,30 @@ class AuthService {
                     successBlock(tokenLogin, expiredAt)
                 } else {
                     errorBlock("Tuvimos problemas al inciar sesión")
+                }
+            case .failure(let error):
+                errorBlock(error.localizedDescription)
+            }
+        }
+    }
+    
+    
+    static func selfAuthToken(
+        successBlock: @escaping(_ tokenWeb: String) -> Void,
+        errorBlock: @escaping(_ error:  String?) -> Void
+    ) {
+        
+        let pathUrl: ULAPIAuth = .selfAuthToken
+        
+        AF.request(pathUrl).validate(statusCode: 200..<205).responseObject {
+            (response: DataResponse<ULTokenWebResponse, AFError>) in
+            debugPrint("Response Data: \(response)")
+            switch response.result {
+            case .success(let value):
+                if let tokenWeb = value.data?.token {
+                    successBlock(tokenWeb)
+                } else {
+                    errorBlock("Tuvimos problemas al obtener la información")
                 }
             case .failure(let error):
                 errorBlock(error.localizedDescription)
