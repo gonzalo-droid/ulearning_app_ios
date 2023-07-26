@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ULProfileViewController: UIViewController {
     
     var viewModel: ULProfileViewModel = ULProfileViewModel()
@@ -64,7 +65,8 @@ class ULProfileViewController: UIViewController {
     }
     
     @IBAction func goToScanQRButton(_ sender: UIButton) {
-        
+        let qrScannerVC = ULQRScannerViewController()
+        present(qrScannerVC, animated: true, completion: nil)
     }
     
     
