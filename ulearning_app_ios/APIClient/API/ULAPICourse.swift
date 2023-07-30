@@ -10,9 +10,7 @@ import SwiftyJSON
 
 enum ULAPICourse: ULAPIConfig {
         
-    var urlBase: String {
-        return "https://www.sandbox.api.ulearning.com.pe/api/"
-    }
+    
     /// GET
 
     case getSubscriptions(
@@ -22,8 +20,8 @@ enum ULAPICourse: ULAPIConfig {
     )
     
     case getSubscriptionsPackage(
-        perPage: Int,
-        page: Int,
+        perPage: Int = 50,
+        page: Int = 1,
         classification: String,
         includes: String = "learning_package"
     )
@@ -66,23 +64,6 @@ enum ULAPICourse: ULAPIConfig {
         }
     }
 
-    var queryItems: [URLQueryItem]? {
-        switch self {
-        case .getSubscriptions(let perPage, let page, let isFinished):
-            var urlComponents = URLComponents()
-             urlComponents.queryItems = [
-                 URLQueryItem(name: "per_page", value: "\(perPage)"),
-                 URLQueryItem(name: "page", value: "\(page)"),
-                 URLQueryItem(name: "is_finished", value: "\(isFinished)")
-             ]
-            return urlComponents.queryItems
-
-        default:
-            return nil
-        }
-    }
-    
-
     var path: String {
         switch self {
         
@@ -91,9 +72,10 @@ enum ULAPICourse: ULAPIConfig {
              urlComponents.queryItems = [
                  URLQueryItem(name: "per_page", value: "\(perPage)"),
                  URLQueryItem(name: "page", value: "\(page)"),
-                 URLQueryItem(name: "is_finished", value: "\(isFinished)")
+                 URLQueryItem(name: "is_finished", value: "\(isFinished)"),
+                 URLQueryItem(name: "classification", value: "course")
              ]
-            return "subscriptions\(urlComponents.string!)"
+            return "subscriptions\(urlComponents.string!)" // "https://demo1784653.mockable.io/subscription" //
             
         case .getSubscriptionsPackage(perPage: let perPage, page: let page, classification: let classification, includes: let includes):
             return "subscriptions?per_page=\(perPage)&page=\(page)&classification=\(classification)&includes=\(includes)"

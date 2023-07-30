@@ -22,11 +22,12 @@ extension ULAPIConfig {
 
     // Defaults
     var urlBase: String {
-        return "https://www.sandbox.api.ulearning.com.pe/api/"
+        return "https://sandbox.api.ulearning.com.pe/api/"
     }
 
     var method: HTTPMethod { return .get }
     var contentType: String { return "application/json" }
+    var acceptHeader: String { return "application/json" }
     var parameters: Parameters? { return nil }
     var encoding: ParameterEncoding? { return URLEncoding.default }
     var queryItems: [URLQueryItem]? { return nil }
@@ -45,14 +46,11 @@ extension ULAPIConfig {
         return httpBody
     }
 
-    private func setAPIKey(in urlRequest: inout URLRequest) {
-        
-    }
-
     private func setAuthorizationHeader(in urlRequest: inout URLRequest) {
-        let token = "16|6BPxCb4lhSAdc6zONuZ1QRZWGaG8iRD34BRKMbHa"
-        
-        urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        if let token = ULUserStore().getToken() {
+            debugPrint("Bearer \(String(describing: token))")
+            urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        }
     }
 
     /// Transforms a Request into a standard URL request
@@ -67,8 +65,9 @@ extension ULAPIConfig {
 
         urlRequest.httpMethod = method.rawValue
         urlRequest.timeoutInterval = 30
-        
-        debugPrint("urlRequest: \(urlRequest)")
+        urlRequest.setValue(contentType, forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue(acceptHeader, forHTTPHeaderField: "Accept")
+        debugPrint("urlRequest:\(urlRequest)")
 
         if let querys = queryItems {
             var urlComponents = URLComponents(string: fullUrl)
@@ -83,7 +82,6 @@ extension ULAPIConfig {
 
         }
 
-        setAPIKey(in: &urlRequest)
         setAuthorizationHeader(in: &urlRequest)
 
         if let encodedURLRequest = try? encoding?.encode(urlRequest, with: parameters), parameters != nil {
@@ -96,7 +94,7 @@ extension ULAPIConfig {
 
     func handleResponse<T>(_ dataResponse: DataResponse<T, AFError>) {
         if let httpResponse = dataResponse.response {
-
+            debugPrint("Response Data: \(httpResponse)")
         }
     }
 }

@@ -7,30 +7,47 @@
 
 import UIKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        
+        if let _ = ULUserStore().getToken() {
+            let vc = UINavigationController(rootViewController: ULTabBarViewController())
+            window.rootViewController = vc
+        } else {
+            let vc = UINavigationController(rootViewController: ULLoginViewController())
+            window.rootViewController = vc
+        }
+    
+        window.makeKeyAndVisible()
+        
+        self.window = window
+        
         return true
     }
+    
+    func changeRootViewController(_ viewcontroller: UIViewController) {
+        let desiredViewController = viewcontroller
 
-    // MARK: UISceneSession Lifecycle
+        let snapshot:UIView = (self.window?.snapshotView(afterScreenUpdates: true))!
+        desiredViewController.view.addSubview(snapshot)
 
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+        self.window?.rootViewController = desiredViewController
+
+        UIView.animate(withDuration: 0.3, animations: {() in
+            snapshot.layer.opacity = 0;
+            snapshot.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5);
+        }, completion: {
+            (value: Bool) in
+            snapshot.removeFromSuperview();
+        })
     }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-
 
 }
 
