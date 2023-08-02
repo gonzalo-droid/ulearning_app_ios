@@ -12,6 +12,7 @@ final class ULTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .white
         setUpTabs()
     }
 

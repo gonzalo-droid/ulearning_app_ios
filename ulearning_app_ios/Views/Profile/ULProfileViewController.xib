@@ -35,7 +35,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EtO-Lg-H4G">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            <rect key="frame" x="20" y="0.0" width="393" height="852"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vag-2z-UE9" userLabel="container">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -407,24 +407,17 @@
                         <constraint firstAttribute="trailing" secondItem="EtO-Lg-H4G" secondAttribute="trailing" id="6gh-EW-a5I"/>
                         <constraint firstAttribute="bottom" secondItem="EtO-Lg-H4G" secondAttribute="bottom" constant="20" symbolic="YES" id="EXq-Fs-q0P"/>
                         <constraint firstItem="EtO-Lg-H4G" firstAttribute="width" secondItem="hwh-V3-fqM" secondAttribute="width" id="Jrl-Hu-CT8"/>
-                        <constraint firstItem="EtO-Lg-H4G" firstAttribute="top" secondItem="hwh-V3-fqM" secondAttribute="top" constant="20" symbolic="YES" id="bpb-UK-WXc"/>
-                        <constraint firstAttribute="bottom" secondItem="EtO-Lg-H4G" secondAttribute="bottom" id="dsw-qz-5hV"/>
-                        <constraint firstItem="EtO-Lg-H4G" firstAttribute="leading" secondItem="hwh-V3-fqM" secondAttribute="leading" id="f0W-Za-wrP"/>
                         <constraint firstItem="EtO-Lg-H4G" firstAttribute="height" secondItem="hwh-V3-fqM" secondAttribute="height" priority="250" id="qrJ-Yd-VJG"/>
                         <constraint firstItem="EtO-Lg-H4G" firstAttribute="top" secondItem="hwh-V3-fqM" secondAttribute="top" id="thT-zX-VMf"/>
-                        <constraint firstAttribute="trailing" secondItem="EtO-Lg-H4G" secondAttribute="trailing" id="v5U-tc-Ev7"/>
                     </constraints>
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="hwh-V3-fqM" secondAttribute="bottom" id="0m0-OJ-AKl"/>
                 <constraint firstItem="hwh-V3-fqM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Bjt-sL-nx8"/>
                 <constraint firstItem="hwh-V3-fqM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="J8P-rJ-gnT"/>
                 <constraint firstItem="hwh-V3-fqM" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="UXL-tX-XYT"/>
-                <constraint firstItem="hwh-V3-fqM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Vh5-LP-ApO"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hwh-V3-fqM" secondAttribute="trailing" id="XrQ-b4-LKJ"/>
                 <constraint firstAttribute="bottom" secondItem="hwh-V3-fqM" secondAttribute="bottom" id="mLi-8x-V96"/>
                 <constraint firstItem="hwh-V3-fqM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xah-NM-S7N"/>
             </constraints>

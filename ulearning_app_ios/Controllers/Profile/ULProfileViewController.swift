@@ -72,7 +72,7 @@ class ULProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .white
         bindViewModel()
     }
     

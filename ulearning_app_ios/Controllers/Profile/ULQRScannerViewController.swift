@@ -15,6 +15,7 @@ class ULQRScannerViewController: UIViewController, AVCaptureMetadataOutputObject
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .white
         setupQRScanner()
     }
 
