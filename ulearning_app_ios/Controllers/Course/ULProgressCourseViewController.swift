@@ -109,6 +109,19 @@ class ULProgressCourseViewController: UIViewController {
             self.reloadTableView()
         }
     }
+    
+    func openSubscription(id: Int) {
+        guard let subscription = viewModel.retriveSubscription(withId: id) else {
+            return
+        }
+        
+        DispatchQueue.main.async {
+            let viewModel = ULCourseDetailViewModel(data: subscription)
+            let controller = ULCourseDetailViewController(viewModel: viewModel)
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
+
 }
 
 
@@ -155,6 +168,7 @@ extension ULProgressCourseViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let id = subscriptionsDataSource[indexPath.row].id
-        // self.openDetails(movieId: movieId)
+        print(subscriptionsDataSource[indexPath.row].title)
+        self.openSubscription(id: id)
     }
 }

@@ -47,4 +47,13 @@ class ULProgressCourseViewModel {
         subscriptions.value = self.dataSource?.compactMap({ULCourseTableCellViewModel(subscription: $0)})
     }
     
+    
+    func retriveSubscription(withId id: Int) -> ULSubscription? {
+        guard let data = dataSource?.first(where: {$0.id == id}) else {
+            return nil
+        }
+        
+        return data
+    }
+    
 }
