@@ -16,17 +16,63 @@ class DetailComponentTableViewCell: UITableViewCell {
     @IBAction func backBtn(_ sender: Any) {
     }
     
+    @IBOutlet weak var backPressBtn: UIButton!{
+        didSet {
+            backPressBtn.setTitle("", for: .normal)
+            backPressBtn.setTitle("", for: .selected)
+            backPressBtn.setTitle("", for: .focused)
+            backPressBtn.addTarget(
+                self,
+                action: #selector(closeButtonPress(_:)),
+                for: .touchUpInside
+            )
+        }
+    }
+    
+    @IBOutlet weak var containerBtnGoToMessage: UIView!{
+        didSet {
+            containerBtnGoToMessage.layer.cornerRadius = 8
+        }
+    }
+    
     @IBOutlet weak var courseaImageView: UIImageView!
     
     @IBOutlet weak var titleLabel: UILabel!
     
-    @IBOutlet weak var descriptionLabel: UITextView!
+    @IBOutlet weak var descriptionLabel: UITextView! {
+        didSet {
+            descriptionLabel.font = UIFont.boldSystemFont(ofSize: 16)
+            descriptionLabel.textColor = .blackUL
+            descriptionLabel.isUserInteractionEnabled = true
+            descriptionLabel.dataDetectorTypes = .link
+            descriptionLabel.isSelectable = true
+            descriptionLabel.isEditable = false
+        }
+    }
     
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!{
+        didSet {
+            descriptionLabel.font = UIFont.boldSystemFont(ofSize: 14)
+            descriptionLabel.textColor = .blackUL
+        }
+    }
     
-    @IBOutlet weak var modeLabel: UILabel!
     
-    @IBOutlet weak var sessionLabel: UILabel!
+    @IBOutlet weak var modeLabel: UILabel!{
+        didSet {
+            descriptionLabel.font = UIFont.boldSystemFont(ofSize: 14)
+            descriptionLabel.textColor = .blackUL
+        }
+    }
+    
+    @IBOutlet weak var sessionLabel: UILabel!{
+        didSet {
+            descriptionLabel.font = UIFont.boldSystemFont(ofSize: 14)
+            descriptionLabel.textColor = .blackUL
+        }
+    }
+    
+    
     
     @IBAction func goToMessageBtn(_ sender: Any) {
     }
@@ -60,6 +106,20 @@ class DetailComponentTableViewCell: UITableViewCell {
             ]
         )
         
+        
+        let paragraphDescriptionContent = NSMutableParagraphStyle()
+        paragraphDescriptionContent.lineHeightMultiple = 1.22
+        descriptionLabel.attributedText = NSMutableAttributedString(
+            string: data.course?.descriptionLarge ?? "",
+            attributes: [
+                .paragraphStyle: paragraphDescriptionContent
+            ]
+        )
+        
+    }
+    
+    @objc func closeButtonPress(_ sender: UIButton) {
+        self.delegate?.closeButtonPress(sender: sender, cell: self)
     }
     
 }

@@ -11,7 +11,7 @@
 		C100B4842A7A09C1008FB9DE /* ULCourseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C100B4822A7A09C1008FB9DE /* ULCourseDetailViewController.xib */; };
 		C100B4872A7A17B1008FB9DE /* ULCourseDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100B4862A7A17B1008FB9DE /* ULCourseDetailViewModel.swift */; };
 		C100B4922A7A28DA008FB9DE /* DetailComponentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100B4902A7A28DA008FB9DE /* DetailComponentTableViewCell.swift */; };
-		C100B4932A7A28DA008FB9DE /* ULDetailComponentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C100B4912A7A28DA008FB9DE /* ULDetailComponentTableViewCell.xib */; };
+		C100B4932A7A28DA008FB9DE /* DetailComponentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C100B4912A7A28DA008FB9DE /* DetailComponentTableViewCell.xib */; };
 		C100B4962A7A28F6008FB9DE /* ULTopicComponentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100B4942A7A28F6008FB9DE /* ULTopicComponentTableViewCell.swift */; };
 		C100B4972A7A28F6008FB9DE /* ULTopicComponentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C100B4952A7A28F6008FB9DE /* ULTopicComponentTableViewCell.xib */; };
 		C10535462A584A7D00F10139 /* ULCompletedCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10535442A584A7D00F10139 /* ULCompletedCourseViewController.swift */; };
@@ -83,7 +83,7 @@
 		C100B4822A7A09C1008FB9DE /* ULCourseDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULCourseDetailViewController.xib; sourceTree = "<group>"; };
 		C100B4862A7A17B1008FB9DE /* ULCourseDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULCourseDetailViewModel.swift; sourceTree = "<group>"; };
 		C100B4902A7A28DA008FB9DE /* DetailComponentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailComponentTableViewCell.swift; sourceTree = "<group>"; };
-		C100B4912A7A28DA008FB9DE /* ULDetailComponentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULDetailComponentTableViewCell.xib; sourceTree = "<group>"; };
+		C100B4912A7A28DA008FB9DE /* DetailComponentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailComponentTableViewCell.xib; sourceTree = "<group>"; };
 		C100B4942A7A28F6008FB9DE /* ULTopicComponentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULTopicComponentTableViewCell.swift; sourceTree = "<group>"; };
 		C100B4952A7A28F6008FB9DE /* ULTopicComponentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULTopicComponentTableViewCell.xib; sourceTree = "<group>"; };
 		C10535442A584A7D00F10139 /* ULCompletedCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULCompletedCourseViewController.swift; sourceTree = "<group>"; };
@@ -428,7 +428,7 @@
 			isa = PBXGroup;
 			children = (
 				C100B4952A7A28F6008FB9DE /* ULTopicComponentTableViewCell.xib */,
-				C100B4912A7A28DA008FB9DE /* ULDetailComponentTableViewCell.xib */,
+				C100B4912A7A28DA008FB9DE /* DetailComponentTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -600,7 +600,7 @@
 				C100B4842A7A09C1008FB9DE /* ULCourseDetailViewController.xib in Resources */,
 				C13218392A6618A4009B2DB8 /* ULProfileViewController.xib in Resources */,
 				C11D71E22A454E0100B31C26 /* LaunchScreen.storyboard in Resources */,
-				C100B4932A7A28DA008FB9DE /* ULDetailComponentTableViewCell.xib in Resources */,
+				C100B4932A7A28DA008FB9DE /* DetailComponentTableViewCell.xib in Resources */,
 				C10535472A584A7D00F10139 /* ULCompletedCourseViewController.xib in Resources */,
 				C100B4972A7A28F6008FB9DE /* ULTopicComponentTableViewCell.xib in Resources */,
 				C11BCAAC2A516AC900AEC3AB /* ULHomeViewController.xib in Resources */,
