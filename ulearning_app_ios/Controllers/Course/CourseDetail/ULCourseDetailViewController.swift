@@ -9,6 +9,7 @@ import UIKit
 
 enum DetailsComponents {
     case detailComponent(data: ULSubscription)
+    // case topicsComponent(data: ULSubscription)
 }
 
 class ULCourseDetailViewController: UIViewController {
@@ -24,6 +25,8 @@ class ULCourseDetailViewController: UIViewController {
         }
     }
     
+    var details: [DetailsComponents] = []
+    var index: IndexPath = IndexPath()
     var viewModel: ULCourseDetailViewModel
     
     init(viewModel: ULCourseDetailViewModel) {
@@ -38,15 +41,28 @@ class ULCourseDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("log viewModel \(viewModel.title)")
-        
+                
         configNavBar()
-        tableView.register(
-            ULDetailComponentTableViewCell().nib,
-            forCellReuseIdentifier: String(describing: ULDetailComponentTableViewCell.self)
-        )
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+       
+        
+        tableView.register(UINib(nibName: "DetailComponentTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: "DetailComponentTableViewCell")
 
+        
+        prepareInfo()
+
+    }
+    
+    func prepareInfo() {
+        self.details.removeAll()
+        details = [
+            .detailComponent(data: self.viewModel.subscription)
+        ]
+
+        self.tableView.reloadData()
     }
     
     func configNavBar() {
@@ -111,4 +127,59 @@ class ULCourseDetailViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
 
+}
+
+extension ULCourseDetailViewController: UITableViewDelegate, UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return details.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let component = details[indexPath.row]
+        switch component {
+        case .detailComponent(data: let data):
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: String(describing: DetailComponentTableViewCell.self)
+            ) as! DetailComponentTableViewCell
+            cell.selectionStyle = .none
+            cell.setupCell(data: data, delegate: self)
+            return cell
+        }
+            /*
+        case .topicsComponent(data: let data):
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: String(describing: DetailComponentTableViewCell.self)
+            ) as! DetailComponentTableViewCell
+            cell.selectionStyle = .none
+            cell.setupCell(data: data, delegate: self)
+            return cell
+        } */
+    }
+
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let safeAreaTop = UIApplication.shared.windows.filter
+        { $0.isKeyWindow }.first?.safeAreaInsets.top ?? 0
+
+
+        let magicalSafeAreaTop: CGFloat = safeAreaTop +
+        (navigationController?.navigationBar.frame.height ?? 0)
+
+        if (scrollView.contentOffset.y >= magicalSafeAreaTop) {
+            self.navigationController?.setNavigationBarHidden(false, animated: true)
+        } else {
+            self.navigationController?.setNavigationBarHidden(true, animated: true)
+
+        }
+    }
+
+}
+
+extension ULCourseDetailViewController: DetailComponentTableViewCellProtocol {
+
+    func closeButtonPress(sender: UIButton, cell: DetailComponentTableViewCell) {
+        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
+    }
 }

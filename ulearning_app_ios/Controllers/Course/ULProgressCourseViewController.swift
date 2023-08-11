@@ -168,7 +168,6 @@ extension ULProgressCourseViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let id = subscriptionsDataSource[indexPath.row].id
-        print(subscriptionsDataSource[indexPath.row].title)
         self.openSubscription(id: id)
     }
 }
