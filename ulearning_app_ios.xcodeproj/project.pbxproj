@@ -73,6 +73,10 @@
 		C1DC2F862A6DAE0E00542F7A /* ULUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DC2F852A6DAE0E00542F7A /* ULUserStore.swift */; };
 		C1E8BBFE2A536C31005CCA51 /* ULConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8BBFD2A536C31005CCA51 /* ULConstant.swift */; };
 		C1E8BC002A536D74005CCA51 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8BBFF2A536D74005CCA51 /* UIUtils.swift */; };
+		C1F093A82A8753A800B95995 /* ULTopicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F093A62A8753A800B95995 /* ULTopicCollectionViewCell.swift */; };
+		C1F093A92A8753A800B95995 /* ULTopicCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1F093A72A8753A800B95995 /* ULTopicCollectionViewCell.xib */; };
+		C1F644932A89486500801826 /* ULTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F644922A89486500801826 /* ULTopic.swift */; };
+		C1F644952A89495B00801826 /* ULTopicResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F644942A89495B00801826 /* ULTopicResponse.swift */; };
 		D83A367848C93B9BDAFB7753 /* Pods_ulearning_app_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5ABA8A5D058F62C90973FA /* Pods_ulearning_app_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -147,6 +151,10 @@
 		C1DC2F852A6DAE0E00542F7A /* ULUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULUserStore.swift; sourceTree = "<group>"; };
 		C1E8BBFD2A536C31005CCA51 /* ULConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULConstant.swift; sourceTree = "<group>"; };
 		C1E8BBFF2A536D74005CCA51 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
+		C1F093A62A8753A800B95995 /* ULTopicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULTopicCollectionViewCell.swift; sourceTree = "<group>"; };
+		C1F093A72A8753A800B95995 /* ULTopicCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULTopicCollectionViewCell.xib; sourceTree = "<group>"; };
+		C1F644922A89486500801826 /* ULTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULTopic.swift; sourceTree = "<group>"; };
+		C1F644942A89495B00801826 /* ULTopicResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULTopicResponse.swift; sourceTree = "<group>"; };
 		EAB641E195F443132E92CA7A /* Pods-ulearning_app_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ulearning_app_ios.release.xcconfig"; path = "Target Support Files/Pods-ulearning_app_ios/Pods-ulearning_app_ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,6 +215,7 @@
 				C1BA3F6C2A69072700695D31 /* ULBaseResponseProfile.swift */,
 				C11310EE2A6DC1FA004DAAD8 /* ULLoginResponse.swift */,
 				C15CB7F22A70D06B008500F4 /* ULTokenWebResponse.swift */,
+				C1F644942A89495B00801826 /* ULTopicResponse.swift */,
 			);
 			path = APIResponse;
 			sourceTree = "<group>";
@@ -231,6 +240,7 @@
 				C11BCA912A511DB300AEC3AB /* ULSubscription.swift */,
 				C11BCA932A511E0A00AEC3AB /* ULLearningPackage.swift */,
 				C11BCA952A511F3E00AEC3AB /* ULLearningPackageItem.swift */,
+				C1F644922A89486500801826 /* ULTopic.swift */,
 			);
 			path = DataTypes;
 			sourceTree = "<group>";
@@ -427,6 +437,7 @@
 		C19EE4C12A8600A7006A3B9E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				C1F093A72A8753A800B95995 /* ULTopicCollectionViewCell.xib */,
 				C100B4952A7A28F6008FB9DE /* ULTopicComponentTableViewCell.xib */,
 				C100B4912A7A28DA008FB9DE /* DetailComponentTableViewCell.xib */,
 			);
@@ -437,6 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				C100B4942A7A28F6008FB9DE /* ULTopicComponentTableViewCell.swift */,
+				C1F093A62A8753A800B95995 /* ULTopicCollectionViewCell.swift */,
 				C100B4902A7A28DA008FB9DE /* DetailComponentTableViewCell.swift */,
 			);
 			path = Cells;
@@ -607,6 +619,7 @@
 				C10535512A584B4400F10139 /* ULProgressCourseViewController.xib in Resources */,
 				C10535552A584B5800F10139 /* ULPackageCourseViewController.xib in Resources */,
 				C11D71DF2A454E0100B31C26 /* Assets.xcassets in Resources */,
+				C1F093A92A8753A800B95995 /* ULTopicCollectionViewCell.xib in Resources */,
 				C1720D332A55435F003DCC4E /* ULLoginViewController.xib in Resources */,
 				C155633E2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.xib in Resources */,
 			);
@@ -666,6 +679,7 @@
 				C156545E2A4E924F00E6E42A /* ULAPICourse.swift in Sources */,
 				C15654532A4E3F3100E6E42A /* ULService.swift in Sources */,
 				C1DC2F842A6DACA000542F7A /* ULLoginViewModel.swift in Sources */,
+				C1F644952A89495B00801826 /* ULTopicResponse.swift in Sources */,
 				C15CB7F32A70D06B008500F4 /* ULTokenWebResponse.swift in Sources */,
 				C1C6585F2A5CFE2300077E84 /* ULCourseTableCellViewModel.swift in Sources */,
 				C1B151412A4BF43D0011620D /* ULProfileViewController.swift in Sources */,
@@ -689,9 +703,11 @@
 				C156545C2A4E911400E6E42A /* ULAPIConfig.swift in Sources */,
 				C15CB7F52A70DED3008500F4 /* ULQRScannerViewController.swift in Sources */,
 				C10535542A584B5800F10139 /* ULPackageCourseViewController.swift in Sources */,
+				C1F093A82A8753A800B95995 /* ULTopicCollectionViewCell.swift in Sources */,
 				C15654572A4E3F4D00E6E42A /* ULRequest.swift in Sources */,
 				C1B1513D2A4BF4220011620D /* ULHomeViewController.swift in Sources */,
 				C155633D2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.swift in Sources */,
+				C1F644932A89486500801826 /* ULTopic.swift in Sources */,
 				C1C6585D2A5CFCBC00077E84 /* ULObservable.swift in Sources */,
 				C1C658682A5D28C800077E84 /* ULCourseTableViewCell.swift in Sources */,
 				C11BCA942A511E0A00AEC3AB /* ULLearningPackage.swift in Sources */,

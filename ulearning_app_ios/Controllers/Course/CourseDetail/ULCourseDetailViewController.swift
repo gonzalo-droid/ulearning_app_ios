@@ -9,7 +9,7 @@ import UIKit
 
 enum DetailsComponents {
     case detailComponent(data: ULSubscription)
-    // case topicsComponent(data: ULSubscription)
+    case topicsComponent(data: ULCourse)
 }
 
 class ULCourseDetailViewController: UIViewController {
@@ -41,9 +41,7 @@ class ULCourseDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        configNavBar()
-        
+                    
         tableView.delegate = self
         tableView.dataSource = self
        
@@ -51,6 +49,8 @@ class ULCourseDetailViewController: UIViewController {
         tableView.register(UINib(nibName: "DetailComponentTableViewCell", bundle: nil),
                            forCellReuseIdentifier: "DetailComponentTableViewCell")
 
+        tableView.register(UINib(nibName: "ULTopicComponentTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: "ULTopicComponentTableViewCell")
         
         prepareInfo()
 
@@ -59,42 +59,20 @@ class ULCourseDetailViewController: UIViewController {
     func prepareInfo() {
         self.details.removeAll()
         details = [
-            .detailComponent(data: self.viewModel.subscription)
+            .detailComponent(
+                data: self.viewModel.subscription
+            )
         ]
+        
+        details.append(
+            .topicsComponent(
+                data: self.viewModel.subscription.course
+            )
+        )
 
         self.tableView.reloadData()
     }
     
-    func configNavBar() {
-        if let nav = self.navigationController {
-            let title = self.viewModel.title
-            navigationItem.hidesBackButton = true
-            nav.navigationItem.largeTitleDisplayMode = .never
-            nav.navigationBar.prefersLargeTitles = false
-            nav.navigationBar.sizeToFit()
-
-            self.title = title
-            self.navigationItem
-                .titleView =  setTitle(title: title,
-                                       titleColor: .blueUL,
-                                       titleSize: 18,
-                                       view: self.view)
-
-            let searchButtonItem = UIBarButtonItem(
-                image: UIImage(
-                    named: "arrow.backward"
-                ),
-                style: .plain,
-                target: self,
-                action: #selector(backButtonPressed)
-            )
-
-            self.navigationItem.rightBarButtonItems = [
-                searchButtonItem,
-            ]
-        }
-
-    }
     
     func setTitle(title: String,
                   titleColor: UIColor,
@@ -145,6 +123,13 @@ extension ULCourseDetailViewController: UITableViewDelegate, UITableViewDataSour
             cell.selectionStyle = .none
             cell.setupCell(data: data, delegate: self)
             return cell
+        case .topicsComponent(data: let data):
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: String(describing: ULTopicComponentTableViewCell.self)
+            ) as! ULTopicComponentTableViewCell
+            cell.selectionStyle = .none
+            cell.setupCell(data: data, delegate: self)
+            return cell
         }
             /*
         case .topicsComponent(data: let data):
@@ -182,4 +167,13 @@ extension ULCourseDetailViewController: DetailComponentTableViewCellProtocol {
         self.dismiss(animated: true)
         self.navigationController?.popViewController(animated: true)
     }
+}
+
+extension ULCourseDetailViewController: ULTopicComponentTableViewCellProtocol {
+    func goToMessageBtn(sender: UIButton, cell: ULTopicComponentTableViewCell) {
+        // 
+    }
+    
+
+    
 }

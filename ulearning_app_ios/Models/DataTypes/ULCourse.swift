@@ -42,7 +42,7 @@ class ULCourse:Mappable{
     var ratingCount: Int?
     var record: Bool?
     var scheduleLink: String?
-    var selfStudyHour: String?
+    var selfStudyHour: Int?
     var slug: String?
     var studentsCount: Int?
     var syllabusLink: String?
@@ -54,7 +54,7 @@ class ULCourse:Mappable{
         self.init()
         mapping(map: map)
     }
-
+    
     func mapping(map: Map) {
         amount <- map["amount"]
         asynchronousHour <- map["asynchronous_hour"]
@@ -96,6 +96,30 @@ class ULCourse:Mappable{
         target <- map["target"]
         title <- map["title"]
     }
-
     
+    
+    func formatModality() -> String {
+        switch modality {
+        case "virtual":
+            return "Virtual"
+        case "onsite":
+            return "En sitio"
+        case "blend":
+            return "Semipresencial"
+        case "recorded":
+            return "Grabado"
+        case "online":
+            return "Virtual"
+        case "self_learning":
+            return "Autoaprendizaje"
+        case "teacher":
+            return "Con docente"
+        case "platform":
+            return "En Plataforma"
+        case "lms":
+            return "LMS"
+        default:
+            return ""
+        }
+    }
 }

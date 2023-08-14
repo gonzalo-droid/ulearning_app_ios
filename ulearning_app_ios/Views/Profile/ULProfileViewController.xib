@@ -35,7 +35,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EtO-Lg-H4G">
-                            <rect key="frame" x="20" y="0.0" width="393" height="852"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vag-2z-UE9" userLabel="container">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -397,16 +397,12 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <constraints>
-                                <constraint firstItem="vag-2z-UE9" firstAttribute="width" secondItem="EtO-Lg-H4G" secondAttribute="width" id="icO-VL-Q7g"/>
-                            </constraints>
                         </stackView>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="EtO-Lg-H4G" firstAttribute="leading" secondItem="hwh-V3-fqM" secondAttribute="leading" constant="20" symbolic="YES" id="10j-wD-7q6"/>
-                        <constraint firstAttribute="trailing" secondItem="EtO-Lg-H4G" secondAttribute="trailing" id="6gh-EW-a5I"/>
+                        <constraint firstAttribute="trailing" secondItem="EtO-Lg-H4G" secondAttribute="trailing" id="E6i-Wt-YJJ"/>
                         <constraint firstAttribute="bottom" secondItem="EtO-Lg-H4G" secondAttribute="bottom" constant="20" symbolic="YES" id="EXq-Fs-q0P"/>
-                        <constraint firstItem="EtO-Lg-H4G" firstAttribute="width" secondItem="hwh-V3-fqM" secondAttribute="width" id="Jrl-Hu-CT8"/>
+                        <constraint firstItem="EtO-Lg-H4G" firstAttribute="leading" secondItem="hwh-V3-fqM" secondAttribute="leading" id="OqD-eP-swO"/>
                         <constraint firstItem="EtO-Lg-H4G" firstAttribute="height" secondItem="hwh-V3-fqM" secondAttribute="height" priority="250" id="qrJ-Yd-VJG"/>
                         <constraint firstItem="EtO-Lg-H4G" firstAttribute="top" secondItem="hwh-V3-fqM" secondAttribute="top" id="thT-zX-VMf"/>
                     </constraints>
@@ -415,11 +411,12 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="hwh-V3-fqM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Bjt-sL-nx8"/>
-                <constraint firstItem="hwh-V3-fqM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="J8P-rJ-gnT"/>
-                <constraint firstItem="hwh-V3-fqM" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="UXL-tX-XYT"/>
+                <constraint firstAttribute="bottom" secondItem="hwh-V3-fqM" secondAttribute="bottom" id="MyF-MM-Kqn"/>
+                <constraint firstItem="hwh-V3-fqM" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Xk5-aW-jKX"/>
                 <constraint firstAttribute="bottom" secondItem="hwh-V3-fqM" secondAttribute="bottom" id="mLi-8x-V96"/>
+                <constraint firstItem="hwh-V3-fqM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mUR-63-D59"/>
                 <constraint firstItem="hwh-V3-fqM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xah-NM-S7N"/>
+                <constraint firstItem="hwh-V3-fqM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ypv-f2-neI"/>
             </constraints>
             <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>

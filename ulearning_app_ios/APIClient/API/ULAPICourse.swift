@@ -35,6 +35,10 @@ enum ULAPICourse: ULAPIConfig {
         courseIds: String
     )
     
+    case getTopicsByCourse(
+        courseId: Int
+    )
+    
     /// POST
     
     case myCertificates(
@@ -91,6 +95,8 @@ enum ULAPICourse: ULAPIConfig {
         
         case .showGuestFile(_):
             return "show-guest-file"
+        case .getTopicsByCourse(courseId: let courseId):
+            return "topics_preview/?course_id=\(courseId)"
         }
     }
 

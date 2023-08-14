@@ -105,21 +105,59 @@ class DetailComponentTableViewCell: UITableViewCell {
                 .kern: -0.46,
             ]
         )
-        
+        var descriptionLarge = ""
+        if let plainString = parseHTMLToPlainString(html: data.course?.descriptionLarge ?? "") {
+            descriptionLarge = plainString
+            print(plainString)
+        }
         
         let paragraphDescriptionContent = NSMutableParagraphStyle()
         paragraphDescriptionContent.lineHeightMultiple = 1.22
         descriptionLabel.attributedText = NSMutableAttributedString(
-            string: data.course?.descriptionLarge ?? "",
+            string: descriptionLarge,
             attributes: [
                 .paragraphStyle: paragraphDescriptionContent
             ]
         )
         
+        var selfStudyHour = "--"
+        if let hour = data.course?.selfStudyHour {
+            selfStudyHour = String(hour.self)
+        }
+        timeLabel.text = "\(selfStudyHour) hr"
+        modeLabel.text = data.course?.formatModality()
+        
+        var formattedCount = "--"
+        if let lessonsCount = data.course?.lessonsCount {
+            formattedCount = String(lessonsCount.self)
+        }
+        sessionLabel.text = formattedCount
+        
+        
+        
     }
     
     @objc func closeButtonPress(_ sender: UIButton) {
         self.delegate?.closeButtonPress(sender: sender, cell: self)
+    }
+    
+    func parseHTMLToPlainString(html: String) -> String? {
+        guard let data = html.data(using: .utf8) else {
+            return nil
+        }
+        
+        do {
+            let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
+                .documentType: NSAttributedString.DocumentType.html,
+                .characterEncoding: String.Encoding.utf8.rawValue
+            ]
+            
+            let attributedString = try NSAttributedString(data: data, options: options, documentAttributes: nil)
+            return attributedString.string
+        } catch {
+            print("Error parsing HTML: \(error)")
+            return nil
+        }
     }
     
 }

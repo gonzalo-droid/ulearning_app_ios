@@ -33,6 +33,4 @@ class ULImage:Mappable{
         size <- map["size"]
         uuid <- map["uuid"]
     }
-    
-    
 }
