@@ -53,6 +53,7 @@
 		C15CB7F52A70DED3008500F4 /* ULQRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15CB7F42A70DED3008500F4 /* ULQRScannerViewController.swift */; };
 		C1720D322A55435F003DCC4E /* ULLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1720D302A55435F003DCC4E /* ULLoginViewController.swift */; };
 		C1720D332A55435F003DCC4E /* ULLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1720D312A55435F003DCC4E /* ULLoginViewController.xib */; };
+		C1874B722A8B43A1007D432F /* ULTopicCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1874B712A8B43A1007D432F /* ULTopicCellViewModel.swift */; };
 		C1B1513B2A4BF4110011620D /* ULTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513A2A4BF4110011620D /* ULTabBarViewController.swift */; };
 		C1B1513D2A4BF4220011620D /* ULHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513C2A4BF4220011620D /* ULHomeViewController.swift */; };
 		C1B1513F2A4BF4320011620D /* ULMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513E2A4BF4320011620D /* ULMessageViewController.swift */; };
@@ -131,6 +132,7 @@
 		C15CB7F42A70DED3008500F4 /* ULQRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULQRScannerViewController.swift; sourceTree = "<group>"; };
 		C1720D302A55435F003DCC4E /* ULLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULLoginViewController.swift; sourceTree = "<group>"; };
 		C1720D312A55435F003DCC4E /* ULLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULLoginViewController.xib; sourceTree = "<group>"; };
+		C1874B712A8B43A1007D432F /* ULTopicCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULTopicCellViewModel.swift; sourceTree = "<group>"; };
 		C1B1513A2A4BF4110011620D /* ULTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULTabBarViewController.swift; sourceTree = "<group>"; };
 		C1B1513C2A4BF4220011620D /* ULHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULHomeViewController.swift; sourceTree = "<group>"; };
 		C1B1513E2A4BF4320011620D /* ULMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULMessageViewController.swift; sourceTree = "<group>"; };
@@ -517,6 +519,7 @@
 				C13218342A65CC59009B2DB8 /* ULLearningPackageTableCellViewModel.swift */,
 				C13218362A65CD04009B2DB8 /* ULPackageCourseViewModel.swift */,
 				C100B4862A7A17B1008FB9DE /* ULCourseDetailViewModel.swift */,
+				C1874B712A8B43A1007D432F /* ULTopicCellViewModel.swift */,
 			);
 			path = Course;
 			sourceTree = "<group>";
@@ -723,6 +726,7 @@
 				C11BCA922A511DB300AEC3AB /* ULSubscription.swift in Sources */,
 				C1B1513B2A4BF4110011620D /* ULTabBarViewController.swift in Sources */,
 				C10535462A584A7D00F10139 /* ULCompletedCourseViewController.swift in Sources */,
+				C1874B722A8B43A1007D432F /* ULTopicCellViewModel.swift in Sources */,
 				C1BA3F6F2A6907F000695D31 /* ULAPIAuth.swift in Sources */,
 				C1B1513F2A4BF4320011620D /* ULMessageViewController.swift in Sources */,
 				C11BCA8A2A51148500AEC3AB /* ULCategory.swift in Sources */,

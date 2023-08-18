@@ -9,7 +9,7 @@ import UIKit
 
 enum DetailsComponents {
     case detailComponent(data: ULSubscription)
-    case topicsComponent(data: ULCourse)
+    case topicsComponent(topics: [ULTopic])
 }
 
 class ULCourseDetailViewController: UIViewController {
@@ -28,6 +28,7 @@ class ULCourseDetailViewController: UIViewController {
     var details: [DetailsComponents] = []
     var index: IndexPath = IndexPath()
     var viewModel: ULCourseDetailViewModel
+    var listTopics: [ULTopic] = []
     
     init(viewModel: ULCourseDetailViewModel) {
         self.viewModel = viewModel
@@ -41,19 +42,28 @@ class ULCourseDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.getTokenWeb()
                     
         tableView.delegate = self
         tableView.dataSource = self
        
-        
         tableView.register(UINib(nibName: "DetailComponentTableViewCell", bundle: nil),
                            forCellReuseIdentifier: "DetailComponentTableViewCell")
 
         tableView.register(UINib(nibName: "ULTopicComponentTableViewCell", bundle: nil),
                            forCellReuseIdentifier: "ULTopicComponentTableViewCell")
         
-        prepareInfo()
-
+        viewModel.getTopicsData(courseId: viewModel.subscription.courseId)
+        
+        viewModel.topicsObservable.bind { [weak self] topicsObservable in
+            guard let self = self,
+                  let topicsObservable = topicsObservable else {
+                return
+            }
+            self.listTopics = topicsObservable
+            prepareInfo()
+        }
     }
     
     func prepareInfo() {
@@ -66,33 +76,11 @@ class ULCourseDetailViewController: UIViewController {
         
         details.append(
             .topicsComponent(
-                data: self.viewModel.subscription.course
+                topics: listTopics
             )
         )
 
         self.tableView.reloadData()
-    }
-    
-    
-    func setTitle(title: String,
-                  titleColor: UIColor,
-                  titleSize: CGFloat,
-                  view: UIView) -> UIView {
-
-        let titleLabel = UILabel(frame: CGRect(x:8, y: 0, width: view.frame.width - 100, height: 30))
-
-        titleLabel.backgroundColor = UIColor.clear
-        titleLabel.textColor = titleColor
-        titleLabel.adjustsFontSizeToFitWidth = false
-        titleLabel.font = UIFont.boldSystemFont(ofSize: titleSize)
-        titleLabel.lineBreakMode = .byTruncatingTail
-        titleLabel.textAlignment = .left
-        titleLabel.text = title
-
-        let titleView = UIView(frame: CGRect(x:0, y:0, width: view.frame.width - 30, height:30))
-        titleView.addSubview(titleLabel)
-
-        return titleView
     }
     
     func setupNavigationBar(){
@@ -123,7 +111,7 @@ extension ULCourseDetailViewController: UITableViewDelegate, UITableViewDataSour
             cell.selectionStyle = .none
             cell.setupCell(data: data, delegate: self)
             return cell
-        case .topicsComponent(data: let data):
+        case .topicsComponent(topics: let data):
             let cell = tableView.dequeueReusableCell(
                 withIdentifier: String(describing: ULTopicComponentTableViewCell.self)
             ) as! ULTopicComponentTableViewCell
@@ -131,15 +119,6 @@ extension ULCourseDetailViewController: UITableViewDelegate, UITableViewDataSour
             cell.setupCell(data: data, delegate: self)
             return cell
         }
-            /*
-        case .topicsComponent(data: let data):
-            let cell = tableView.dequeueReusableCell(
-                withIdentifier: String(describing: DetailComponentTableViewCell.self)
-            ) as! DetailComponentTableViewCell
-            cell.selectionStyle = .none
-            cell.setupCell(data: data, delegate: self)
-            return cell
-        } */
     }
 
 
@@ -170,10 +149,21 @@ extension ULCourseDetailViewController: DetailComponentTableViewCellProtocol {
 }
 
 extension ULCourseDetailViewController: ULTopicComponentTableViewCellProtocol {
+    func showDetails(topic: ULTopic) {
+        let parms = "/courses/\(String(describing: topic.courseId))/topics/\(String(describing: topic.id))"
+        
+        if let urlViewModel = viewModel.urlTopic {
+            let webTopic = "\(urlViewModel)?return=\(parms)"
+            if let url = URL(string: webTopic ?? viewModel.urlStudent) {
+                UIApplication.shared.open(url, options: [:])
+            }
+        }
+        
+       
+    }
+    
     func goToMessageBtn(sender: UIButton, cell: ULTopicComponentTableViewCell) {
         // 
     }
-    
 
-    
 }

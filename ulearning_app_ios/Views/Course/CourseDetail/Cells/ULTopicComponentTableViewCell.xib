@@ -96,34 +96,34 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gox-ug-iPF" userLabel="Container topics">
-                        <rect key="frame" x="0.0" y="150" width="320" height="300"/>
+                        <rect key="frame" x="0.0" y="150" width="320" height="250"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1Fb-DB-bUJ">
-                                <rect key="frame" x="20" y="0.0" width="280" height="300"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="20" y="0.0" width="280" height="252"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ffQ-Kv-ewH">
-                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="itemSize" width="128" height="40"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1Fb-DB-bUJ" firstAttribute="top" secondItem="Gox-ug-iPF" secondAttribute="top" id="V3x-oi-Nr7"/>
                             <constraint firstAttribute="trailing" secondItem="1Fb-DB-bUJ" secondAttribute="trailing" constant="20" id="Zc4-W3-FcQ"/>
                             <constraint firstItem="1Fb-DB-bUJ" firstAttribute="leading" secondItem="Gox-ug-iPF" secondAttribute="leading" constant="20" id="gBF-sY-Kfe"/>
-                            <constraint firstAttribute="bottom" secondItem="1Fb-DB-bUJ" secondAttribute="bottom" id="iJX-Xm-XBL"/>
+                            <constraint firstAttribute="bottom" secondItem="1Fb-DB-bUJ" secondAttribute="bottom" constant="-2" id="kPK-fr-X3i"/>
+                            <constraint firstItem="1Fb-DB-bUJ" firstAttribute="top" secondItem="Gox-ug-iPF" secondAttribute="top" id="pVR-AG-Eqm"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Gox-ug-iPF" secondAttribute="bottom" id="8JO-dq-hRP"/>
                     <constraint firstItem="CM2-yJ-0m7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Vm3-fM-DnM"/>
                     <constraint firstAttribute="trailing" secondItem="Gox-ug-iPF" secondAttribute="trailing" id="ZsT-9E-PZK"/>
                     <constraint firstAttribute="trailing" secondItem="CM2-yJ-0m7" secondAttribute="trailing" id="bZ6-JY-Vze"/>
                     <constraint firstItem="Gox-ug-iPF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ctA-qY-RYm"/>
-                    <constraint firstItem="Gox-ug-iPF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="100" id="eSd-L2-AVX"/>
                     <constraint firstItem="Gox-ug-iPF" firstAttribute="top" secondItem="CM2-yJ-0m7" secondAttribute="bottom" constant="20" id="fhv-Wu-lUY"/>
                     <constraint firstAttribute="bottom" secondItem="CM2-yJ-0m7" secondAttribute="bottom" constant="270" id="jNp-jd-Gw7"/>
                     <constraint firstItem="CM2-yJ-0m7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="jwg-C9-93L"/>
@@ -133,6 +133,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="containerBtnGoToMessage" destination="5cO-A0-m6J" id="iEb-Hf-ObB"/>
+                <outlet property="topicsCollectionView" destination="1Fb-DB-bUJ" id="rMZ-xq-VQ0"/>
             </connections>
             <point key="canvasLocation" x="53.435114503816791" y="39.436619718309863"/>
         </tableViewCell>
@@ -140,9 +141,6 @@
     <resources>
         <image name="arrow.forward" catalog="system" width="128" height="95"/>
         <image name="icloud.and.arrow.down.fill" catalog="system" width="128" height="111"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

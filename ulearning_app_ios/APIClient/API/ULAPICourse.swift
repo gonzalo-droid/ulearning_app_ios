@@ -96,7 +96,7 @@ enum ULAPICourse: ULAPIConfig {
         case .showGuestFile(_):
             return "show-guest-file"
         case .getTopicsByCourse(courseId: let courseId):
-            return "topics_preview/?course_id=\(courseId)"
+            return "topics_preview/\(courseId)"
         }
     }
 
