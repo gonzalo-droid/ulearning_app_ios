@@ -100,4 +100,32 @@ class CourseService {
         }
     }
     
+    static func getCoursePercentages(
+        courseIds: String,
+        successBlock: @escaping(_ topics: [ULCoursePercentage]?) -> Void,
+        errorBlock: @escaping(_ error:  String?) -> Void
+    ) {
+        
+        let pathUrl: ULAPICourse = .getCoursePercentage(courseIds: courseIds)
+        
+        AF.request(pathUrl).validate(statusCode: 200..<205).responseObject {
+            (response: DataResponse<ULCoursePercentageResponse, AFError>) in
+            
+            switch response.result {
+            case .success(let value):
+                if value.message == nil {
+                    if let subs = value.data {
+                        successBlock(subs)
+                    } else {
+                        errorBlock("data is nil")
+                    }
+                } else {
+                    errorBlock(value.message ?? "ERROR AQUI")
+                }
+            case .failure(let error):
+                errorBlock(error.localizedDescription)
+            }
+        }
+    }
+    
 }

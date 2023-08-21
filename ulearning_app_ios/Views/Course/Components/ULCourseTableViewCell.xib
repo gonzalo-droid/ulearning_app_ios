@@ -42,19 +42,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gkq-Ff-TRX">
+                                <rect key="frame" x="0.0" y="119" width="280" height="4"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="FUv-am-uwq" firstAttribute="top" secondItem="xRB-bo-DXI" secondAttribute="top" id="2tP-kz-vie"/>
                             <constraint firstAttribute="bottom" secondItem="FUv-am-uwq" secondAttribute="bottom" id="7YT-sP-nZA"/>
+                            <constraint firstAttribute="trailing" secondItem="gkq-Ff-TRX" secondAttribute="trailing" id="AOy-Fs-70u"/>
                             <constraint firstAttribute="trailing" secondItem="pB4-dn-WXv" secondAttribute="trailing" constant="12" id="Ble-nG-WLM"/>
                             <constraint firstItem="FUv-am-uwq" firstAttribute="leading" secondItem="xRB-bo-DXI" secondAttribute="leading" id="GCO-67-FsL"/>
                             <constraint firstAttribute="trailing" secondItem="pkC-2M-3dI" secondAttribute="trailing" constant="12" id="INY-lc-Btr"/>
                             <constraint firstItem="pB4-dn-WXv" firstAttribute="leading" secondItem="xRB-bo-DXI" secondAttribute="leading" constant="12" id="Ls3-a7-bHK"/>
+                            <constraint firstAttribute="bottom" secondItem="gkq-Ff-TRX" secondAttribute="bottom" id="Pav-7U-qzg"/>
                             <constraint firstItem="pkC-2M-3dI" firstAttribute="top" secondItem="pB4-dn-WXv" secondAttribute="bottom" constant="14" id="j9Y-B3-pI3"/>
                             <constraint firstItem="pB4-dn-WXv" firstAttribute="top" secondItem="xRB-bo-DXI" secondAttribute="top" constant="12" id="pi3-S4-IkF"/>
                             <constraint firstItem="pkC-2M-3dI" firstAttribute="leading" secondItem="xRB-bo-DXI" secondAttribute="leading" constant="12" id="vm3-b7-UGS"/>
                             <constraint firstAttribute="trailing" secondItem="FUv-am-uwq" secondAttribute="trailing" id="wVe-4o-uwa"/>
+                            <constraint firstItem="gkq-Ff-TRX" firstAttribute="leading" secondItem="xRB-bo-DXI" secondAttribute="leading" id="x5U-mh-8L1"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -72,6 +78,7 @@
                 <outlet property="categoryLabel" destination="pB4-dn-WXv" id="yzi-pk-Xms"/>
                 <outlet property="containerView" destination="xRB-bo-DXI" id="ZzG-xx-aRy"/>
                 <outlet property="courseImageView" destination="0e2-Cx-uFK" id="cif-8E-UQ5"/>
+                <outlet property="progressAdvance" destination="gkq-Ff-TRX" id="FEF-1y-2eb"/>
                 <outlet property="titleCourseLabel" destination="pkC-2M-3dI" id="CeL-pM-3Xl"/>
             </connections>
             <point key="canvasLocation" x="112.97709923664122" y="22.183098591549296"/>

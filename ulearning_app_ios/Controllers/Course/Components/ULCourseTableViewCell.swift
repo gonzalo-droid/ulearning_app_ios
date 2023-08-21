@@ -33,6 +33,9 @@ class ULCourseTableViewCell: UITableViewCell {
     }
     
     
+    @IBOutlet weak var progressAdvance: UIProgressView!
+    
+    
     static var identifier: String {
         get {
             "ULCourseTableViewCell"
@@ -52,6 +55,10 @@ class ULCourseTableViewCell: UITableViewCell {
     func setupCell(viewModel: ULCourseTableCellViewModel) {
         self.categoryLabel.text = viewModel.category
         self.titleCourseLabel.text = viewModel.title
+        progressAdvance.isHidden = viewModel.isFinished
+        debugPrint("progressAdvance \(viewModel.percentage)")
+
+         progressAdvance.setProgress(viewModel.percentage ?? Float(0), animated: true)
         
         if let imageUrl = viewModel.image {
             debugPrint("imageUrl \(String(describing: imageUrl))")

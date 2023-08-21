@@ -53,6 +53,8 @@
 		C15CB7F52A70DED3008500F4 /* ULQRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15CB7F42A70DED3008500F4 /* ULQRScannerViewController.swift */; };
 		C1720D322A55435F003DCC4E /* ULLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1720D302A55435F003DCC4E /* ULLoginViewController.swift */; };
 		C1720D332A55435F003DCC4E /* ULLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1720D312A55435F003DCC4E /* ULLoginViewController.xib */; };
+		C184F23B2A930E960075D61A /* ULCoursePercentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C184F23A2A930E960075D61A /* ULCoursePercentage.swift */; };
+		C184F23D2A930F3B0075D61A /* ULCoursePercentageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C184F23C2A930F3B0075D61A /* ULCoursePercentageResponse.swift */; };
 		C1874B722A8B43A1007D432F /* ULTopicCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1874B712A8B43A1007D432F /* ULTopicCellViewModel.swift */; };
 		C1B1513B2A4BF4110011620D /* ULTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513A2A4BF4110011620D /* ULTabBarViewController.swift */; };
 		C1B1513D2A4BF4220011620D /* ULHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513C2A4BF4220011620D /* ULHomeViewController.swift */; };
@@ -132,6 +134,8 @@
 		C15CB7F42A70DED3008500F4 /* ULQRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULQRScannerViewController.swift; sourceTree = "<group>"; };
 		C1720D302A55435F003DCC4E /* ULLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULLoginViewController.swift; sourceTree = "<group>"; };
 		C1720D312A55435F003DCC4E /* ULLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULLoginViewController.xib; sourceTree = "<group>"; };
+		C184F23A2A930E960075D61A /* ULCoursePercentage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULCoursePercentage.swift; sourceTree = "<group>"; };
+		C184F23C2A930F3B0075D61A /* ULCoursePercentageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULCoursePercentageResponse.swift; sourceTree = "<group>"; };
 		C1874B712A8B43A1007D432F /* ULTopicCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULTopicCellViewModel.swift; sourceTree = "<group>"; };
 		C1B1513A2A4BF4110011620D /* ULTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULTabBarViewController.swift; sourceTree = "<group>"; };
 		C1B1513C2A4BF4220011620D /* ULHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULHomeViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +222,7 @@
 				C11310EE2A6DC1FA004DAAD8 /* ULLoginResponse.swift */,
 				C15CB7F22A70D06B008500F4 /* ULTokenWebResponse.swift */,
 				C1F644942A89495B00801826 /* ULTopicResponse.swift */,
+				C184F23C2A930F3B0075D61A /* ULCoursePercentageResponse.swift */,
 			);
 			path = APIResponse;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 				C11BCA932A511E0A00AEC3AB /* ULLearningPackage.swift */,
 				C11BCA952A511F3E00AEC3AB /* ULLearningPackageItem.swift */,
 				C1F644922A89486500801826 /* ULTopic.swift */,
+				C184F23A2A930E960075D61A /* ULCoursePercentage.swift */,
 			);
 			path = DataTypes;
 			sourceTree = "<group>";
@@ -689,6 +695,7 @@
 				C11BCA902A511BF400AEC3AB /* ULTeacher.swift in Sources */,
 				C11BCA962A511F3E00AEC3AB /* ULLearningPackageItem.swift in Sources */,
 				C13218352A65CC59009B2DB8 /* ULLearningPackageTableCellViewModel.swift in Sources */,
+				C184F23B2A930E960075D61A /* ULCoursePercentage.swift in Sources */,
 				C10535502A584B4400F10139 /* ULProgressCourseViewController.swift in Sources */,
 				C1E8BC002A536D74005CCA51 /* UIUtils.swift in Sources */,
 				C1BA3F712A6909BF00695D31 /* AuthService.swift in Sources */,
@@ -725,6 +732,7 @@
 				C15654552A4E3F3F00E6E42A /* ULEndpoint.swift in Sources */,
 				C11BCA922A511DB300AEC3AB /* ULSubscription.swift in Sources */,
 				C1B1513B2A4BF4110011620D /* ULTabBarViewController.swift in Sources */,
+				C184F23D2A930F3B0075D61A /* ULCoursePercentageResponse.swift in Sources */,
 				C10535462A584A7D00F10139 /* ULCompletedCourseViewController.swift in Sources */,
 				C1874B722A8B43A1007D432F /* ULTopicCellViewModel.swift in Sources */,
 				C1BA3F6F2A6907F000695D31 /* ULAPIAuth.swift in Sources */,

@@ -33,7 +33,9 @@ class ULSubscription: Mappable {
     var learningPackage: ULLearningPackage?
     var course: ULCourse?
     var group: ULGroup?
-
+    var percentageAdvance: String?
+    
+    
     convenience required init?(map: Map) {
         self.init()
         mapping(map: map)
@@ -64,5 +66,6 @@ class ULSubscription: Mappable {
         classification <- map["classification"]
         learningPackage <- map["learning_package"]
         learningPackageId <- map["learning_package_id"]
+        percentageAdvance <- map["percentageAdvance"]
     }
 }
