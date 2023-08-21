@@ -102,6 +102,18 @@ class ULCompletedCourseViewController: UIViewController {
             self.reloadTableView()
         }
     }
+    
+    func openSubscription(id: Int) {
+        guard let subscription = viewModel.retriveSubscription(withId: id) else {
+            return
+        }
+        
+        DispatchQueue.main.async {
+            let viewModel = ULCourseDetailViewModel(data: subscription)
+            let controller = ULCourseDetailViewController(viewModel: viewModel)
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
 }
 
 
@@ -148,6 +160,6 @@ extension ULCompletedCourseViewController: UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let id = subscriptionsDataSource[indexPath.row].id
-        // self.openDetails(movieId: movieId)
+        self.openSubscription(id: id)
     }
 }

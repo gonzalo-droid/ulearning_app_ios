@@ -56,15 +56,11 @@ class ULCourseTableViewCell: UITableViewCell {
         self.categoryLabel.text = viewModel.category
         self.titleCourseLabel.text = viewModel.title
         progressAdvance.isHidden = viewModel.isFinished
-        debugPrint("progressAdvance \(viewModel.percentage)")
-
-         progressAdvance.setProgress(viewModel.percentage ?? Float(0), animated: true)
+        progressAdvance.setProgress(viewModel.percentage ?? Float(0), animated: true)
         
         if let imageUrl = viewModel.image {
-            debugPrint("imageUrl \(String(describing: imageUrl))")
             self.courseImageView.kf.setImage(with: imageUrl)
-            
-        } 
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

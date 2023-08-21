@@ -30,8 +30,8 @@ class ULTopicCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var containerTopic: UIView! {
         didSet {
-            containerTopic.layer.cornerRadius = 16
-            containerTopic.layer.borderWidth = 1
+            containerTopic.layer.cornerRadius = 8
+            containerTopic.layer.borderWidth = 0.5
         }
     }
 
