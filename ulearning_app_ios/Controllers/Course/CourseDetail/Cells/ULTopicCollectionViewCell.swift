@@ -17,8 +17,8 @@ class ULTopicCollectionViewCell: UICollectionViewCell {
 
     var topic: ULTopic?
     var delegate: ULTopicComponentTableViewCellProtocol?
-    let iconModule = UIImage(named: "flag")?.withTintColor(.blueUL)
-    let iconSession = UIImage(named: "checkmark.circle.fill")?.withTintColor(.blueUL)
+    let iconModule = UIImage(systemName: "flag")?.withTintColor(.blueUL)
+    let iconSession = UIImage(systemName: "checkmark.circle.fill")?.withTintColor(.blueUL)
     
     @IBOutlet weak var iconTypeImageView: UIImageView!{
         didSet {
@@ -41,15 +41,13 @@ class ULTopicCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func setupCell(topic: ULTopic, delegate: ULTopicComponentTableViewCellProtocol?) {
         self.topic = topic
         self.delegate = delegate
         titleTopicLabel.text = self.topic?.title
-        
-         iconTypeImageView.image = (self.topic?.parentId == nil) ? iconModule : iconSession
+        iconTypeImageView.image = (self.topic?.parentId != nil) ? iconSession : iconModule
 
     }
 

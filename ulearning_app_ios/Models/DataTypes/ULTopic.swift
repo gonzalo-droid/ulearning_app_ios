@@ -14,6 +14,7 @@ class ULTopic:Mappable{
     var id: Int?
     var courseId: Int?
     var order: Int?
+    var orderIndex: Int = 0
     var parentId: Int?
     var title: String?
     var type: String?
@@ -29,6 +30,7 @@ class ULTopic:Mappable{
         id <- map["id"]
         courseId <- map["courseId"]
         order <- map["order"]
+        orderIndex <- map["orderIndex"]
         parentId <- map["parent_id"]
         title <- map["title"]
         type <- map["type"]

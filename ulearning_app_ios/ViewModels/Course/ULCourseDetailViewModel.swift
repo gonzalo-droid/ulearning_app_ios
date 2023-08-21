@@ -27,23 +27,27 @@ class ULCourseDetailViewModel {
 
         CourseService.getTopics(courseId:courseId, successBlock: { [weak self] topics in
             guard let self = self else { return }
-            
+
             var mutableTopics: [ULTopic] = []
-
-            if topics != nil {
-                topics!.forEach { topic in
+            let index = 0
+            if let unwrappedTopics = topics {
+                for topic in unwrappedTopics {
                     mutableTopics.append(topic)
-
+                    topic.orderIndex += index
+                    debugPrint("item topics \(topic.title) \(topic.orderIndex)")
                     if let children = topic.children {
-                        children.forEach { child in
+                        for child in children {
                             mutableTopics.append(child)
+                            child.orderIndex += index
+                            debugPrint("item topics \(child.title) \(child.orderIndex)")
+
                         }
                     }
                 }
             }
-            
-            
             self.topicsObservable.value = mutableTopics
+
+            
         }, errorBlock: { [weak self] error in
             guard let self = self else { return }
         })

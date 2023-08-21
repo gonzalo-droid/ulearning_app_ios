@@ -49,11 +49,20 @@ class ULTopicComponentTableViewCell: UITableViewCell {
     }
     
     func setupCell(data: [ULTopic], delegate: ULTopicComponentTableViewCellProtocol) {
-        self.tempArray = data.shuffled()
-        self.tempArray.shuffle()
+        // order list
+        let unsortedList: [ULTopic] = data
+
+        let sortedList = unsortedList.sorted { $0.orderIndex < $1.orderIndex }
+        
+        self.tempArray = sortedList
         self.delegate = delegate
         self.topicsCollectionView.reloadData()
         print("ULTopicComponentTableViewCell setupCell \(data.count)")
+        
+        var totalCellHeight: CGFloat = 0.0
+        let cellHeight: CGFloat = 100.0
+        totalCellHeight = cellHeight * CGFloat(data.count)
+        topicsCollectionView.frame.size.height = totalCellHeight
         
     }
     
@@ -84,7 +93,7 @@ extension ULTopicComponentTableViewCell: UICollectionViewDelegate, UICollectionV
 
 extension ULTopicComponentTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 320, height: 40)
+        return CGSize(width: 320, height: 35)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
