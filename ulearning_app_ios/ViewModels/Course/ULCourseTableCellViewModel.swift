@@ -14,6 +14,7 @@ class ULCourseTableCellViewModel {
     var isFinished: Bool = false
     var image: URL?
     var percentage: Float? = Float(0)
+    var percentageTitle: String? = "0 %"
     
     init(subscription: ULSubscription) {
         self.id = subscription.id ?? 0
@@ -25,6 +26,7 @@ class ULCourseTableCellViewModel {
         if let value = subscription.percentageAdvance {
             let toFLoat = Float(value)
             self.percentage = (toFLoat ?? 0) / 100
+            self.percentageTitle = "\(toFLoat ?? 0) %"
         }
         
     }

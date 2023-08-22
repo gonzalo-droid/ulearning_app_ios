@@ -35,6 +35,7 @@ class ULCourseTableViewCell: UITableViewCell {
     
     @IBOutlet weak var progressAdvance: UIProgressView!
     
+    @IBOutlet weak var percentageTitle: UILabel!
     
     static var identifier: String {
         get {
@@ -56,7 +57,10 @@ class ULCourseTableViewCell: UITableViewCell {
         self.categoryLabel.text = viewModel.category
         self.titleCourseLabel.text = viewModel.title
         progressAdvance.isHidden = viewModel.isFinished
+        percentageTitle.isHidden = viewModel.isFinished
+        
         progressAdvance.setProgress(viewModel.percentage ?? Float(0), animated: true)
+        percentageTitle.text = viewModel.percentageTitle
         
         if let imageUrl = viewModel.image {
             self.courseImageView.kf.setImage(with: imageUrl)

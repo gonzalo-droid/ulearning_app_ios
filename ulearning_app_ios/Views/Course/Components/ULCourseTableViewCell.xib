@@ -42,6 +42,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSk-PR-7ul">
+                                <rect key="frame" x="255.66666666666671" y="109.33333333333333" width="14.333333333333343" height="8.6666666666666714"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="7"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gkq-Ff-TRX">
                                 <rect key="frame" x="0.0" y="119" width="280" height="4"/>
                             </progressView>
@@ -56,8 +62,10 @@
                             <constraint firstAttribute="trailing" secondItem="pkC-2M-3dI" secondAttribute="trailing" constant="12" id="INY-lc-Btr"/>
                             <constraint firstItem="pB4-dn-WXv" firstAttribute="leading" secondItem="xRB-bo-DXI" secondAttribute="leading" constant="12" id="Ls3-a7-bHK"/>
                             <constraint firstAttribute="bottom" secondItem="gkq-Ff-TRX" secondAttribute="bottom" id="Pav-7U-qzg"/>
+                            <constraint firstAttribute="bottom" secondItem="hSk-PR-7ul" secondAttribute="bottom" constant="5" id="etX-rl-UEF"/>
                             <constraint firstItem="pkC-2M-3dI" firstAttribute="top" secondItem="pB4-dn-WXv" secondAttribute="bottom" constant="14" id="j9Y-B3-pI3"/>
                             <constraint firstItem="pB4-dn-WXv" firstAttribute="top" secondItem="xRB-bo-DXI" secondAttribute="top" constant="12" id="pi3-S4-IkF"/>
+                            <constraint firstAttribute="trailing" secondItem="hSk-PR-7ul" secondAttribute="trailing" constant="10" id="uoi-mu-naQ"/>
                             <constraint firstItem="pkC-2M-3dI" firstAttribute="leading" secondItem="xRB-bo-DXI" secondAttribute="leading" constant="12" id="vm3-b7-UGS"/>
                             <constraint firstAttribute="trailing" secondItem="FUv-am-uwq" secondAttribute="trailing" id="wVe-4o-uwa"/>
                             <constraint firstItem="gkq-Ff-TRX" firstAttribute="leading" secondItem="xRB-bo-DXI" secondAttribute="leading" id="x5U-mh-8L1"/>
@@ -78,6 +86,7 @@
                 <outlet property="categoryLabel" destination="pB4-dn-WXv" id="yzi-pk-Xms"/>
                 <outlet property="containerView" destination="xRB-bo-DXI" id="ZzG-xx-aRy"/>
                 <outlet property="courseImageView" destination="0e2-Cx-uFK" id="cif-8E-UQ5"/>
+                <outlet property="percentageTitle" destination="hSk-PR-7ul" id="IGu-bE-cgo"/>
                 <outlet property="progressAdvance" destination="gkq-Ff-TRX" id="FEF-1y-2eb"/>
                 <outlet property="titleCourseLabel" destination="pkC-2M-3dI" id="CeL-pM-3Xl"/>
             </connections>
