@@ -20,5 +20,68 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3C4B4F67-BC0C-422D-A086-68584E922081"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ulearning_app_ios/Controllers/Message/ULMessageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "bindViewModel()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3C4B4F67-BC0C-422D-A086-68584E922081 - 5e0c4cd9499f8c1d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;ulearning_app_ios.ULMessageTableCellViewModel&gt;&gt;) -&gt; () in ulearning_app_ios.ULMessageViewController.bindViewModel() -&gt; ()"
+                  moduleName = "ulearning_app_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gonzalolopez/Code/Solti/ulearning_app_ios/ulearning_app_ios/Controllers/Message/ULMessageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "248">
+               </Location>
+               <Location
+                  uuid = "3C4B4F67-BC0C-422D-A086-68584E922081 - 5e0c4cd9499f8c3c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;ulearning_app_ios.ULMessageTableCellViewModel&gt;&gt;) -&gt; () in ulearning_app_ios.ULMessageViewController.bindViewModel() -&gt; ()"
+                  moduleName = "ulearning_app_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gonzalolopez/Code/Solti/ulearning_app_ios/ulearning_app_ios/Controllers/Message/ULMessageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "300">
+               </Location>
+               <Location
+                  uuid = "3C4B4F67-BC0C-422D-A086-68584E922081 - 5e0c4cd9499f8c3c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;ulearning_app_ios.ULMessageTableCellViewModel&gt;&gt;) -&gt; () in ulearning_app_ios.ULMessageViewController.bindViewModel() -&gt; ()"
+                  moduleName = "ulearning_app_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gonzalolopez/Code/Solti/ulearning_app_ios/ulearning_app_ios/Controllers/Message/ULMessageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "264">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

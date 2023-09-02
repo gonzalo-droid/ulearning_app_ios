@@ -8,23 +8,110 @@
 import UIKit
 
 class ULMessageViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        view.backgroundColor = .systemBackground
-        title = "Mensajería"
+    
+    
+    @IBOutlet weak var titleLabel: UILabel!{
+        didSet {
+            titleLabel.font = UIFont.boldSystemFont(ofSize: 24)
+            titleLabel.textColor = .blackUL
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var addMessageButton: UIButton!
+    
+    @IBOutlet weak var messageTableView: UITableView!
+    
+    var viewModel: ULMessageSupportViewModel = ULMessageSupportViewModel()
+    var conversationsDataSource: [ULMessageTableCellViewModel] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configView()
+        bindViewModel()
     }
-    */
+    
+    func configView() {
+        self.view.backgroundColor = .systemBackground
+        self.setupTableView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.getData()
+    }
+    
+    func bindViewModel() {
+        
+        viewModel.conversations.bind { [weak self] conversations in
+            guard let self = self,
+                  let conversations = conversations else {
+                return
+            }
+            self.conversationsDataSource = conversations
+            self.reloadTableView()
+        }
+    }
+    
+    func openMessageSupport(id: Int) {
+       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
 
+}
+
+
+extension ULMessageViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func setupTableView() {
+        self.messageTableView.delegate = self
+        self.messageTableView.dataSource = self
+        self.messageTableView.backgroundColor = .clear
+        
+        self.registerCells()
+    }
+    
+    func reloadTableView() {
+        DispatchQueue.main.async {
+            self.messageTableView.reloadData()
+        }
+    }
+    
+    func registerCells() {
+        self.messageTableView.register(ULConversationTableViewCell.register(), forCellReuseIdentifier: ULConversationTableViewCell.identifier)
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        viewModel.numberOfSections()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        100
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.numberOfRows(in: section)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ULConversationTableViewCell.identifier, for: indexPath) as? ULConversationTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.setupCell(viewModel: conversationsDataSource[indexPath.row])
+        cell.selectionStyle = .none
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let id = conversationsDataSource[indexPath.row].id
+        self.openMessageSupport(id: id)
+    }
 }
