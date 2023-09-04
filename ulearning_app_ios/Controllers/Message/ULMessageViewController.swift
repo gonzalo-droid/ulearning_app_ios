@@ -17,7 +17,11 @@ class ULMessageViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var addMessageButton: UIButton!
+    @IBOutlet weak var addMessageButton: UIButton!{
+        didSet {
+            addMessageButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        }
+    }
     
     @IBOutlet weak var messageTableView: UITableView!
     
