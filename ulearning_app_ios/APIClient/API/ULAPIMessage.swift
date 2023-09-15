@@ -21,25 +21,16 @@ enum ULAPIMessage: ULAPIConfig {
     
     /// POST
 
-    case showGuestFile(
-        parameter: Parameters
+    case sendConversationSupport(
+        params: Parameters
     )
     
     var method: Alamofire.HTTPMethod {
         switch self {
-        case  .showGuestFile(_):
+        case  .sendConversationSupport(_):
             return .post
         default:
             return .get
-        }
-    }
-
-    var parameters: Parameters? {
-        switch self {
-        case .showGuestFile(let params):
-            return params
-        default:
-            return nil
         }
     }
 
@@ -56,13 +47,23 @@ enum ULAPIMessage: ULAPIConfig {
             ]
             return "conversations\(urlComponents.string!)"
             
-        case .showGuestFile(parameter: let parameter):
+        case .sendConversationSupport:
             return "conversations"
         }
     }
+    
+    var parameters: Parameters? {
+           switch self {
+           case .sendConversationSupport(let parameters):
+               return parameters
+           default:
+               return nil
+           }
+       }
+    
     var encoding: Alamofire.ParameterEncoding? {
           switch self {
-          case .showGuestFile:
+          case .sendConversationSupport:
               return Alamofire.JSONEncoding.default
           default:
               return URLEncoding.default

@@ -10,8 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIAddMessageViewController" customModule="ulearning_app_ios" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ULAddMessageViewController" customModule="ulearning_app_ios" customModuleProvider="target">
             <connections>
+                <outlet property="btnBack" destination="ANk-f5-xJx" id="KF8-5E-ud4"/>
+                <outlet property="btnSendMessage" destination="Axp-3p-c8d" id="N79-wr-DSA"/>
+                <outlet property="inputSendMessage" destination="CoO-OL-6vY" id="WqN-6O-9pB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,31 +26,37 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFr-K2-xvK" userLabel="Container">
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RO6-As-1SU">
+                            <rect key="frame" x="20" y="23" width="19.666666666666671" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="19.666666666666664" id="4DW-6Q-fka"/>
+                                <constraint firstAttribute="height" constant="27.666666666666686" id="YfS-NR-pvo"/>
+                            </constraints>
+                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isr-5s-uKP">
-                            <rect key="frame" x="20" y="48" width="33" height="17"/>
+                            <rect key="frame" x="20" y="60" width="33" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" name="AccentColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresa un mensaje:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M30-aw-hS0">
-                            <rect key="frame" x="20" y="127.33333333333334" width="129" height="17"/>
+                            <rect key="frame" x="20" y="139.33333333333334" width="129" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" name="AccentColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CoO-OL-6vY">
-                            <rect key="frame" x="20" y="164.33333333333334" width="353" height="34"/>
+                            <rect key="frame" x="20" y="176.33333333333334" width="353" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axp-3p-c8d">
-                            <rect key="frame" x="151" y="340" width="71" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axp-3p-c8d">
+                            <rect key="frame" x="20" y="250.33333333333331" width="353" height="35"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Enviar"/>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcM-NV-gdd">
-                            <rect key="frame" x="19.999999999999993" y="83" width="124.33333333333331" height="24.333333333333329"/>
+                            <rect key="frame" x="19.999999999999993" y="95" width="124.33333333333331" height="24.333333333333329"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soporte plataforma" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRP-nd-fzq">
                                     <rect key="frame" x="5" y="5.0000000000000009" width="109.33333333333333" height="14.333333333333336"/>
@@ -64,18 +73,32 @@
                                 <constraint firstItem="KRP-nd-fzq" firstAttribute="leading" secondItem="gcM-NV-gdd" secondAttribute="leading" constant="5" id="uZm-jN-WFh"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANk-f5-xJx" userLabel="btn Back">
+                            <rect key="frame" x="20" y="20" width="19.666666666666671" height="27.666666666666671"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="isr-5s-uKP" firstAttribute="leading" secondItem="hFr-K2-xvK" secondAttribute="leading" constant="20" id="1rL-8e-U7v"/>
+                        <constraint firstItem="ANk-f5-xJx" firstAttribute="top" secondItem="RO6-As-1SU" secondAttribute="top" id="2oX-sz-SrW"/>
                         <constraint firstItem="CoO-OL-6vY" firstAttribute="top" secondItem="M30-aw-hS0" secondAttribute="bottom" constant="20" id="Ehh-ll-Zoe"/>
+                        <constraint firstItem="ANk-f5-xJx" firstAttribute="leading" secondItem="RO6-As-1SU" secondAttribute="leading" id="ItK-fR-bep"/>
+                        <constraint firstItem="ANk-f5-xJx" firstAttribute="bottom" secondItem="RO6-As-1SU" secondAttribute="bottom" id="L39-Ca-p0l"/>
                         <constraint firstAttribute="trailing" secondItem="CoO-OL-6vY" secondAttribute="trailing" constant="20" id="N6A-DH-RRw"/>
+                        <constraint firstItem="RO6-As-1SU" firstAttribute="leading" secondItem="hFr-K2-xvK" secondAttribute="leading" constant="20" id="Nwy-n1-sJ3"/>
+                        <constraint firstItem="ANk-f5-xJx" firstAttribute="trailing" secondItem="RO6-As-1SU" secondAttribute="trailing" id="QLD-7y-9ez"/>
                         <constraint firstItem="gcM-NV-gdd" firstAttribute="leading" secondItem="hFr-K2-xvK" secondAttribute="leading" constant="20" symbolic="YES" id="Qh5-Mn-QJj"/>
-                        <constraint firstItem="isr-5s-uKP" firstAttribute="top" secondItem="hFr-K2-xvK" secondAttribute="top" constant="48" id="V2B-FE-ec6"/>
+                        <constraint firstItem="isr-5s-uKP" firstAttribute="top" secondItem="hFr-K2-xvK" secondAttribute="top" constant="60" id="V2B-FE-ec6"/>
                         <constraint firstItem="gcM-NV-gdd" firstAttribute="top" secondItem="isr-5s-uKP" secondAttribute="bottom" constant="18" id="WJ5-ii-bqi"/>
+                        <constraint firstAttribute="trailing" secondItem="Axp-3p-c8d" secondAttribute="trailing" constant="20" id="dnk-It-lgY"/>
                         <constraint firstItem="CoO-OL-6vY" firstAttribute="leading" secondItem="hFr-K2-xvK" secondAttribute="leading" constant="20" id="fW1-Ml-rFD"/>
+                        <constraint firstItem="Axp-3p-c8d" firstAttribute="leading" secondItem="hFr-K2-xvK" secondAttribute="leading" constant="20" id="iT2-hJ-Q00"/>
                         <constraint firstItem="M30-aw-hS0" firstAttribute="leading" secondItem="hFr-K2-xvK" secondAttribute="leading" constant="20" id="mI5-MN-61K"/>
+                        <constraint firstItem="Axp-3p-c8d" firstAttribute="top" secondItem="CoO-OL-6vY" secondAttribute="bottom" constant="40" id="moC-np-vjT"/>
                         <constraint firstItem="M30-aw-hS0" firstAttribute="top" secondItem="gcM-NV-gdd" secondAttribute="bottom" constant="20" id="sCJ-D1-QXa"/>
+                        <constraint firstItem="RO6-As-1SU" firstAttribute="top" secondItem="hFr-K2-xvK" secondAttribute="top" constant="20" id="vED-wZ-qrf"/>
                     </constraints>
                 </view>
             </subviews>
@@ -91,6 +114,7 @@
         </view>
     </objects>
     <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

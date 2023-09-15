@@ -33,7 +33,7 @@ class CourseService {
                     if let subs = value.data {
                         successBlock(subs)
                     } else {
-                        errorBlock("Subscriptions data is nil")
+                        errorBlock("Data is nil")
                     }
                 } else {
                     errorBlock(value.message ?? "ERROR AQUI")
@@ -61,7 +61,7 @@ class CourseService {
                     if let subs = value.data {
                         successBlock(subs)
                     } else {
-                        errorBlock("Subscriptions data is nil")
+                        errorBlock("Data is nil")
                     }
                 } else {
                     errorBlock(value.message ?? "ERROR AQUI")
@@ -89,7 +89,7 @@ class CourseService {
                     if let subs = value.data {
                         successBlock(subs)
                     } else {
-                        errorBlock("Topics data is nil")
+                        errorBlock("Data is nil")
                     }
                 } else {
                     errorBlock(value.message ?? "ERROR AQUI")

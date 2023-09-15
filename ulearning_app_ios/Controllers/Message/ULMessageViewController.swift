@@ -9,7 +9,8 @@ import UIKit
 
 class ULMessageViewController: UIViewController {
     
-    
+    let MESSAGE_SUPPORT = "support"
+
     @IBOutlet weak var titleLabel: UILabel!{
         didSet {
             titleLabel.font = UIFont.boldSystemFont(ofSize: 24)
@@ -37,6 +38,17 @@ class ULMessageViewController: UIViewController {
     func configView() {
         self.view.backgroundColor = .systemBackground
         self.setupTableView()
+        
+        addMessageButton.addTarget(self, action: #selector(addMessageButtonButtonTapped), for: .touchUpInside)
+
+    }
+    
+    @objc func addMessageButtonButtonTapped() {
+        DispatchQueue.main.async {
+            let viewModel = ULAddMessageSupportViewModel(typeMessage: self.MESSAGE_SUPPORT, courseId: nil, userIds: nil)
+            let controller = ULAddMessageViewController(viewModel: viewModel)
+            self.present(controller, animated: true, completion: nil)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
