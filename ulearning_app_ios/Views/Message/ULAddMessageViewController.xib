@@ -15,6 +15,7 @@
                 <outlet property="btnBack" destination="ANk-f5-xJx" id="KF8-5E-ud4"/>
                 <outlet property="btnSendMessage" destination="Axp-3p-c8d" id="N79-wr-DSA"/>
                 <outlet property="inputSendMessage" destination="CoO-OL-6vY" id="WqN-6O-9pB"/>
+                <outlet property="loadingProgress" destination="2bd-v7-ehV" id="CAc-Wj-qHx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,6 +27,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFr-K2-xvK" userLabel="Container">
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="2bd-v7-ehV">
+                            <rect key="frame" x="186" y="369" width="20" height="20"/>
+                        </activityIndicatorView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RO6-As-1SU">
                             <rect key="frame" x="20" y="23" width="19.666666666666671" height="22"/>
                             <constraints>
@@ -83,15 +87,19 @@
                     <constraints>
                         <constraint firstItem="isr-5s-uKP" firstAttribute="leading" secondItem="hFr-K2-xvK" secondAttribute="leading" constant="20" id="1rL-8e-U7v"/>
                         <constraint firstItem="ANk-f5-xJx" firstAttribute="top" secondItem="RO6-As-1SU" secondAttribute="top" id="2oX-sz-SrW"/>
+                        <constraint firstItem="2bd-v7-ehV" firstAttribute="top" secondItem="hFr-K2-xvK" secondAttribute="top" constant="369" id="Ajf-gQ-eHq"/>
                         <constraint firstItem="CoO-OL-6vY" firstAttribute="top" secondItem="M30-aw-hS0" secondAttribute="bottom" constant="20" id="Ehh-ll-Zoe"/>
                         <constraint firstItem="ANk-f5-xJx" firstAttribute="leading" secondItem="RO6-As-1SU" secondAttribute="leading" id="ItK-fR-bep"/>
                         <constraint firstItem="ANk-f5-xJx" firstAttribute="bottom" secondItem="RO6-As-1SU" secondAttribute="bottom" id="L39-Ca-p0l"/>
                         <constraint firstAttribute="trailing" secondItem="CoO-OL-6vY" secondAttribute="trailing" constant="20" id="N6A-DH-RRw"/>
+                        <constraint firstAttribute="trailing" secondItem="2bd-v7-ehV" secondAttribute="trailing" constant="187" id="N75-BH-WGK"/>
                         <constraint firstItem="RO6-As-1SU" firstAttribute="leading" secondItem="hFr-K2-xvK" secondAttribute="leading" constant="20" id="Nwy-n1-sJ3"/>
                         <constraint firstItem="ANk-f5-xJx" firstAttribute="trailing" secondItem="RO6-As-1SU" secondAttribute="trailing" id="QLD-7y-9ez"/>
                         <constraint firstItem="gcM-NV-gdd" firstAttribute="leading" secondItem="hFr-K2-xvK" secondAttribute="leading" constant="20" symbolic="YES" id="Qh5-Mn-QJj"/>
                         <constraint firstItem="isr-5s-uKP" firstAttribute="top" secondItem="hFr-K2-xvK" secondAttribute="top" constant="60" id="V2B-FE-ec6"/>
                         <constraint firstItem="gcM-NV-gdd" firstAttribute="top" secondItem="isr-5s-uKP" secondAttribute="bottom" constant="18" id="WJ5-ii-bqi"/>
+                        <constraint firstItem="2bd-v7-ehV" firstAttribute="leading" secondItem="hFr-K2-xvK" secondAttribute="leading" constant="186" id="WUJ-l4-Blm"/>
+                        <constraint firstAttribute="bottom" secondItem="2bd-v7-ehV" secondAttribute="bottom" constant="370" id="Xw3-F3-Iyt"/>
                         <constraint firstAttribute="trailing" secondItem="Axp-3p-c8d" secondAttribute="trailing" constant="20" id="dnk-It-lgY"/>
                         <constraint firstItem="CoO-OL-6vY" firstAttribute="leading" secondItem="hFr-K2-xvK" secondAttribute="leading" constant="20" id="fW1-Ml-rFD"/>
                         <constraint firstItem="Axp-3p-c8d" firstAttribute="leading" secondItem="hFr-K2-xvK" secondAttribute="leading" constant="20" id="iT2-hJ-Q00"/>

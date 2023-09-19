@@ -97,8 +97,7 @@ class DetailComponentTableViewCell: UITableViewCell {
     
     func setupCell(data: ULSubscription, delegate: DetailComponentTableViewCellProtocol) {
         self.delegate = delegate
-        print("DetailComponentTableViewCellProtocoll \(data.course?.title)")
-
+    
         titleLabel.attributedText = NSMutableAttributedString(
             string: data.course?.title ?? "text",
             attributes: [

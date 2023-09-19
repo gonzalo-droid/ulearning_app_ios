@@ -7,13 +7,38 @@
 
 import UIKit
 
+protocol ULAddMessageViewControllerProtocol: AnyObject {
+    func sendMessageBtn(controller: ULAddMessageViewController)
+}
+
 class ULAddMessageViewController: UIViewController {
-
-    var viewModel: ULAddMessageSupportViewModel
-
-    @IBOutlet weak var inputSendMessage: UITextField!
     
-    @IBOutlet weak var btnSendMessage: UIButton!
+    var viewModel: ULAddMessageSupportViewModel
+    
+    var delegate: ULAddMessageViewControllerProtocol?
+
+    
+    @IBOutlet weak var loadingProgress: UIActivityIndicatorView!{
+        didSet {
+            loadingProgress.hidesWhenStopped = true
+        }
+    }
+    
+    @IBOutlet weak var inputSendMessage: UITextField!{
+        didSet {
+            inputSendMessage.text = ""
+        }
+    }
+    
+    @IBOutlet weak var btnSendMessage: UIButton!{
+        didSet {
+            btnSendMessage.addTarget(
+                self,
+                action: #selector(sendMessageBtn),
+                for: .touchUpInside
+            )
+        }
+    }
     
     @IBOutlet weak var btnBack: UIButton!{
         didSet {
@@ -29,8 +54,9 @@ class ULAddMessageViewController: UIViewController {
     }
     
     
-    init(viewModel: ULAddMessageSupportViewModel) {
+    init(viewModel: ULAddMessageSupportViewModel, delegate: ULAddMessageViewControllerProtocol) {
         self.viewModel = viewModel
+        self.delegate = delegate
         super.init(nibName: "ULAddMessageViewController", bundle: nil)
     }
     
@@ -43,9 +69,60 @@ class ULAddMessageViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @objc func sendMessageBtn() {
+        if let textFieldText = inputSendMessage.text {
+            if !textFieldText.isEmpty {
+                viewModel.sendMessage(content: textFieldText)
+            } else {
+                self.showAlert()
+            }
+        } else {
+            self.showAlert()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindViewModel()
     }
-
-
+    
+    func bindViewModel() {
+        
+        viewModel.isLoadingData.bind { [weak self] isLoading in
+            guard let isLoading = isLoading else {
+                return
+            }
+            DispatchQueue.main.async {
+                if isLoading {
+                    self?.loadingProgress.startAnimating()
+                } else {
+                    self?.loadingProgress.stopAnimating()
+                }
+            }
+        }
+        
+        viewModel.conversationResponse.bind { [weak self] conversation in
+            guard let self = self,
+                  let conversation = conversation else {
+                return
+            }
+            
+            self.delegate?.sendMessageBtn(controller: self)
+            
+        }
+    }
+    
+    @IBAction func showAlert() {
+        // Create an alert controller
+        let alertController = UIAlertController(title: "", message: "Ingrese un mensaje", preferredStyle: .alert)
+        
+        // Add an action (button) to the alert
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        
+        // Present the alert
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    
 }

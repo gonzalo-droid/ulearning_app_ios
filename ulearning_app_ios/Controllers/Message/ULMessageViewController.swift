@@ -45,8 +45,8 @@ class ULMessageViewController: UIViewController {
     
     @objc func addMessageButtonButtonTapped() {
         DispatchQueue.main.async {
-            let viewModel = ULAddMessageSupportViewModel(typeMessage: self.MESSAGE_SUPPORT, courseId: nil, userIds: nil)
-            let controller = ULAddMessageViewController(viewModel: viewModel)
+            let viewModel = ULAddMessageSupportViewModel(typeMessage: self.MESSAGE_SUPPORT, courseId: nil, userIds: [])
+            let controller = ULAddMessageViewController(viewModel: viewModel, delegate: self)
             self.present(controller, animated: true, completion: nil)
         }
     }
@@ -130,4 +130,14 @@ extension ULMessageViewController: UITableViewDelegate, UITableViewDataSource {
         let id = conversationsDataSource[indexPath.row].id
         self.openMessageSupport(id: id)
     }
+}
+
+
+extension ULMessageViewController: ULAddMessageViewControllerProtocol {
+    func sendMessageBtn(controller: ULAddMessageViewController) {
+        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
+        viewModel.getData()
+    }
+    
 }

@@ -48,7 +48,7 @@ enum ULAPIMessage: ULAPIConfig {
             return "conversations\(urlComponents.string!)"
             
         case .sendConversationSupport:
-            return "conversations"
+            return "messages"
         }
     }
     

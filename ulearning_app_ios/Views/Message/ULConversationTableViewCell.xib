@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXf-hr-FY5" userLabel="Container Item">
-                        <rect key="frame" x="20" y="0.0" width="280" height="67"/>
+                        <rect key="frame" x="20" y="5" width="280" height="57"/>
                         <subviews>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HgR-X2-gc8" userLabel="Container Background">
-                                <rect key="frame" x="0.0" y="0.0" width="280" height="67"/>
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="57"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqF-R9-cAl">
@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13:50 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUE-eu-RC7">
-                                <rect key="frame" x="220.33333333333334" y="43" width="49.666666666666657" height="14"/>
+                                <rect key="frame" x="220.33333333333334" y="33" width="49.666666666666657" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -56,8 +56,8 @@
                 <constraints>
                     <constraint firstItem="NXf-hr-FY5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="5xd-xv-ZLv"/>
                     <constraint firstAttribute="trailing" secondItem="NXf-hr-FY5" secondAttribute="trailing" constant="20" id="FgR-EM-Esx"/>
-                    <constraint firstItem="NXf-hr-FY5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="XCl-Mc-1NS"/>
-                    <constraint firstAttribute="bottom" secondItem="NXf-hr-FY5" secondAttribute="bottom" id="ZZL-eM-Ahx"/>
+                    <constraint firstItem="NXf-hr-FY5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="XCl-Mc-1NS"/>
+                    <constraint firstAttribute="bottom" secondItem="NXf-hr-FY5" secondAttribute="bottom" constant="5" id="ZZL-eM-Ahx"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
