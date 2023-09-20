@@ -35,6 +35,10 @@ enum ULAPICourse: ULAPIConfig {
         courseIds: String
     )
     
+    case getTopicsByCourse(
+        courseId: Int
+    )
+    
     /// POST
     
     case myCertificates(
@@ -75,7 +79,7 @@ enum ULAPICourse: ULAPIConfig {
                  URLQueryItem(name: "is_finished", value: "\(isFinished)"),
                  URLQueryItem(name: "classification", value: "course")
              ]
-            return "subscriptions\(urlComponents.string!)" // "https://demo1784653.mockable.io/subscription" //
+            return "subscriptions\(urlComponents.string!)"
             
         case .getSubscriptionsPackage(perPage: let perPage, page: let page, classification: let classification, includes: let includes):
             return "subscriptions?per_page=\(perPage)&page=\(page)&classification=\(classification)&includes=\(includes)"
@@ -91,6 +95,8 @@ enum ULAPICourse: ULAPIConfig {
         
         case .showGuestFile(_):
             return "show-guest-file"
+        case .getTopicsByCourse(courseId: let courseId):
+            return "topics_preview/\(courseId)"
         }
     }
 

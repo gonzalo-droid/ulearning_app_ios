@@ -33,6 +33,10 @@ class ULCourseTableViewCell: UITableViewCell {
     }
     
     
+    @IBOutlet weak var progressAdvance: UIProgressView!
+    
+    @IBOutlet weak var percentageTitle: UILabel!
+    
     static var identifier: String {
         get {
             "ULCourseTableViewCell"
@@ -52,12 +56,15 @@ class ULCourseTableViewCell: UITableViewCell {
     func setupCell(viewModel: ULCourseTableCellViewModel) {
         self.categoryLabel.text = viewModel.category
         self.titleCourseLabel.text = viewModel.title
+        progressAdvance.isHidden = viewModel.isFinished
+        percentageTitle.isHidden = viewModel.isFinished
+        
+        progressAdvance.setProgress(viewModel.percentage ?? Float(0), animated: true)
+        percentageTitle.text = viewModel.percentageTitle
         
         if let imageUrl = viewModel.image {
-            debugPrint("imageUrl \(String(describing: imageUrl))")
             self.courseImageView.kf.setImage(with: imageUrl)
-            
-        } 
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

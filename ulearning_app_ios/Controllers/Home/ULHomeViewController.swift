@@ -176,9 +176,7 @@ class ULHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-
-            
+        self.view.backgroundColor = .white
     }
     
     override func viewWillAppear(_ animated: Bool) {
