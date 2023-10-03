@@ -28,7 +28,7 @@ class ULCourseDetailViewModel {
         CourseService.getTopics(courseId:courseId, successBlock: { [weak self] topics in
             guard let self = self else { return }
 
-            var mutableTopics: [ULTopic] = []
+            var mutableTopics: [ULTopic] = []                         
             let index = 0
             if let unwrappedTopics = topics {
                 for topic in unwrappedTopics {

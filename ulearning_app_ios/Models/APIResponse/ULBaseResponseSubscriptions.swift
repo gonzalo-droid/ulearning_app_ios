@@ -1,16 +1,15 @@
 //
-//  ULBaseResponse.swift
+//  ULBaseResponseSubscriptions.swift
 //  ulearning_app_ios
 //
-//  Created by Gonzalo López on 1/07/23.
+//  Created by Gonzalo López on 26/09/23.
 //
 
 import Foundation
 import ObjectMapper
 
-
-class BaseResponseSubscription: Mappable {
-    var data: ULSubscription?
+class BaseResponseSubscriptions: Mappable {
+    var data: [ULSubscription]?
     var code: String?
     var message: String?
 
@@ -25,6 +24,3 @@ class BaseResponseSubscription: Mappable {
         message <- map["message"]
     }
 }
-
-
-

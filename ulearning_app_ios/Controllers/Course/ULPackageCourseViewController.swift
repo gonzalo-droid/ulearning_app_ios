@@ -93,7 +93,7 @@ class ULPackageCourseViewController: UIViewController {
                 }
             }
         }
-        
+
         viewModel.subscriptions.bind { [weak self] subscriptions in
             guard let self = self,
                   let subscriptions = subscriptions else {
@@ -101,6 +101,14 @@ class ULPackageCourseViewController: UIViewController {
             }
             self.subscriptionsDataSource = subscriptions
             self.reloadTableView()
+        }
+    }
+    
+    func openDetail(id: Int) {
+        DispatchQueue.main.async {
+            let viewModel = ULPackageDetailViewModel(idLearningPackage: id)
+            let controller = ULPackageDetailViewController(viewModel: viewModel)
+            self.present(controller, animated: true, completion: nil)
         }
     }
     
@@ -150,6 +158,6 @@ extension ULPackageCourseViewController: UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let id = subscriptionsDataSource[indexPath.row].id
-        // self.openDetails(movieId: movieId)
+        self.openDetail(id: id)
     }
 }

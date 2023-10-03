@@ -25,7 +25,7 @@ class CourseService {
         )
         
         AF.request(pathUrl).validate(statusCode: 200..<205).responseObject {
-            (response: DataResponse<BaseResponseSubscription, AFError>) in
+            (response: DataResponse<BaseResponseSubscriptions, AFError>) in
             
             switch response.result {
             case .success(let value):
@@ -53,7 +53,7 @@ class CourseService {
         let pathUrl: ULAPICourse = .getSubscriptionsPackage(classification: classification)
         
         AF.request(pathUrl).validate(statusCode: 200..<205).responseObject {
-            (response: DataResponse<BaseResponseSubscription, AFError>) in
+            (response: DataResponse<BaseResponseSubscriptions, AFError>) in
             
             switch response.result {
             case .success(let value):
@@ -118,6 +118,34 @@ class CourseService {
                         successBlock(subs)
                     } else {
                         errorBlock("data is nil")
+                    }
+                } else {
+                    errorBlock(value.message ?? "ERROR AQUI")
+                }
+            case .failure(let error):
+                errorBlock(error.localizedDescription)
+            }
+        }
+    }
+    
+    static func getLearningPackage(
+        learningPackageId: Int,
+        successBlock: @escaping(_ subscriptions: ULSubscription?) -> Void,
+        errorBlock: @escaping(_ error:  String?) -> Void
+    ) {
+        
+        let pathUrl: ULAPICourse = .getLearningPackage(learningPackageId: learningPackageId)
+        
+        AF.request(pathUrl).validate(statusCode: 200..<205).responseObject {
+            (response: DataResponse<BaseResponseSubscription, AFError>) in
+            
+            switch response.result {
+            case .success(let value):
+                if value.message == nil {
+                    if let subs = value.data {
+                        successBlock(subs)
+                    } else {
+                        errorBlock("Data is nil")
                     }
                 } else {
                     errorBlock(value.message ?? "ERROR AQUI")

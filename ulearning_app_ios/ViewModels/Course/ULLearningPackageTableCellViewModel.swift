@@ -14,7 +14,7 @@ class ULLearningPackageTableCellViewModel {
     var image: URL?
     
     init(subscription: ULSubscription) {
-        self.id = subscription.id ?? 0
+        self.id = subscription.learningPackageId ?? 0
         self.title = subscription.learningPackage?.title ?? ""
         self.image = makeImageURL(subscription.course?.mainImage?.originalUrl ?? "")
     }

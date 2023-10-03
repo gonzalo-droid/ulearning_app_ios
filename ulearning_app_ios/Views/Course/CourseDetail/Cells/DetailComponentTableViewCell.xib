@@ -95,7 +95,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwy-qk-Mr9">
-                                        <rect key="frame" x="0.0" y="28.333333333333343" width="280" height="165.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="28.333333333333343" width="270" height="165.66666666666666"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
                                         <color key="textColor" systemColor="labelColor"/>
@@ -108,7 +108,7 @@
                                     <constraint firstItem="rvY-Pa-jXz" firstAttribute="top" secondItem="md0-Kc-9KG" secondAttribute="top" id="Ghg-Z3-V5M"/>
                                     <constraint firstAttribute="trailing" secondItem="rvY-Pa-jXz" secondAttribute="trailing" id="KaJ-sa-CmI"/>
                                     <constraint firstItem="rvY-Pa-jXz" firstAttribute="leading" secondItem="md0-Kc-9KG" secondAttribute="leading" id="Uud-aG-fu8"/>
-                                    <constraint firstAttribute="trailing" secondItem="hwy-qk-Mr9" secondAttribute="trailing" id="kKC-P2-u6t"/>
+                                    <constraint firstAttribute="trailing" secondItem="hwy-qk-Mr9" secondAttribute="trailing" constant="10" id="kKC-P2-u6t"/>
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLk-Du-fFG" userLabel="items">
