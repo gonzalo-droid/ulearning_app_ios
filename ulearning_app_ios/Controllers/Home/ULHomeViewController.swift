@@ -9,11 +9,13 @@ import UIKit
 
 class ULHomeViewController: UIViewController {
     
+    var viewModel: ULProfileViewModel = ULProfileViewModel()
+
     
     @IBOutlet weak var userLabel: UILabel!{
         didSet {
             userLabel.font = UIFont.boldSystemFont(ofSize: 24)
-            userLabel.textColor = .blackUL
+            userLabel.textColor = .blueUL
         }
     }
     
@@ -177,8 +179,30 @@ class ULHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        bindViewModel()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.getData()
+    }
+    
+    func bindViewModel() {
+                
+        viewModel.profile.bind { [weak self] profile in
+            guard let self = self,
+                  let profile = profile else {
+                      return
+                  }
+            setProfileData(data: profile)
+        }
+    }
+    
+    func setProfileData(data : ULProfile?){
+        if(data != nil){
+            userLabel.text = data?.name ?? "Estudiante"
+        }
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
