@@ -15,6 +15,7 @@ class BannerTableViewCell: UITableViewCell {
 
     var delegate: BannerTableViewCellProtocol?
     
+    @IBOutlet weak var percentageLabel: UILabel!
     
     @IBOutlet weak var backButton: UIButton!{
         didSet {
@@ -61,6 +62,33 @@ class BannerTableViewCell: UITableViewCell {
         self.delegate = delegate
         
         self.titleLabel.text = data?.learningPackage?.title
+        
+        calculatePercentage(data: data)
+    }
+    
+    func calculatePercentage(data: ULSubscription?){
+        let items = data?.learningPackage?.items
+        
+        let total: Double = 100.0
+        var resultText = "0"
+        var resultNumber: Double = 0.0
+
+        if !items!.isEmpty {
+            if let items = items {
+                  let totalDivider = total / Double(items.count)
+                  var result: Double = 0.0
+                  
+                for item in items {
+                    let value =  Double(item.percentageAdvance ?? "0")
+                    result = result + (totalDivider * (value ?? 0) / 100.0)
+                  }
+                  
+                  resultNumber = result
+                  resultText = String(result)
+              }
+        }
+        
+        percentageLabel.text = "\(resultText) %"
     }
     
     

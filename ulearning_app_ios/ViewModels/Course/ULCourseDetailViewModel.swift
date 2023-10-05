@@ -34,13 +34,10 @@ class ULCourseDetailViewModel {
                 for topic in unwrappedTopics {
                     mutableTopics.append(topic)
                     topic.orderIndex += index
-                    debugPrint("item topics \(topic.title) \(topic.orderIndex)")
                     if let children = topic.children {
                         for child in children {
                             mutableTopics.append(child)
                             child.orderIndex += index
-                            debugPrint("item topics \(child.title) \(child.orderIndex)")
-
                         }
                     }
                 }

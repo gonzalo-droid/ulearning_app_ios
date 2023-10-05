@@ -66,6 +66,7 @@ class ULPackageDetailViewController: UIViewController {
     }
     
     func prepareInfo() {
+        
         self.details.removeAll()
         details = [
             .bannerComponent(

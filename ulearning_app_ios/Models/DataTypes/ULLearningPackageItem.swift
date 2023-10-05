@@ -16,6 +16,8 @@ class ULLearningPackageItem: Mappable{
     var id: Int?
     var isRequired: Bool = false
     var learningPackageId: Int?
+    var percentageAdvance: String?
+
     
     convenience required init?(map: Map) {
         self.init()
@@ -24,10 +26,11 @@ class ULLearningPackageItem: Mappable{
     
     func mapping(map: Map) {
         course <- map["course"]
-        courseId <- map["courseId"]
+        courseId <- map["course_id"]
         id <- map["id"]
-        isRequired <- map["isRequired"]
-        learningPackageId <- map["learningPackageId"]
+        isRequired <- map["is_required"]
+        learningPackageId <- map["learning_package_id"]
+        percentageAdvance <- map["percentageAdvance"]
     }
     
 }

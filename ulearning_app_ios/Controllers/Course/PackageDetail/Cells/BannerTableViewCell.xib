@@ -79,10 +79,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0z-Tf-X6i">
+                                <rect key="frame" x="257" y="20" width="23" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Jyj-ih-Cx1" firstAttribute="leading" secondItem="N1g-jt-nx0" secondAttribute="leading" constant="20" id="6Kr-al-fGG"/>
+                            <constraint firstItem="v0z-Tf-X6i" firstAttribute="top" secondItem="N1g-jt-nx0" secondAttribute="top" constant="20" id="BAf-Ag-iRS"/>
+                            <constraint firstAttribute="trailing" secondItem="v0z-Tf-X6i" secondAttribute="trailing" constant="40" id="Id5-nJ-jU2"/>
                             <constraint firstAttribute="width" constant="320" id="OCH-Fv-fPO"/>
                             <constraint firstAttribute="height" constant="100" id="bqd-eu-TpS"/>
                             <constraint firstAttribute="trailing" secondItem="Jyj-ih-Cx1" secondAttribute="trailing" constant="80" id="nnL-Hz-qcm"/>
@@ -106,6 +114,7 @@
             <connections>
                 <outlet property="backButton" destination="Hsv-cI-NI3" id="gh0-4C-C8g"/>
                 <outlet property="imagePackageView" destination="7G1-bJ-Buo" id="IVn-8U-yuV"/>
+                <outlet property="percentageLabel" destination="v0z-Tf-X6i" id="xXi-qF-TQg"/>
                 <outlet property="titleLabel" destination="Jyj-ih-Cx1" id="4A4-Jc-yin"/>
             </connections>
             <point key="canvasLocation" x="109.9236641221374" y="202.81690140845072"/>

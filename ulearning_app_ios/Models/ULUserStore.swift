@@ -15,7 +15,6 @@ class ULUserStore {
     }
     public func getRole() -> String?{
         let defaults = UserDefaults.standard
-        debugPrint("Role \(defaults.object(forKey: "role") ?? "")")
         return defaults.object(forKey: "role") as? String
     }
     
@@ -35,7 +34,6 @@ class ULUserStore {
     }
     public func getUserId() -> Int?{
         let defaults = UserDefaults.standard
-        debugPrint("UserId \(defaults.object(forKey: "userId") ?? "")")
         return defaults.object(forKey: "userId") as? Int
     }
     

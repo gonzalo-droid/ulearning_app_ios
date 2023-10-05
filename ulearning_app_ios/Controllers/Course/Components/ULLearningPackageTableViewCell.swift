@@ -13,6 +13,7 @@ class ULLearningPackageTableViewCell: UITableViewCell {
         didSet {
             titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
             titleLabel.textColor = .blueUL
+            titleLabel.numberOfLines = 3
         }
     }
     

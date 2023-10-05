@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 
 protocol CourseLearningCollectionViewCellProtocol: AnyObject {
@@ -71,7 +72,24 @@ class CourseLearningCollectionViewCell: UICollectionViewCell {
         categoryLabel.text = data.course?.category?.name
         
         containerRequired.isHidden = !data.isRequired
+        
+      
+        if let value = data.percentageAdvance {
+            debugPrint("percentage \(value)")
+            let toFLoat = Float(value)
+            // self.percentage = (toFLoat ?? 0) / 100
+            percentageLabel.text = "\(toFLoat ?? 0) %"
+        }
+        // progressView.setProgress(data.percentageAdvance ?? Float(0), animated: true)
+        
+        if let imageUrl = data.course?.mainImage?.originalUrl {
+            self.imageView.kf.setImage(with: makeImageURL(imageUrl))
+        }
 
     }
 
+    
+    private func makeImageURL(_ imageURL: String) -> URL? {
+        URL(string: imageURL)
+    }
 }
