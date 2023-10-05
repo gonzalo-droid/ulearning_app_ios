@@ -60,6 +60,8 @@
 		C184F23B2A930E960075D61A /* ULCoursePercentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C184F23A2A930E960075D61A /* ULCoursePercentage.swift */; };
 		C184F23D2A930F3B0075D61A /* ULCoursePercentageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C184F23C2A930F3B0075D61A /* ULCoursePercentageResponse.swift */; };
 		C1874B722A8B43A1007D432F /* ULTopicCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1874B712A8B43A1007D432F /* ULTopicCellViewModel.swift */; };
+		C19DE37E2ACD2CCF0030BD9E /* CourseLearningCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19DE37C2ACD2CCF0030BD9E /* CourseLearningCollectionViewCell.swift */; };
+		C19DE37F2ACD2CCF0030BD9E /* CourseLearningCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19DE37D2ACD2CCF0030BD9E /* CourseLearningCollectionViewCell.xib */; };
 		C1B1513B2A4BF4110011620D /* ULTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513A2A4BF4110011620D /* ULTabBarViewController.swift */; };
 		C1B1513D2A4BF4220011620D /* ULHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513C2A4BF4220011620D /* ULHomeViewController.swift */; };
 		C1B1513F2A4BF4320011620D /* ULMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1513E2A4BF4320011620D /* ULMessageViewController.swift */; };
@@ -90,7 +92,6 @@
 		C1C6586B2A5D303000077E84 /* ULExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C6586A2A5D303000077E84 /* ULExtensionView.swift */; };
 		C1C6586D2A5D391900077E84 /* ULCompletedCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C6586C2A5D391900077E84 /* ULCompletedCourseViewModel.swift */; };
 		C1CAF2BA2AC3EA0A005DCFB0 /* ULBaseResponseSubscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CAF2B92AC3EA0A005DCFB0 /* ULBaseResponseSubscriptions.swift */; };
-		C1D02BDE2ACBEF1700BC00C6 /* CourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D02BDD2ACBEF1700BC00C6 /* CourseCollectionViewCell.swift */; };
 		C1DC2F842A6DACA000542F7A /* ULLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DC2F832A6DACA000542F7A /* ULLoginViewModel.swift */; };
 		C1DC2F862A6DAE0E00542F7A /* ULUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DC2F852A6DAE0E00542F7A /* ULUserStore.swift */; };
 		C1E2FD472ABBF68C00A30071 /* ULPackageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E2FD452ABBF68C00A30071 /* ULPackageDetailViewController.swift */; };
@@ -121,7 +122,7 @@
 		C105354A2A584AED00F10139 /* ULRouteCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULRouteCourseViewController.swift; sourceTree = "<group>"; };
 		C105354B2A584AED00F10139 /* ULRouteCourseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULRouteCourseViewController.xib; sourceTree = "<group>"; };
 		C105354E2A584B4400F10139 /* ULProgressCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULProgressCourseViewController.swift; sourceTree = "<group>"; };
-		C105354F2A584B4400F10139 /* ULProgressCourseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ULProgressCourseViewController.xib; path = ../../Controllers/Course/ULProgressCourseViewController.xib; sourceTree = "<group>"; };
+		C105354F2A584B4400F10139 /* ULProgressCourseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULProgressCourseViewController.xib; sourceTree = "<group>"; };
 		C10535522A584B5800F10139 /* ULPackageCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULPackageCourseViewController.swift; sourceTree = "<group>"; };
 		C10535532A584B5800F10139 /* ULPackageCourseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULPackageCourseViewController.xib; sourceTree = "<group>"; };
 		C10AB0B32AB405BE000EA975 /* ULMessageSupportResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULMessageSupportResponse.swift; sourceTree = "<group>"; };
@@ -164,6 +165,8 @@
 		C184F23A2A930E960075D61A /* ULCoursePercentage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULCoursePercentage.swift; sourceTree = "<group>"; };
 		C184F23C2A930F3B0075D61A /* ULCoursePercentageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULCoursePercentageResponse.swift; sourceTree = "<group>"; };
 		C1874B712A8B43A1007D432F /* ULTopicCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULTopicCellViewModel.swift; sourceTree = "<group>"; };
+		C19DE37C2ACD2CCF0030BD9E /* CourseLearningCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseLearningCollectionViewCell.swift; sourceTree = "<group>"; };
+		C19DE37D2ACD2CCF0030BD9E /* CourseLearningCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseLearningCollectionViewCell.xib; sourceTree = "<group>"; };
 		C1B1513A2A4BF4110011620D /* ULTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULTabBarViewController.swift; sourceTree = "<group>"; };
 		C1B1513C2A4BF4220011620D /* ULHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULHomeViewController.swift; sourceTree = "<group>"; };
 		C1B1513E2A4BF4320011620D /* ULMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULMessageViewController.swift; sourceTree = "<group>"; };
@@ -173,7 +176,7 @@
 		C1BA3F6C2A69072700695D31 /* ULBaseResponseProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULBaseResponseProfile.swift; sourceTree = "<group>"; };
 		C1BA3F6E2A6907F000695D31 /* ULAPIAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULAPIAuth.swift; sourceTree = "<group>"; };
 		C1BA3F702A6909BF00695D31 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		C1BC67582A9A5F6C00F01E95 /* ULMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ULMessageViewController.xib; path = ulearning_app_ios/Models/APIResponse/ULMessageViewController.xib; sourceTree = SOURCE_ROOT; };
+		C1BC67582A9A5F6C00F01E95 /* ULMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ULMessageViewController.xib; path = ulearning_app_ios/Controllers/Message/ULMessageViewController.xib; sourceTree = SOURCE_ROOT; };
 		C1BC675A2A9C3A8500F01E95 /* ULMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ULMessageViewModel.swift; path = ulearning_app_ios/Models/APIResponse/ULMessageViewModel.swift; sourceTree = SOURCE_ROOT; };
 		C1BC675C2A9C3BB400F01E95 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		C1BC675E2A9C3E1C00F01E95 /* ULAPIMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULAPIMessage.swift; sourceTree = "<group>"; };
@@ -194,7 +197,6 @@
 		C1C6586A2A5D303000077E84 /* ULExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULExtensionView.swift; sourceTree = "<group>"; };
 		C1C6586C2A5D391900077E84 /* ULCompletedCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULCompletedCourseViewModel.swift; sourceTree = "<group>"; };
 		C1CAF2B92AC3EA0A005DCFB0 /* ULBaseResponseSubscriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULBaseResponseSubscriptions.swift; sourceTree = "<group>"; };
-		C1D02BDD2ACBEF1700BC00C6 /* CourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCell.swift; sourceTree = "<group>"; };
 		C1DC2F832A6DACA000542F7A /* ULLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULLoginViewModel.swift; sourceTree = "<group>"; };
 		C1DC2F852A6DAE0E00542F7A /* ULUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULUserStore.swift; sourceTree = "<group>"; };
 		C1E2FD452ABBF68C00A30071 /* ULPackageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULPackageDetailViewController.swift; sourceTree = "<group>"; };
@@ -234,17 +236,9 @@
 		C100B4802A7A099A008FB9DE /* CourseDetail */ = {
 			isa = PBXGroup;
 			children = (
+				C100B4822A7A09C1008FB9DE /* ULCourseDetailViewController.xib */,
 				C19EE4C22A8600C4006A3B9E /* Cells */,
 				C100B4812A7A09C1008FB9DE /* ULCourseDetailViewController.swift */,
-			);
-			path = CourseDetail;
-			sourceTree = "<group>";
-		};
-		C100B4852A7A0BDA008FB9DE /* CourseDetail */ = {
-			isa = PBXGroup;
-			children = (
-				C19EE4C12A8600A7006A3B9E /* Cells */,
-				C100B4822A7A09C1008FB9DE /* ULCourseDetailViewController.xib */,
 			);
 			path = CourseDetail;
 			sourceTree = "<group>";
@@ -317,11 +311,6 @@
 		C11BCAAA2A51682A00AEC3AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C1720D2A2A5542B2003DCC4E /* Home */,
-				C1720D292A554275003DCC4E /* Message */,
-				C1720D282A554267003DCC4E /* Course */,
-				C1720D272A554257003DCC4E /* Profile */,
-				C1720D262A554247003DCC4E /* Login */,
 				C1C6586A2A5D303000077E84 /* ULExtensionView.swift */,
 			);
 			path = Views;
@@ -404,57 +393,10 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		C1720D262A554247003DCC4E /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				C1720D312A55435F003DCC4E /* ULLoginViewController.xib */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		C1720D272A554257003DCC4E /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				C13218382A6618A4009B2DB8 /* ULProfileViewController.xib */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		C1720D282A554267003DCC4E /* Course */ = {
-			isa = PBXGroup;
-			children = (
-				C1E2FD432ABBF63C00A30071 /* PackageDetail */,
-				C100B4852A7A0BDA008FB9DE /* CourseDetail */,
-				C1C658602A5D17C700077E84 /* Components */,
-				C10535532A584B5800F10139 /* ULPackageCourseViewController.xib */,
-				C105354F2A584B4400F10139 /* ULProgressCourseViewController.xib */,
-				C105354B2A584AED00F10139 /* ULRouteCourseViewController.xib */,
-				C10535452A584A7D00F10139 /* ULCompletedCourseViewController.xib */,
-			);
-			path = Course;
-			sourceTree = "<group>";
-		};
-		C1720D292A554275003DCC4E /* Message */ = {
-			isa = PBXGroup;
-			children = (
-				C172D99E2AA3F50100353276 /* ULAddMessageViewController.xib */,
-				C1BC67692A9C506D00F01E95 /* ULConversationTableViewCell.xib */,
-				C1BC67582A9A5F6C00F01E95 /* ULMessageViewController.xib */,
-			);
-			path = Message;
-			sourceTree = "<group>";
-		};
-		C1720D2A2A5542B2003DCC4E /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				C11BCAAB2A516AC900AEC3AB /* ULHomeViewController.xib */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		C1720D2B2A5542DD003DCC4E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C11BCAAB2A516AC900AEC3AB /* ULHomeViewController.xib */,
 				C1B1513C2A4BF4220011620D /* ULHomeViewController.swift */,
 				C1B1513A2A4BF4110011620D /* ULTabBarViewController.swift */,
 			);
@@ -464,6 +406,7 @@
 		C1720D2C2A5542EB003DCC4E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				C13218382A6618A4009B2DB8 /* ULProfileViewController.xib */,
 				C1B151402A4BF43D0011620D /* ULProfileViewController.swift */,
 				C15CB7F42A70DED3008500F4 /* ULQRScannerViewController.swift */,
 			);
@@ -473,6 +416,9 @@
 		C1720D2D2A5542F1003DCC4E /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				C172D99E2AA3F50100353276 /* ULAddMessageViewController.xib */,
+				C1BC67692A9C506D00F01E95 /* ULConversationTableViewCell.xib */,
+				C1BC67582A9A5F6C00F01E95 /* ULMessageViewController.xib */,
 				C1B1513E2A4BF4320011620D /* ULMessageViewController.swift */,
 				C1BC67682A9C506D00F01E95 /* ULConversationTableViewCell.swift */,
 				C172D99D2AA3F50100353276 /* ULAddMessageViewController.swift */,
@@ -483,6 +429,7 @@
 		C1720D2E2A5542FA003DCC4E /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				C1720D312A55435F003DCC4E /* ULLoginViewController.xib */,
 				C1720D302A55435F003DCC4E /* ULLoginViewController.swift */,
 			);
 			path = Login;
@@ -491,6 +438,10 @@
 		C1720D2F2A554300003DCC4E /* Course */ = {
 			isa = PBXGroup;
 			children = (
+				C10535532A584B5800F10139 /* ULPackageCourseViewController.xib */,
+				C105354F2A584B4400F10139 /* ULProgressCourseViewController.xib */,
+				C105354B2A584AED00F10139 /* ULRouteCourseViewController.xib */,
+				C10535452A584A7D00F10139 /* ULCompletedCourseViewController.xib */,
 				C1E2FD442ABBF65700A30071 /* PackageDetail */,
 				C100B4802A7A099A008FB9DE /* CourseDetail */,
 				C1C658652A5D270200077E84 /* Components */,
@@ -502,19 +453,12 @@
 			path = Course;
 			sourceTree = "<group>";
 		};
-		C19EE4C12A8600A7006A3B9E /* Cells */ = {
+		C19EE4C22A8600C4006A3B9E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				C1F093A72A8753A800B95995 /* ULTopicCollectionViewCell.xib */,
 				C100B4952A7A28F6008FB9DE /* ULTopicComponentTableViewCell.xib */,
 				C100B4912A7A28DA008FB9DE /* DetailComponentTableViewCell.xib */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		C19EE4C22A8600C4006A3B9E /* Cells */ = {
-			isa = PBXGroup;
-			children = (
 				C100B4942A7A28F6008FB9DE /* ULTopicComponentTableViewCell.swift */,
 				C1F093A62A8753A800B95995 /* ULTopicCollectionViewCell.swift */,
 				C100B4902A7A28DA008FB9DE /* DetailComponentTableViewCell.swift */,
@@ -594,29 +538,15 @@
 			path = Course;
 			sourceTree = "<group>";
 		};
-		C1C658602A5D17C700077E84 /* Components */ = {
+		C1C658652A5D270200077E84 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				C155633C2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.xib */,
 				C1C658672A5D28C800077E84 /* ULCourseTableViewCell.xib */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		C1C658652A5D270200077E84 /* Components */ = {
-			isa = PBXGroup;
-			children = (
 				C1C658662A5D28C800077E84 /* ULCourseTableViewCell.swift */,
 				C155633B2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		C1E2FD432ABBF63C00A30071 /* PackageDetail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PackageDetail;
 			sourceTree = "<group>";
 		};
 		C1E2FD442ABBF65700A30071 /* PackageDetail */ = {
@@ -636,7 +566,8 @@
 				C1E2FD4B2ABC049600A30071 /* BannerTableViewCell.xib */,
 				C1C3F8092ABE5FE6000855C9 /* TaBarDetailTableViewCell.swift */,
 				C1C3F80A2ABE5FE6000855C9 /* TaBarDetailTableViewCell.xib */,
-				C1D02BDD2ACBEF1700BC00C6 /* CourseCollectionViewCell.swift */,
+				C19DE37C2ACD2CCF0030BD9E /* CourseLearningCollectionViewCell.swift */,
+				C19DE37D2ACD2CCF0030BD9E /* CourseLearningCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -718,6 +649,7 @@
 				C1C3F80C2ABE5FE6000855C9 /* TaBarDetailTableViewCell.xib in Resources */,
 				C13218392A6618A4009B2DB8 /* ULProfileViewController.xib in Resources */,
 				C11D71E22A454E0100B31C26 /* LaunchScreen.storyboard in Resources */,
+				C19DE37F2ACD2CCF0030BD9E /* CourseLearningCollectionViewCell.xib in Resources */,
 				C100B4932A7A28DA008FB9DE /* DetailComponentTableViewCell.xib in Resources */,
 				C1E2FD482ABBF68C00A30071 /* ULPackageDetailViewController.xib in Resources */,
 				C10535472A584A7D00F10139 /* ULCompletedCourseViewController.xib in Resources */,
@@ -815,7 +747,6 @@
 				C1C6586B2A5D303000077E84 /* ULExtensionView.swift in Sources */,
 				C1BC675D2A9C3BB400F01E95 /* MessageService.swift in Sources */,
 				C100B4922A7A28DA008FB9DE /* DetailComponentTableViewCell.swift in Sources */,
-				C1D02BDE2ACBEF1700BC00C6 /* CourseCollectionViewCell.swift in Sources */,
 				C13218372A65CD04009B2DB8 /* ULPackageCourseViewModel.swift in Sources */,
 				C1C3F80E2ABEA5BC000855C9 /* ULPackageDetailViewModel.swift in Sources */,
 				C11BCA8E2A511A2800AEC3AB /* ULGroup.swift in Sources */,
@@ -843,6 +774,7 @@
 				C11BCA882A5110D800AEC3AB /* ULCourse.swift in Sources */,
 				C11310EF2A6DC1FA004DAAD8 /* ULLoginResponse.swift in Sources */,
 				C1C3F80B2ABE5FE6000855C9 /* TaBarDetailTableViewCell.swift in Sources */,
+				C19DE37E2ACD2CCF0030BD9E /* CourseLearningCollectionViewCell.swift in Sources */,
 				C15654552A4E3F3F00E6E42A /* ULEndpoint.swift in Sources */,
 				C11BCA922A511DB300AEC3AB /* ULSubscription.swift in Sources */,
 				C1B1513B2A4BF4110011620D /* ULTabBarViewController.swift in Sources */,

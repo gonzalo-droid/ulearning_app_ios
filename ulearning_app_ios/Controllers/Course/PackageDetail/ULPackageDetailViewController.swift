@@ -140,9 +140,27 @@ extension ULPackageDetailViewController: UITableViewDelegate, UITableViewDataSou
 }
 
 extension ULPackageDetailViewController: BannerTableViewCellProtocol {
+    func closeButtonPress(sender: UIButton, cell: BannerTableViewCell) {
+        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 
 }
 
-extension ULPackageDetailViewController: TaBarDetailTableViewCellProtocol {
+extension ULPackageDetailViewController: CourseLearningCollectionViewCellProtocol {
+    
+    func showDetails(data: ULLearningPackageItem) {
+        let subscription = ULSubscription()
+        subscription.course = data.course
+        subscription.courseId = data.courseId ?? 0
+        
+        DispatchQueue.main.async {
+            let viewModel = ULCourseDetailViewModel(data: subscription)
+            let controller = ULCourseDetailViewController(viewModel: viewModel)
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
+    
 
 }

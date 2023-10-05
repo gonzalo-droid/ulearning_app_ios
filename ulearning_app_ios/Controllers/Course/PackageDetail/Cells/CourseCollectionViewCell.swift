@@ -19,6 +19,9 @@ class CourseCollectionViewCell: UICollectionViewCell {
     var delegate: CourseCollectionViewCellProtocol?
 
     
+    
+    
+    
     public let nib = UINib(nibName: "CourseCollectionViewCell", bundle: nil)
 
     
@@ -26,8 +29,8 @@ class CourseCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func setupCell(topic: ULLearningPackageItem, delegate: CourseCollectionViewCellProtocol?) {
-        self.data = topic
+    func setupCell(data: ULLearningPackageItem, delegate: CourseCollectionViewCellProtocol?) {
+        self.data = data
         self.delegate = delegate
         
 

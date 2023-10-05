@@ -73,8 +73,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N1g-jt-nx0" userLabel="title">
                         <rect key="frame" x="0.0" y="200" width="320" height="100"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Italiano Intermeedio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyj-ih-Cx1">
-                                <rect key="frame" x="20" y="30" width="128" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyj-ih-Cx1">
+                                <rect key="frame" x="20" y="30" width="220" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -85,6 +85,7 @@
                             <constraint firstItem="Jyj-ih-Cx1" firstAttribute="leading" secondItem="N1g-jt-nx0" secondAttribute="leading" constant="20" id="6Kr-al-fGG"/>
                             <constraint firstAttribute="width" constant="320" id="OCH-Fv-fPO"/>
                             <constraint firstAttribute="height" constant="100" id="bqd-eu-TpS"/>
+                            <constraint firstAttribute="trailing" secondItem="Jyj-ih-Cx1" secondAttribute="trailing" constant="80" id="nnL-Hz-qcm"/>
                             <constraint firstItem="Jyj-ih-Cx1" firstAttribute="top" secondItem="N1g-jt-nx0" secondAttribute="top" constant="30" id="uZ5-q7-hB2"/>
                         </constraints>
                     </view>
@@ -103,6 +104,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="backButton" destination="Hsv-cI-NI3" id="gh0-4C-C8g"/>
+                <outlet property="imagePackageView" destination="7G1-bJ-Buo" id="IVn-8U-yuV"/>
                 <outlet property="titleLabel" destination="Jyj-ih-Cx1" id="4A4-Jc-yin"/>
             </connections>
             <point key="canvasLocation" x="109.9236641221374" y="202.81690140845072"/>

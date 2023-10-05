@@ -22,6 +22,7 @@ class ULCourseTableViewCell: UITableViewCell {
         didSet {
             titleCourseLabel.font = UIFont.boldSystemFont(ofSize: 20)
             titleCourseLabel.textColor = .blueUL
+            titleCourseLabel.numberOfLines = 3
         }
     }
     
