@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="addMessageButton" destination="34N-5J-XJO" id="kwK-FQ-x6R"/>
                 <outlet property="messageTableView" destination="xJ9-Jh-ogF" id="R7E-PV-Kw6"/>
+                <outlet property="onBackPress" destination="DEO-bR-Rra" id="TgP-Ks-nrp"/>
                 <outlet property="titleLabel" destination="pr7-lq-cuU" id="XqX-DB-hEd"/>
                 <outlet property="view" destination="iN0-l3-epB" id="A1c-zF-Xpe"/>
             </connections>
@@ -31,25 +32,43 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtp-bg-I76" userLabel="NavBar">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
                                     <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TsT-uS-5ai">
+                                            <rect key="frame" x="20" y="8" width="20" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="Kfh-Y3-J9h"/>
+                                                <constraint firstAttribute="height" constant="21.666666666666671" id="hmb-Sl-P3y"/>
+                                            </constraints>
+                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mensajería a plataforma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pr7-lq-cuU">
-                                            <rect key="frame" x="20" y="20" width="260.33333333333331" height="28.666666666666671"/>
+                                            <rect key="frame" x="20" y="30" width="260.33333333333331" height="28.666666666666671"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34N-5J-XJO">
-                                            <rect key="frame" x="20" y="108.66666666666666" width="164" height="34.333333333333343"/>
+                                            <rect key="frame" x="20" y="98.666666666666657" width="164" height="34.333333333333343"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" title="Nuevo mensaje"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEO-bR-Rra">
+                                            <rect key="frame" x="20" y="5" width="20" height="21.666666666666668"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain"/>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstItem="pr7-lq-cuU" firstAttribute="top" secondItem="xtp-bg-I76" secondAttribute="top" constant="20" id="BWU-GG-BgE"/>
+                                        <constraint firstItem="DEO-bR-Rra" firstAttribute="leading" secondItem="TsT-uS-5ai" secondAttribute="leading" id="5So-mr-1fT"/>
+                                        <constraint firstItem="pr7-lq-cuU" firstAttribute="top" secondItem="xtp-bg-I76" secondAttribute="top" constant="30" id="BWU-GG-BgE"/>
                                         <constraint firstItem="pr7-lq-cuU" firstAttribute="leading" secondItem="xtp-bg-I76" secondAttribute="leading" constant="20" symbolic="YES" id="D77-d4-HeB"/>
-                                        <constraint firstItem="34N-5J-XJO" firstAttribute="top" secondItem="pr7-lq-cuU" secondAttribute="bottom" constant="60" id="g4V-3i-gFo"/>
+                                        <constraint firstItem="DEO-bR-Rra" firstAttribute="trailing" secondItem="TsT-uS-5ai" secondAttribute="trailing" id="IEI-8c-sZI"/>
+                                        <constraint firstItem="DEO-bR-Rra" firstAttribute="bottom" secondItem="TsT-uS-5ai" secondAttribute="bottom" id="XQ3-2f-Adm"/>
+                                        <constraint firstItem="34N-5J-XJO" firstAttribute="top" secondItem="pr7-lq-cuU" secondAttribute="bottom" constant="40" id="g4V-3i-gFo"/>
                                         <constraint firstAttribute="height" constant="150" id="pXg-JA-pbX"/>
+                                        <constraint firstItem="TsT-uS-5ai" firstAttribute="top" secondItem="xtp-bg-I76" secondAttribute="top" constant="5" id="sGe-nM-zkh"/>
+                                        <constraint firstItem="TsT-uS-5ai" firstAttribute="leading" secondItem="xtp-bg-I76" secondAttribute="leading" constant="20" symbolic="YES" id="wwD-0c-bA2"/>
                                         <constraint firstItem="34N-5J-XJO" firstAttribute="leading" secondItem="xtp-bg-I76" secondAttribute="leading" constant="20" symbolic="YES" id="zEb-pu-VtA"/>
+                                        <constraint firstItem="DEO-bR-Rra" firstAttribute="top" secondItem="TsT-uS-5ai" secondAttribute="top" id="zRa-vd-VXM"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRj-EF-7W9" userLabel="MessagesContainer">
@@ -97,10 +116,11 @@
                 <constraint firstItem="Uzl-iM-LNE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tHc-li-Q6X"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Uzl-iM-LNE" secondAttribute="bottom" id="vCi-Jt-xmg"/>
             </constraints>
-            <point key="canvasLocation" x="59" y="20"/>
+            <point key="canvasLocation" x="58.778625954198468" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

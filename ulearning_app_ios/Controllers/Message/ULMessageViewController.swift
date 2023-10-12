@@ -28,6 +28,20 @@ class ULMessageViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var onBackPress: UIButton!{
+        didSet {
+            onBackPress.setTitle("", for: .normal)
+            onBackPress.setTitle("", for: .selected)
+            onBackPress.setTitle("", for: .focused)
+            onBackPress.addTarget(
+                self,
+                action: #selector(onBackPressTapped(_:)),
+                for: .touchUpInside
+            )
+        }
+    }
+    
+    
     @IBOutlet weak var messageTableView: UITableView!
     
     var viewModel: ULMessageSupportViewModel = ULMessageSupportViewModel()
@@ -47,7 +61,11 @@ class ULMessageViewController: UIViewController {
         self.setupTableView()
         
         addMessageButton.addTarget(self, action: #selector(addMessageButtonTapped), for: .touchUpInside)
-
+    }
+    
+    @objc func onBackPressTapped(_ sender: UIButton) {
+        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc func addMessageButtonTapped() {
