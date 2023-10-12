@@ -11,6 +11,41 @@ import AlamofireObjectMapper
 
 class MessageService {
     
+    static func getMessageByCourse(
+        page: Int,
+        courseID: Int,
+        successBlock: @escaping(_ conversations: [ULConversation]?) -> Void,
+        errorBlock: @escaping(_ error:  String?) -> Void
+    ) {
+        
+        let pathUrl: ULAPIMessage = .getMessageByCourse(
+            perPage: 50,
+            page: page,
+            courseID: courseID
+        )
+        
+        AF.request(pathUrl).validate(statusCode: 200..<205).responseObject {
+            (response: DataResponse<ULMessagesSupportResponse, AFError>) in
+            
+            switch response.result {
+            case .success(let value):
+                if value.message == nil {
+                    if let subs = value.data {
+                        successBlock(subs)
+                    } else {
+                        errorBlock("Data is nil")
+                    }
+                } else {
+                    errorBlock(value.message ?? "ERROR AQUI")
+                }
+            case .failure(let error):
+                errorBlock(error.localizedDescription)
+            }
+        }
+    }
+    
+    
+    
     static func getMessageSupport(
         page: Int,
         toSupport: Bool,

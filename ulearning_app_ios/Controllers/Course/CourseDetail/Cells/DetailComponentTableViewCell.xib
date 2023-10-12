@@ -278,9 +278,6 @@
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title=" "/>
-                                        <connections>
-                                            <action selector="goToMessageBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="FM8-sf-2Ds"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray3Color"/>
@@ -332,6 +329,7 @@
                 <outlet property="containerBtnGoToMessage" destination="tQ4-y8-57V" id="OQ4-Gk-TzU"/>
                 <outlet property="courseaImageView" destination="7G1-bJ-Buo" id="atD-jZ-92h"/>
                 <outlet property="descriptionLabel" destination="hwy-qk-Mr9" id="XCO-NF-Hmx"/>
+                <outlet property="goToMessageBtn" destination="Ssp-UJ-FpG" id="bon-Fv-lc6"/>
                 <outlet property="modeLabel" destination="Cno-35-61b" id="X3i-8n-esr"/>
                 <outlet property="sessionLabel" destination="QSt-48-3OP" id="mFq-5M-94k"/>
                 <outlet property="timeLabel" destination="jSB-XI-NiK" id="hhJ-r8-yLd"/>

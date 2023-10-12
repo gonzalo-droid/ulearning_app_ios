@@ -10,6 +10,10 @@ import UIKit
 class ULMessageViewController: UIViewController {
     
     let MESSAGE_SUPPORT = "support"
+    let MESSAGE_COURSE = "course"
+    var courseID: Int?
+    var typeMessage: String? 
+
 
     @IBOutlet weak var titleLabel: UILabel!{
         didSet {
@@ -31,6 +35,9 @@ class ULMessageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+            
+        titleLabel.text = (self.typeMessage == self.MESSAGE_SUPPORT) ? "Soporte plataforma" : "Curso"
+        
         configView()
         bindViewModel()
     }
@@ -39,11 +46,11 @@ class ULMessageViewController: UIViewController {
         self.view.backgroundColor = .systemBackground
         self.setupTableView()
         
-        addMessageButton.addTarget(self, action: #selector(addMessageButtonButtonTapped), for: .touchUpInside)
+        addMessageButton.addTarget(self, action: #selector(addMessageButtonTapped), for: .touchUpInside)
 
     }
     
-    @objc func addMessageButtonButtonTapped() {
+    @objc func addMessageButtonTapped() {
         DispatchQueue.main.async {
             let viewModel = ULAddMessageSupportViewModel(typeMessage: self.MESSAGE_SUPPORT, courseId: nil, userIds: [])
             let controller = ULAddMessageViewController(viewModel: viewModel, delegate: self)
@@ -53,7 +60,9 @@ class ULMessageViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewModel.getData()
+        viewModel.courseID = self.courseID
+        
+        viewModel.getConversations()
     }
     
     func bindViewModel() {
@@ -137,7 +146,7 @@ extension ULMessageViewController: ULAddMessageViewControllerProtocol {
     func sendMessageBtn(controller: ULAddMessageViewController) {
         self.dismiss(animated: true)
         self.navigationController?.popViewController(animated: true)
-        viewModel.getData()
+        viewModel.getConversations()
     }
     
 }

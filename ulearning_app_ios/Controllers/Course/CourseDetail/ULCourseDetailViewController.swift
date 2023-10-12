@@ -141,6 +141,15 @@ extension ULCourseDetailViewController: UITableViewDelegate, UITableViewDataSour
 }
 
 extension ULCourseDetailViewController: DetailComponentTableViewCellProtocol {
+    func goToMessageButtonPress(courseID: Int) {
+        DispatchQueue.main.async {
+            let controller = ULMessageViewController()
+            controller.typeMessage = "course"
+            controller.courseID = courseID
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
+    
 
     func closeButtonPress(sender: UIButton, cell: DetailComponentTableViewCell) {
         self.dismiss(animated: true)

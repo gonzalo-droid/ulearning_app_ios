@@ -19,6 +19,7 @@ final class ULTabBarViewController: UITabBarController {
     private func setUpTabs() {
         let homeVC = ULHomeViewController()
         let messageVC = ULMessageViewController()
+        messageVC.typeMessage = "support"
         let profileVC = ULProfileViewController()
 
         homeVC.navigationItem.largeTitleDisplayMode = .automatic

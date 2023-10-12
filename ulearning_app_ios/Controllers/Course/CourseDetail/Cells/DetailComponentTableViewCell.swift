@@ -9,6 +9,7 @@ import UIKit
 
 protocol DetailComponentTableViewCellProtocol: AnyObject {
     func closeButtonPress(sender: UIButton, cell: DetailComponentTableViewCell)
+    func goToMessageButtonPress(courseID: Int)
 }
 
 class DetailComponentTableViewCell: UITableViewCell {
@@ -34,6 +35,9 @@ class DetailComponentTableViewCell: UITableViewCell {
             containerBtnGoToMessage.layer.cornerRadius = 8
         }
     }
+    
+    @IBOutlet weak var goToMessageBtn: UIButton!
+    
     
     @IBOutlet weak var courseaImageView: UIImageView!
     
@@ -72,12 +76,8 @@ class DetailComponentTableViewCell: UITableViewCell {
         }
     }
     
-    
-    
-    @IBAction func goToMessageBtn(_ sender: Any) {
-    }
-    
     var delegate: DetailComponentTableViewCellProtocol?
+    var courseID:  Int?
 
     
     public let nib = UINib(
@@ -98,6 +98,8 @@ class DetailComponentTableViewCell: UITableViewCell {
     func setupCell(data: ULSubscription, delegate: DetailComponentTableViewCellProtocol) {
         self.delegate = delegate
     
+        self.courseID = data.course?.id
+        
         titleLabel.attributedText = NSMutableAttributedString(
             string: data.course?.title ?? "text",
             attributes: [
@@ -132,8 +134,14 @@ class DetailComponentTableViewCell: UITableViewCell {
         }
         sessionLabel.text = formattedCount
         
+        goToMessageBtn.addTarget(self, action: #selector(goToMessageButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func goToMessageButtonTapped() {
         
-        
+        if let courseID = self.courseID {
+            self.delegate?.goToMessageButtonPress(courseID: courseID)
+        }
     }
     
     @objc func closeButtonPress(_ sender: UIButton) {

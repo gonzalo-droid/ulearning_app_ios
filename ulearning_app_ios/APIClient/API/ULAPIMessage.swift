@@ -13,11 +13,19 @@ enum ULAPIMessage: ULAPIConfig {
     /// GET
 
     case getMessageSupport(
-        perPage: Int = 50,
+        perPage: Int = 100,
         page: Int = 1,
         toSupport: Bool = false,
         includes: String = "first_message"
     )
+    
+    case getMessageByCourse(
+        perPage: Int = 100,
+        page: Int = 1,
+        courseID: Int,
+        includes: String = "first_message"
+    )
+    
     
     /// POST
 
@@ -36,6 +44,15 @@ enum ULAPIMessage: ULAPIConfig {
 
     var path: String {
         switch self {
+        case .getMessageByCourse(perPage: let perPage, page: let page,courseID: let courseID, includes: let includes):
+            var urlComponents = URLComponents()
+            urlComponents.queryItems = [
+                URLQueryItem(name: "per_page", value: "\(perPage)"),
+                URLQueryItem(name: "page", value: "\(page)"),
+                URLQueryItem(name: "course_id", value: "\(courseID)"),
+                URLQueryItem(name: "includes", value: "\(includes)")
+            ]
+            return "conversations\(urlComponents.string!)"
             
         case .getMessageSupport(perPage: let perPage, page: let page,toSupport: let toSupport, includes: let includes):
             var urlComponents = URLComponents()

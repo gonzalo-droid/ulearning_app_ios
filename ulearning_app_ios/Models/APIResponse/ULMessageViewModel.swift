@@ -11,7 +11,7 @@ class ULMessageSupportViewModel {
     
     var dataSource: [ULConversation]?
     var conversations: ULObservable<[ULMessageTableCellViewModel]> = ULObservable(nil)
-    
+    var courseID:  Int?
     func numberOfSections() -> Int {
         return 1
     }
@@ -20,7 +20,16 @@ class ULMessageSupportViewModel {
         return dataSource?.count ?? 0
     }
     
-    func getData() {
+    func getConversations() {
+        if let courseID = self.courseID {
+            getConversationsByCourse(courseID: courseID)
+        } else {
+            getConversationsSupport()
+        }
+    }
+    
+    
+    func getConversationsSupport(){
         MessageService.getMessageSupport(page: 1, toSupport: true, successBlock: { [weak self] conversations in
             guard let self = self else { return }
             self.dataSource = conversations
@@ -30,6 +39,15 @@ class ULMessageSupportViewModel {
         })
     }
     
+    func getConversationsByCourse(courseID:Int){
+        MessageService.getMessageByCourse(page: 1, courseID: courseID, successBlock: { [weak self] conversations in
+            guard let self = self else { return }
+            self.dataSource = conversations
+            self.mapData()
+        }, errorBlock: { [weak self] error in
+            guard let self = self else { return }
+        })
+    }
     
     private func mapData() {
         conversations.value = self.dataSource?.compactMap({ULMessageTableCellViewModel(conversation: $0)})
