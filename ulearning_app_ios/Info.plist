@@ -2,11 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>CFBundleName</key>
-    <string>$(PRODUCT_NAME)</string>
-    <key>NSCameraUsageDescription</key>
-    <string>$(PRODUCT_NAME) ocupa tu cámara de fotos solo para escanear un codigo qr del certificado que se obtiene al terminar un curso, al leerlo lo redireccinora a la plataforma web con la información del certificado del curso</string>
-    <key>UIUserInterfaceStyle</key>
-    <string>Light</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.638259262496-bk817nvn64tpiq0mlhdnnsrqln3dccub</string>
+			</array>
+		</dict>
+		<dict/>
+	</array>
 </dict>
 </plist>

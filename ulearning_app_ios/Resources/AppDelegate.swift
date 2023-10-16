@@ -6,6 +6,10 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseCore
+import FirebaseAuth
+import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,8 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = window
         
+        FirebaseApp.configure()
+        
         return true
     }
+
     
     func changeRootViewController(_ viewcontroller: UIViewController) {
         let desiredViewController = viewcontroller

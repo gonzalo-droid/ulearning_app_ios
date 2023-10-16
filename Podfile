@@ -11,4 +11,5 @@ target 'ulearning_app_ios' do
   pod 'AlamofireObjectMapper'
   pod 'SwiftyJSON'
   pod 'ObjectMapper'
+  pod 'GoogleSignIn'
 end
