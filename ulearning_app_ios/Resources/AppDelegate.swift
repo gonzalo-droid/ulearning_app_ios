@@ -34,6 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        // Google Sign
+        // https://agnelselvan.medium.com/google-login-in-swift-5-18d7c6fc2f88
+    
+        
         return true
     }
 

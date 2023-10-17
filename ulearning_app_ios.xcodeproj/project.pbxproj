@@ -45,7 +45,7 @@
 		C13218372A65CD04009B2DB8 /* ULPackageCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13218362A65CD04009B2DB8 /* ULPackageCourseViewModel.swift */; };
 		C13218392A6618A4009B2DB8 /* ULProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C13218382A6618A4009B2DB8 /* ULProfileViewController.xib */; };
 		C13D6F7D2ADCF05200ADA339 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C13D6F7C2ADCF05200ADA339 /* FirebaseAuth */; };
-		C13D6F7F2ADCF1B900ADA339 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C13D6F7E2ADCF1B900ADA339 /* GoogleService-Info.plist */; };
+		C14F76892ADE651F00E2CC72 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C14F76882ADE651F00E2CC72 /* GoogleService-Info.plist */; };
 		C155633D2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C155633B2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.swift */; };
 		C155633E2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C155633C2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.xib */; };
 		C15654532A4E3F3100E6E42A /* ULService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15654522A4E3F3100E6E42A /* ULService.swift */; };
@@ -154,7 +154,7 @@
 		C13218342A65CC59009B2DB8 /* ULLearningPackageTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULLearningPackageTableCellViewModel.swift; sourceTree = "<group>"; };
 		C13218362A65CD04009B2DB8 /* ULPackageCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULPackageCourseViewModel.swift; sourceTree = "<group>"; };
 		C13218382A6618A4009B2DB8 /* ULProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULProfileViewController.xib; sourceTree = "<group>"; };
-		C13D6F7E2ADCF1B900ADA339 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C14F76882ADE651F00E2CC72 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C155633B2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULLearningPackageTableViewCell.swift; sourceTree = "<group>"; };
 		C155633C2A64DE2C0031D3A4 /* ULLearningPackageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ULLearningPackageTableViewCell.xib; sourceTree = "<group>"; };
 		C15654522A4E3F3100E6E42A /* ULService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULService.swift; sourceTree = "<group>"; };
@@ -351,7 +351,7 @@
 		C11D71D42A454DFF00B31C26 /* ulearning_app_ios */ = {
 			isa = PBXGroup;
 			children = (
-				C13D6F7E2ADCF1B900ADA339 /* GoogleService-Info.plist */,
+				C14F76882ADE651F00E2CC72 /* GoogleService-Info.plist */,
 				C15BEBB92A5256F600B9B0A3 /* ViewModels */,
 				C11BCAAA2A51682A00AEC3AB /* Views */,
 				C11BCA7C2A50860300AEC3AB /* Models */,
@@ -607,6 +607,7 @@
 				C11D71CF2A454DFF00B31C26 /* Frameworks */,
 				C11D71D02A454DFF00B31C26 /* Resources */,
 				A688FDCC41B332B00F68D996 /* [CP] Embed Pods Frameworks */,
+				C14F76872ADE632D00E2CC72 /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -684,7 +685,7 @@
 				C11BCAAC2A516AC900AEC3AB /* ULHomeViewController.xib in Resources */,
 				C1BC676B2A9C506D00F01E95 /* ULConversationTableViewCell.xib in Resources */,
 				C10535512A584B4400F10139 /* ULProgressCourseViewController.xib in Resources */,
-				C13D6F7F2ADCF1B900ADA339 /* GoogleService-Info.plist in Resources */,
+				C14F76892ADE651F00E2CC72 /* GoogleService-Info.plist in Resources */,
 				C10535552A584B5800F10139 /* ULPackageCourseViewController.xib in Resources */,
 				C11D71DF2A454E0100B31C26 /* Assets.xcassets in Resources */,
 				C1F093A92A8753A800B95995 /* ULTopicCollectionViewCell.xib in Resources */,
@@ -734,6 +735,26 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ulearning_app_ios/Pods-ulearning_app_ios-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C14F76872ADE632D00E2CC72 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/${BUILD_PRODUCTS_DIR}/${INFOPLIST_PATH}",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${BUILD_DIR%Build/*}SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run -gsp ${PROJECT_DIR}/GoogleService-Info.plist;\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -867,7 +888,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
