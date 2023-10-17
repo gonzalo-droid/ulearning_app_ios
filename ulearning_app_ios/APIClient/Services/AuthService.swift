@@ -65,6 +65,63 @@ class AuthService {
         }
     }
     
+    static func loginGoogle(
+        _ params: Parameters,
+        successBlock: @escaping(_ tokenLogin: String, _ expiredAt:String) -> Void,
+        errorBlock: @escaping(_ error:  String?) -> Void
+    ) {
+        
+        let pathUrl: ULAPIAuth = .loginGoogle(params: params)
+        
+        AF.request(pathUrl).validate(statusCode: 200..<205).responseObject {
+            (response: DataResponse<ULLoginResponse, AFError>) in
+            debugPrint("Response Data: \(response.data?.description)")
+            switch response.result {
+            case .success(let value):
+                if let tokenLogin = value.token {
+                    ULUserStore().saveToken(token: tokenLogin)
+                    let expiredAt = value.expiredAt ?? ""
+                    debugPrint("Response Data: tokenLogin")
+
+                    successBlock(tokenLogin, expiredAt)
+                } else {
+                    debugPrint("Response Data:Tuvimos problemas al inciar sesión")
+
+                    errorBlock("Tuvimos problemas al inciar sesión")
+                }
+            case .failure(let error):
+                debugPrint("Response Data: \(error.localizedDescription)")
+
+                errorBlock(error.localizedDescription)
+            }
+        }
+    }
+    
+    static func loginFacebook(
+        _ params: Parameters,
+        successBlock: @escaping(_ tokenLogin: String, _ expiredAt:String) -> Void,
+        errorBlock: @escaping(_ error:  String?) -> Void
+    ) {
+        
+        let pathUrl: ULAPIAuth = .loginFacebook(params: params)
+        
+        AF.request(pathUrl).validate(statusCode: 200..<205).responseObject {
+            (response: DataResponse<ULLoginResponse, AFError>) in
+            debugPrint("Response Data: \(response.data)")
+            switch response.result {
+            case .success(let value):
+                if let tokenLogin = value.token {
+                    ULUserStore().saveToken(token: tokenLogin)
+                    let expiredAt = value.expiredAt ?? ""
+                    successBlock(tokenLogin, expiredAt)
+                } else {
+                    errorBlock("Tuvimos problemas al inciar sesión")
+                }
+            case .failure(let error):
+                errorBlock(error.localizedDescription)
+            }
+        }
+    }
     
     static func selfAuthToken(
         successBlock: @escaping(_ tokenWeb: String) -> Void,

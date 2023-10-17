@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="doLoginButton" destination="PYl-w5-xsw" id="ZGp-mK-IC2"/>
                 <outlet property="eyeButton" destination="gjn-Vy-GKb" id="QiG-zH-R79"/>
+                <outlet property="googleSignInButton" destination="Azs-dH-fyh" id="xV7-NL-SuG"/>
                 <outlet property="inputEmailTextField" destination="uja-DC-nYv" id="Sc1-WV-8oR"/>
                 <outlet property="inputPasswordTextField" destination="Wjw-A8-S2F" id="k5k-Ee-XK1"/>
                 <outlet property="progressIndicator" destination="Vry-9a-Fhu" id="qb1-gB-xPi"/>
@@ -85,14 +86,6 @@
                                 <constraint firstAttribute="width" constant="80" id="mcr-zV-7kC"/>
                             </constraints>
                         </imageView>
-                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Vry-9a-Fhu">
-                            <rect key="frame" x="178" y="361" width="37" height="37"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="37" id="FKF-lD-9KE"/>
-                                <constraint firstAttribute="width" constant="37" id="bWR-ea-j7l"/>
-                            </constraints>
-                            <color key="color" systemColor="systemGrayColor"/>
-                        </activityIndicatorView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjn-Vy-GKb">
                             <rect key="frame" x="343" y="312" width="30" height="30"/>
                             <constraints>
@@ -102,6 +95,22 @@
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system" title=" "/>
                         </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Azs-dH-fyh" userLabel="googleBtn" customClass="GIDSignInButton">
+                            <rect key="frame" x="20" y="439" width="353" height="50"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="DnB-5i-PxS"/>
+                                <constraint firstAttribute="width" constant="353" id="tO3-M4-ifH"/>
+                            </constraints>
+                        </view>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Vry-9a-Fhu">
+                            <rect key="frame" x="178" y="361" width="37" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="37" id="FKF-lD-9KE"/>
+                                <constraint firstAttribute="width" constant="37" id="bWR-ea-j7l"/>
+                            </constraints>
+                            <color key="color" systemColor="systemGrayColor"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -119,6 +128,7 @@
                         <constraint firstItem="Vry-9a-Fhu" firstAttribute="centerX" secondItem="2qT-lu-gWH" secondAttribute="centerX" id="K3b-rK-qg0"/>
                         <constraint firstAttribute="trailing" secondItem="tks-Ij-84E" secondAttribute="trailing" constant="20" id="Lya-CH-DOI"/>
                         <constraint firstItem="Vry-9a-Fhu" firstAttribute="centerY" secondItem="2qT-lu-gWH" secondAttribute="centerY" id="Mdi-n2-JZr"/>
+                        <constraint firstItem="Azs-dH-fyh" firstAttribute="top" secondItem="PYl-w5-xsw" secondAttribute="bottom" constant="20" id="Ng3-kf-wrY"/>
                         <constraint firstItem="tks-Ij-84E" firstAttribute="top" secondItem="Jj0-Cl-M2s" secondAttribute="bottom" constant="40" id="OJS-Ls-mfK"/>
                         <constraint firstItem="Wjw-A8-S2F" firstAttribute="top" secondItem="PBZ-7y-JIu" secondAttribute="bottom" id="RAe-ur-ZRm"/>
                         <constraint firstItem="Wjw-A8-S2F" firstAttribute="leading" secondItem="2qT-lu-gWH" secondAttribute="leading" constant="20" id="UFo-Jo-Gdc"/>
@@ -126,7 +136,9 @@
                         <constraint firstItem="yjB-Vu-3IS" firstAttribute="leading" secondItem="2qT-lu-gWH" secondAttribute="leading" constant="20" id="Vc5-uF-WMt"/>
                         <constraint firstItem="uja-DC-nYv" firstAttribute="top" secondItem="ZOo-4W-nQp" secondAttribute="bottom" id="ccR-QH-65x"/>
                         <constraint firstAttribute="trailing" secondItem="Jj0-Cl-M2s" secondAttribute="trailing" constant="20" id="csU-xS-2s1"/>
+                        <constraint firstAttribute="trailing" secondItem="Azs-dH-fyh" secondAttribute="trailing" constant="20" id="dQL-6q-2hj"/>
                         <constraint firstItem="PYl-w5-xsw" firstAttribute="top" secondItem="Wjw-A8-S2F" secondAttribute="bottom" constant="40" id="diw-ET-6eC"/>
+                        <constraint firstItem="Azs-dH-fyh" firstAttribute="leading" secondItem="2qT-lu-gWH" secondAttribute="leading" constant="20" id="f1x-gX-jLM"/>
                         <constraint firstItem="PBZ-7y-JIu" firstAttribute="leading" secondItem="2qT-lu-gWH" secondAttribute="leading" constant="20" id="fTK-n1-Jvp"/>
                         <constraint firstItem="PYl-w5-xsw" firstAttribute="leading" secondItem="2qT-lu-gWH" secondAttribute="leading" constant="20" id="hyG-Sf-NOQ"/>
                         <constraint firstAttribute="trailing" secondItem="PYl-w5-xsw" secondAttribute="trailing" constant="20" id="ixj-FD-54W"/>

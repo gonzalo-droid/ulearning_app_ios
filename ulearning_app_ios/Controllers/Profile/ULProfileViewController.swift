@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 
 class ULProfileViewController: UIViewController {
     
@@ -57,6 +57,13 @@ class ULProfileViewController: UIViewController {
             let login = ULLoginViewController()
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.changeRootViewController(login)
+        }
+        
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            debugPrint("Error SignOut in Firebase Google \(signOutError)")
         }
     }
     

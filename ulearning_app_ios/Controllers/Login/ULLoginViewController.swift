@@ -6,13 +6,19 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseAuth
+import GoogleSignIn
 
 class ULLoginViewController: UIViewController {
     
     var viewModel: ULLoginViewmodel = ULLoginViewmodel()
     
+    
+    @IBOutlet weak var googleSignInButton: GIDSignInButton!
+    
     @IBOutlet weak var eyeButton: UIButton!
-        
+    
     @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var inputEmailTextField: UITextField!{
@@ -38,7 +44,86 @@ class ULLoginViewController: UIViewController {
         progressIndicator.isHidden = true
         view.backgroundColor = .systemBackground
         bindViewModel()
+        
+        googleSignInButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onGoogleLoginTap)))
     }
+    
+    @objc func onGoogleLoginTap(){
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+        
+        // Create Google Sign In configuration object.
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+        
+        // Start the sign in flow!
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] userResult, errorResult in
+            guard errorResult == nil else {
+                
+                let alertController = UIAlertController(title: "Oops!", message: "Error al ingresar con Google", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: { action in
+                }))
+                present(alertController, animated: true, completion: nil)
+                debugPrint("Error in Google Login \(String(describing: errorResult?.localizedDescription))")
+                return
+            }
+            
+            guard let user = userResult?.user,
+                  let idToken = user.idToken?.tokenString
+            else {
+                self.showErrorLogin()
+                debugPrint("Error in getting Token")
+                return
+            }
+            
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken,
+                                                           accessToken: user.accessToken.tokenString)
+            
+            Auth.auth().signIn(with: credential) { authResult, error in
+                                    
+                if let error = error {
+                    self.showErrorLogin()
+                    debugPrint("Error in Firebase Auth")
+                    return
+                }
+                
+                debugPrint("GoogleSing email: \(String(describing: authResult?.user.email))")
+
+                self.successSignGoogle()
+            
+                
+                debugPrint("Success in Firebase Auth")
+                return
+                
+            }
+
+            
+        }
+    
+    }
+ 
+    func successSignGoogle() {
+        if let user = Auth.auth().currentUser {
+            // Access user data
+            let displayName = user.displayName
+            let email = user.email
+            var familyName = ""
+            var givenName = ""
+            
+            // Access the family name from the Google profile data
+            if let profile = GIDSignIn.sharedInstance.currentUser?.profile {
+                familyName = profile.familyName ?? ""
+                givenName = profile.givenName ?? ""
+            }
+    
+            self.viewModel.sendLoginGoogle(
+                username:displayName,
+                email: email,
+                familyName: familyName,
+                givenName: givenName
+            )
+        }
+    }
+
     
     func setupPasswordField() {
         inputPasswordTextField.textContentType = .password
@@ -123,6 +208,16 @@ class ULLoginViewController: UIViewController {
     
     func showErrorLoginIncorrect() {
         let alertController = UIAlertController(title: "Oops!", message: "Credenciales incorrectas", preferredStyle: .alert)
+        
+        alertController.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: { action in
+            
+        }))
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func showErrorLogin() {
+        let alertController = UIAlertController(title: "Oops!", message: "Problemas al iniciar sesión, inténtelo más tarde", preferredStyle: .alert)
         
         alertController.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: { action in
             
