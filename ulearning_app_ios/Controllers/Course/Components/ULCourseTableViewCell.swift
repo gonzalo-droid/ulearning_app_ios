@@ -65,6 +65,10 @@ class ULCourseTableViewCell: UITableViewCell {
         
         if let imageUrl = viewModel.image {
             self.courseImageView.kf.setImage(with: imageUrl)
+            
+            self.courseImageView.alpha = 0.2
+            self.courseImageView.contentMode = .scaleAspectFill
+            self.courseImageView.translatesAutoresizingMaskIntoConstraints = false
         }
     }
     

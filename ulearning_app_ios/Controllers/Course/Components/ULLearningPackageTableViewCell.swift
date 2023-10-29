@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ULLearningPackageTableViewCell: UITableViewCell {
     
@@ -38,7 +39,13 @@ class ULLearningPackageTableViewCell: UITableViewCell {
     
     func setupCell(viewModel: ULLearningPackageTableCellViewModel) {
          self.titleLabel.text = viewModel.title
-        // self.courseImageView.sd_setImage(with: viewModel.image)
+        
+        if let imageUrl = viewModel.image {
+            self.learningPackageImageView.kf.setImage(with: imageUrl)
+            self.learningPackageImageView.alpha = 0.2
+            self.learningPackageImageView.contentMode = .scaleAspectFill
+            self.learningPackageImageView.translatesAutoresizingMaskIntoConstraints = false
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

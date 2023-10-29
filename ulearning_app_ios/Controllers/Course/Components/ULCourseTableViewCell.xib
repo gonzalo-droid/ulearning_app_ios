@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,9 +21,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRB-bo-DXI">
                         <rect key="frame" x="20" y="8" width="280" height="123"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0e2-Cx-uFK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0e2-Cx-uFK">
                                 <rect key="frame" x="0.0" y="0.0" width="280" height="123"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUv-am-uwq">
                                 <rect key="frame" x="0.0" y="0.0" width="280" height="123"/>
@@ -60,8 +59,12 @@
                             <constraint firstAttribute="trailing" secondItem="pB4-dn-WXv" secondAttribute="trailing" constant="12" id="Ble-nG-WLM"/>
                             <constraint firstItem="FUv-am-uwq" firstAttribute="leading" secondItem="xRB-bo-DXI" secondAttribute="leading" id="GCO-67-FsL"/>
                             <constraint firstAttribute="trailing" secondItem="pkC-2M-3dI" secondAttribute="trailing" constant="12" id="INY-lc-Btr"/>
+                            <constraint firstItem="0e2-Cx-uFK" firstAttribute="leading" secondItem="xRB-bo-DXI" secondAttribute="leading" id="Ijd-r2-eUQ"/>
                             <constraint firstItem="pB4-dn-WXv" firstAttribute="leading" secondItem="xRB-bo-DXI" secondAttribute="leading" constant="12" id="Ls3-a7-bHK"/>
                             <constraint firstAttribute="bottom" secondItem="gkq-Ff-TRX" secondAttribute="bottom" id="Pav-7U-qzg"/>
+                            <constraint firstItem="0e2-Cx-uFK" firstAttribute="top" secondItem="xRB-bo-DXI" secondAttribute="top" id="QeQ-JV-cC7"/>
+                            <constraint firstAttribute="bottom" secondItem="0e2-Cx-uFK" secondAttribute="bottom" id="UUQ-RL-OaL"/>
+                            <constraint firstAttribute="trailing" secondItem="0e2-Cx-uFK" secondAttribute="trailing" id="UuY-0f-JmI"/>
                             <constraint firstAttribute="bottom" secondItem="hSk-PR-7ul" secondAttribute="bottom" constant="5" id="etX-rl-UEF"/>
                             <constraint firstItem="pkC-2M-3dI" firstAttribute="top" secondItem="pB4-dn-WXv" secondAttribute="bottom" constant="14" id="j9Y-B3-pI3"/>
                             <constraint firstItem="pB4-dn-WXv" firstAttribute="top" secondItem="xRB-bo-DXI" secondAttribute="top" constant="12" id="pi3-S4-IkF"/>

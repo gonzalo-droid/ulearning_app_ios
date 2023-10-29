@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol DetailComponentTableViewCellProtocol: AnyObject {
     func closeButtonPress(sender: UIButton, cell: DetailComponentTableViewCell)
@@ -39,7 +40,7 @@ class DetailComponentTableViewCell: UITableViewCell {
     @IBOutlet weak var goToMessageBtn: UIButton!
     
     
-    @IBOutlet weak var courseaImageView: UIImageView!
+    @IBOutlet weak var courseImageView: UIImageView!
     
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -99,6 +100,15 @@ class DetailComponentTableViewCell: UITableViewCell {
         self.delegate = delegate
     
         self.courseID = data.course?.id
+        
+        
+        if let imageUrl = data.course?.mainImage?.originalUrl {
+            let url = self.makeImageURL(imageUrl)
+            self.courseImageView.kf.setImage(with: url)
+            self.courseImageView.alpha = 0.2
+            self.courseImageView.contentMode = .scaleAspectFill
+            self.courseImageView.translatesAutoresizingMaskIntoConstraints = false
+        }
         
         titleLabel.attributedText = NSMutableAttributedString(
             string: data.course?.title ?? "text",
@@ -167,4 +177,7 @@ class DetailComponentTableViewCell: UITableViewCell {
         }
     }
     
+    private func makeImageURL(_ imageURL: String) -> URL? {
+        URL(string: imageURL)
+    }
 }

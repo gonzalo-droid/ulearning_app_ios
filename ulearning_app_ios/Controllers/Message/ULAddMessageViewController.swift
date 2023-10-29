@@ -18,6 +18,12 @@ class ULAddMessageViewController: UIViewController {
     var delegate: ULAddMessageViewControllerProtocol?
 
     
+    @IBOutlet weak var itemBorderContainer: UIView! {
+        didSet {
+            itemBorderContainer.layer.cornerRadius = 8
+        }
+    }
+    
     @IBOutlet weak var loadingProgress: UIActivityIndicatorView!{
         didSet {
             loadingProgress.hidesWhenStopped = true
