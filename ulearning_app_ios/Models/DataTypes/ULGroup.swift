@@ -22,6 +22,8 @@ class ULGroup:Mappable{
     var teachers: [ULTeacher] = []
     var teachersCount: Int?
     var vacancies: Int?
+    var code: String?
+
     
     convenience required init?(map: Map) {
         self.init()
@@ -42,6 +44,7 @@ class ULGroup:Mappable{
         teachers <- map["teachers"]
         teachersCount <- map["teachers_count"]
         vacancies <- map["vacancies"]
+        code <- map["code"]
     }
     
     

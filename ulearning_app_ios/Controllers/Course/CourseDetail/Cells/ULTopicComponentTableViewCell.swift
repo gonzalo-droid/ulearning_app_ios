@@ -15,6 +15,7 @@ class ULTopicComponentTableViewCell: UITableViewCell {
     @IBOutlet weak var containerBtnGoToMessage: UIView!{
         didSet {
             containerBtnGoToMessage.layer.cornerRadius = 8
+            containerBtnGoToMessage.isHidden = true
         }
     }
     

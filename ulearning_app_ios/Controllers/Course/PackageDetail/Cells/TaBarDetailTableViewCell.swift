@@ -15,6 +15,7 @@ class TaBarDetailTableViewCell: UITableViewCell {
     var tempArray: [ULLearningPackageItem] = []
     
     
+    
     @IBOutlet weak var courseCollection: UICollectionView!{
         didSet {
             courseCollection.register(
@@ -37,6 +38,8 @@ class TaBarDetailTableViewCell: UITableViewCell {
     
     @IBOutlet weak var coursesButton: UIButton!{
         didSet {
+            coursesButton.tintColor = .blueUL
+            coursesButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
             coursesButton.tag = 1
             coursesButton.addTarget(
                 self,
@@ -48,6 +51,8 @@ class TaBarDetailTableViewCell: UITableViewCell {
     
     @IBOutlet weak var descriptionButton: UIButton!{
         didSet {
+            descriptionButton.tintColor = .blueUL
+            descriptionButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
             descriptionButton.tag = 2
             descriptionButton.addTarget(
                 self,
@@ -59,6 +64,7 @@ class TaBarDetailTableViewCell: UITableViewCell {
     
     @IBOutlet weak var selectListTab: UIView!{
         didSet {
+            selectListTab.backgroundColor = .blueUL
             selectListTab.isHidden = false
         }
     }
@@ -66,6 +72,8 @@ class TaBarDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var selectDetailTab: UIView!{
         didSet {
             selectDetailTab.isHidden = true
+            selectDetailTab.backgroundColor = .blueUL
+
         }
     }
     

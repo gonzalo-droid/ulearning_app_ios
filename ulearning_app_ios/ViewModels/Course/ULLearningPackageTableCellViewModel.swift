@@ -12,11 +12,13 @@ class ULLearningPackageTableCellViewModel {
     var id: Int
     var title: String
     var image: URL?
+    var isFinished: Bool = false
     
     init(subscription: ULSubscription) {
         self.id = subscription.learningPackageId ?? 0
         self.title = subscription.learningPackage?.title ?? ""
         self.image = makeImageURL(subscription.course?.mainImage?.originalUrl ?? "")
+        self.isFinished = subscription.isFinished ?? false
     }
     
     private func makeImageURL(_ imageURL: String) -> URL? {

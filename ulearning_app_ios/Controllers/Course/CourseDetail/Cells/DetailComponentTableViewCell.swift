@@ -42,7 +42,21 @@ class DetailComponentTableViewCell: UITableViewCell {
     
     @IBOutlet weak var courseImageView: UIImageView!
     
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var groupTitleLabel: UILabel!{
+        didSet {
+            groupTitleLabel.font = UIFont.boldSystemFont(ofSize: 14)
+            groupTitleLabel.textColor = .blueUL
+            groupTitleLabel.text = "Grupo"
+        }
+    }
+    
+    
+    @IBOutlet weak var titleLabel: UILabel!{
+        didSet {
+            titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
+            titleLabel.textColor = .blackUL
+        }
+    }
     
     @IBOutlet weak var descriptionLabel: UITextView! {
         didSet {
@@ -101,11 +115,15 @@ class DetailComponentTableViewCell: UITableViewCell {
     
         self.courseID = data.course?.id
         
+        if let codeGroup = data.group?.code {
+            self.groupTitleLabel.text = "Grupo \(codeGroup)"
+        }
+        
         
         if let imageUrl = data.course?.mainImage?.originalUrl {
             let url = self.makeImageURL(imageUrl)
             self.courseImageView.kf.setImage(with: url)
-            self.courseImageView.alpha = 0.2
+            self.courseImageView.alpha = 0.7
             self.courseImageView.contentMode = .scaleAspectFill
             self.courseImageView.translatesAutoresizingMaskIntoConstraints = false
         }

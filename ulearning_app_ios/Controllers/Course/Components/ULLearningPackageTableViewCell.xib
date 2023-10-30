@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,11 +35,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Concluido)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3c-oe-dgK">
+                                <rect key="frame" x="20" y="52" width="336" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0xe-DP-Z3g" firstAttribute="top" secondItem="gz5-am-NVs" secondAttribute="top" constant="20" id="1jm-Ic-Bm1"/>
                             <constraint firstAttribute="trailing" secondItem="0xe-DP-Z3g" secondAttribute="trailing" constant="20" id="ExV-GW-3ZJ"/>
+                            <constraint firstAttribute="trailing" secondItem="i3c-oe-dgK" secondAttribute="trailing" constant="20" id="FQu-sm-iYp"/>
                             <constraint firstAttribute="bottom" secondItem="hpQ-3O-t8H" secondAttribute="bottom" id="Gnl-ou-huB"/>
                             <constraint firstItem="5QP-1T-y5v" firstAttribute="leading" secondItem="gz5-am-NVs" secondAttribute="leading" id="J1J-Uc-z11"/>
                             <constraint firstItem="5QP-1T-y5v" firstAttribute="top" secondItem="gz5-am-NVs" secondAttribute="top" id="Rge-CQ-VGS"/>
@@ -47,8 +54,10 @@
                             <constraint firstItem="hpQ-3O-t8H" firstAttribute="leading" secondItem="gz5-am-NVs" secondAttribute="leading" id="a8B-7d-7Vr"/>
                             <constraint firstAttribute="trailing" secondItem="5QP-1T-y5v" secondAttribute="trailing" id="bCk-hT-ebS"/>
                             <constraint firstAttribute="bottom" secondItem="5QP-1T-y5v" secondAttribute="bottom" id="hub-qe-oq5"/>
+                            <constraint firstItem="i3c-oe-dgK" firstAttribute="top" secondItem="0xe-DP-Z3g" secondAttribute="bottom" constant="5" id="kkw-fa-sxR"/>
                             <constraint firstAttribute="trailing" secondItem="hpQ-3O-t8H" secondAttribute="trailing" id="lY5-4y-4Sr"/>
                             <constraint firstItem="hpQ-3O-t8H" firstAttribute="top" secondItem="gz5-am-NVs" secondAttribute="top" id="v7t-3u-sg4"/>
+                            <constraint firstItem="i3c-oe-dgK" firstAttribute="leading" secondItem="gz5-am-NVs" secondAttribute="leading" constant="20" id="zZf-FD-Tl0"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -64,6 +73,7 @@
             <connections>
                 <outlet property="containerView" destination="gz5-am-NVs" id="Qyd-Zk-OwZ"/>
                 <outlet property="imageView" destination="hpQ-3O-t8H" id="ypL-66-qRH"/>
+                <outlet property="subTitleLabel" destination="i3c-oe-dgK" id="WgZ-SX-ixb"/>
                 <outlet property="titleLabel" destination="0xe-DP-Z3g" id="dq8-II-FbE"/>
             </connections>
             <point key="canvasLocation" x="87.022900763358777" y="33.450704225352112"/>
