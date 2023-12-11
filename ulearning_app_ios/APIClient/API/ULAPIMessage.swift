@@ -26,6 +26,10 @@ enum ULAPIMessage: ULAPIConfig {
         includes: String = "first_message"
     )
     
+    case getMessageItems(
+        uuid: String
+    )
+    
     
     /// POST
 
@@ -66,6 +70,8 @@ enum ULAPIMessage: ULAPIConfig {
             
         case .sendConversationSupport:
             return "messages"
+        case .getMessageItems(uuid: let uuid):
+            return "messages/\(uuid)"
         }
     }
     

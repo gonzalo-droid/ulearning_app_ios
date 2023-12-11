@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="121" id="KGk-i7-Jjw" customClass="MessageItemTableViewCell" customModule="ulearning_app_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="121"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="392" height="121"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRk-hn-Izo">
+                        <rect key="frame" x="5" y="5" width="382" height="111"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4f-JN-Fup" userLabel="nameLabel">
+                                <rect key="frame" x="10" y="10" width="362" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5q-nc-dyF" userLabel="contentLabel">
+                                <rect key="frame" x="10" y="40" width="362" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="f4f-JN-Fup" secondAttribute="trailing" constant="10" id="BC7-rJ-kbK"/>
+                            <constraint firstAttribute="trailing" secondItem="X5q-nc-dyF" secondAttribute="trailing" constant="10" id="FfN-wb-vNH"/>
+                            <constraint firstItem="f4f-JN-Fup" firstAttribute="leading" secondItem="gRk-hn-Izo" secondAttribute="leading" constant="10" id="PNV-se-1xi"/>
+                            <constraint firstItem="X5q-nc-dyF" firstAttribute="leading" secondItem="gRk-hn-Izo" secondAttribute="leading" constant="10" id="Vr3-FG-Jwa"/>
+                            <constraint firstItem="f4f-JN-Fup" firstAttribute="top" secondItem="gRk-hn-Izo" secondAttribute="top" constant="10" id="Yf5-w6-6X9"/>
+                            <constraint firstAttribute="bottom" secondItem="X5q-nc-dyF" secondAttribute="bottom" constant="38" id="nRV-Wa-Yof"/>
+                            <constraint firstItem="X5q-nc-dyF" firstAttribute="top" secondItem="f4f-JN-Fup" secondAttribute="top" constant="30" id="nqt-lq-xSj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="gRk-hn-Izo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="A5k-t1-P5D"/>
+                    <constraint firstItem="gRk-hn-Izo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="U5s-FT-fqe"/>
+                    <constraint firstAttribute="trailing" secondItem="gRk-hn-Izo" secondAttribute="trailing" constant="5" id="ZbQ-tX-o8p"/>
+                    <constraint firstAttribute="bottom" secondItem="gRk-hn-Izo" secondAttribute="bottom" constant="5" id="zpl-uY-tYm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="container" destination="gRk-hn-Izo" id="bIc-OP-8xC"/>
+                <outlet property="contentLabel" destination="X5q-nc-dyF" id="zwM-Fu-1ec"/>
+                <outlet property="contianerMessage" destination="H2p-sc-9uM" id="ZIR-Ln-9G4"/>
+                <outlet property="nameLabel" destination="f4f-JN-Fup" id="OqW-wx-9EL"/>
+            </connections>
+            <point key="canvasLocation" x="193.89312977099235" y="47.535211267605639"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

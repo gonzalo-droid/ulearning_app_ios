@@ -96,7 +96,15 @@ class ULMessageViewController: UIViewController {
     }
     
     func openMessageSupport(id: Int) {
-       
+        guard let conversation = viewModel.searchConversation(withId: id) else {
+            return
+        }
+        
+        DispatchQueue.main.async {
+            let viewModel = ULChatViewModel(data: conversation)
+            let controller = ULChatViewController(viewModel: viewModel)
+            self.present(controller, animated: true, completion: nil)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

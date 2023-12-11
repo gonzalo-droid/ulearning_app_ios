@@ -52,4 +52,11 @@ class ULMessageSupportViewModel {
     private func mapData() {
         conversations.value = self.dataSource?.compactMap({ULMessageTableCellViewModel(conversation: $0)})
     }
+    
+    func searchConversation(withId id: Int) -> ULConversation? {
+        guard let data = dataSource?.first(where: {$0.id == id}) else {
+            return nil
+        }
+        return data
+    }
 }

@@ -106,16 +106,32 @@ class MessageService {
             }
         }
     }
+    
+    static func getMessageItems(
+        uuid: String,
+        successBlock: @escaping(_ messages: [ULMessageItem]?) -> Void,
+        errorBlock: @escaping(_ error:  String?) -> Void
+    ) {
+        
+        let pathUrl: ULAPIMessage = .getMessageItems(uuid: uuid)
+        
+        AF.request(pathUrl).validate(statusCode: 200..<205).responseObject {
+            (response: DataResponse<ULMessageItemsResponse, AFError>) in
+            
+            switch response.result {
+            case .success(let value):
+                if value.message == nil {
+                    if let subs = value.data {
+                        successBlock(subs)
+                    } else {
+                        errorBlock("Data is nil")
+                    }
+                } else {
+                    errorBlock(value.message ?? "ERROR AQUI")
+                }
+            case .failure(let error):
+                errorBlock(error.localizedDescription)
+            }
+        }
+    }
 }
-
-/*
- @GET("conversations")
- suspend fun conversationsSupport(
-     @Header(SettingRemote.AUTHORIZATION) token: String,
-     @Query("per_page") perPage: Int,
-     @Query("page") page: Int,
-     @Query("to_support") toSupport: Boolean,
-     @Query("includes") includes: String = "first_message",
- ): Response<BaseResponse<List<ConversationResponse>>>
- 
- */
