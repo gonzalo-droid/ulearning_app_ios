@@ -14,6 +14,7 @@
 		C100B4932A7A28DA008FB9DE /* DetailComponentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C100B4912A7A28DA008FB9DE /* DetailComponentTableViewCell.xib */; };
 		C100B4962A7A28F6008FB9DE /* ULTopicComponentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100B4942A7A28F6008FB9DE /* ULTopicComponentTableViewCell.swift */; };
 		C100B4972A7A28F6008FB9DE /* ULTopicComponentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C100B4952A7A28F6008FB9DE /* ULTopicComponentTableViewCell.xib */; };
+		C1051B9B2B2C2981008A8003 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C1051B9A2B2C2981008A8003 /* Kingfisher */; };
 		C10535462A584A7D00F10139 /* ULCompletedCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10535442A584A7D00F10139 /* ULCompletedCourseViewController.swift */; };
 		C10535472A584A7D00F10139 /* ULCompletedCourseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C10535452A584A7D00F10139 /* ULCompletedCourseViewController.xib */; };
 		C105354C2A584AED00F10139 /* ULRouteCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C105354A2A584AED00F10139 /* ULRouteCourseViewController.swift */; };
@@ -66,6 +67,7 @@
 		C1874B722A8B43A1007D432F /* ULTopicCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1874B712A8B43A1007D432F /* ULTopicCellViewModel.swift */; };
 		C19DE37E2ACD2CCF0030BD9E /* CourseLearningCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19DE37C2ACD2CCF0030BD9E /* CourseLearningCollectionViewCell.swift */; };
 		C19DE37F2ACD2CCF0030BD9E /* CourseLearningCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19DE37D2ACD2CCF0030BD9E /* CourseLearningCollectionViewCell.xib */; };
+		C1A2B0B52B41024500F54909 /* ULMessageItemResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A2B0B42B41024500F54909 /* ULMessageItemResponse.swift */; };
 		C1AE05DB2AD8E801007D880D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C1AE05DA2AD8E801007D880D /* FirebaseAnalytics */; };
 		C1AE05DD2AD8E801007D880D /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C1AE05DC2AD8E801007D880D /* FirebaseAnalyticsSwift */; };
 		C1AE05DF2AD8E801007D880D /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = C1AE05DE2AD8E801007D880D /* FirebaseCrashlytics */; };
@@ -183,6 +185,7 @@
 		C1874B712A8B43A1007D432F /* ULTopicCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULTopicCellViewModel.swift; sourceTree = "<group>"; };
 		C19DE37C2ACD2CCF0030BD9E /* CourseLearningCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseLearningCollectionViewCell.swift; sourceTree = "<group>"; };
 		C19DE37D2ACD2CCF0030BD9E /* CourseLearningCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseLearningCollectionViewCell.xib; sourceTree = "<group>"; };
+		C1A2B0B42B41024500F54909 /* ULMessageItemResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULMessageItemResponse.swift; sourceTree = "<group>"; };
 		C1B1513A2A4BF4110011620D /* ULTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULTabBarViewController.swift; sourceTree = "<group>"; };
 		C1B1513C2A4BF4220011620D /* ULHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULHomeViewController.swift; sourceTree = "<group>"; };
 		C1B1513E2A4BF4320011620D /* ULMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULMessageViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +248,7 @@
 				C13D6F7D2ADCF05200ADA339 /* FirebaseAuth in Frameworks */,
 				C120DDA22ADCF642005E6CBD /* GoogleSignInSwift in Frameworks */,
 				C1AE05DF2AD8E801007D880D /* FirebaseCrashlytics in Frameworks */,
+				C1051B9B2B2C2981008A8003 /* Kingfisher in Frameworks */,
 				C1AE05DB2AD8E801007D880D /* FirebaseAnalytics in Frameworks */,
 				D83A367848C93B9BDAFB7753 /* Pods_ulearning_app_ios.framework in Frameworks */,
 				C120DDA02ADCF642005E6CBD /* GoogleSignIn in Frameworks */,
@@ -297,6 +301,7 @@
 				C10AB0B32AB405BE000EA975 /* ULMessageSupportResponse.swift */,
 				C1CAF2B92AC3EA0A005DCFB0 /* ULBaseResponseSubscriptions.swift */,
 				C1DAC76A2B22FB1B0078F613 /* ULMessageItemsResponse.swift */,
+				C1A2B0B42B41024500F54909 /* ULMessageItemResponse.swift */,
 			);
 			path = APIResponse;
 			sourceTree = "<group>";
@@ -653,6 +658,7 @@
 				C13D6F7C2ADCF05200ADA339 /* FirebaseAuth */,
 				C120DD9F2ADCF642005E6CBD /* GoogleSignIn */,
 				C120DDA12ADCF642005E6CBD /* GoogleSignInSwift */,
+				C1051B9A2B2C2981008A8003 /* Kingfisher */,
 			);
 			productName = ulearning_app_ios;
 			productReference = C11D71D22A454DFF00B31C26 /* ulearning_app_ios.app */;
@@ -685,6 +691,7 @@
 			packageReferences = (
 				C1AE05D92AD8E801007D880D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				C120DD9E2ADCF642005E6CBD /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				C1051B992B2C2981008A8003 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = C11D71D32A454DFF00B31C26 /* Products */;
 			projectDirPath = "";
@@ -841,6 +848,7 @@
 				C15CB7F52A70DED3008500F4 /* ULQRScannerViewController.swift in Sources */,
 				C10535542A584B5800F10139 /* ULPackageCourseViewController.swift in Sources */,
 				C1F093A82A8753A800B95995 /* ULTopicCollectionViewCell.swift in Sources */,
+				C1A2B0B52B41024500F54909 /* ULMessageItemResponse.swift in Sources */,
 				C15654572A4E3F4D00E6E42A /* ULRequest.swift in Sources */,
 				C1B1513D2A4BF4220011620D /* ULHomeViewController.swift in Sources */,
 				C1BC676A2A9C506D00F01E95 /* ULConversationTableViewCell.swift in Sources */,
@@ -1015,12 +1023,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2436FLG37H;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = ZMFQ2Y37BD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ulearning_app_ios/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "U-Learning";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "ulearning_app_ios ocupa tu cámara de fotos solo para escanear un codigo qr del certificado que se obtiene al terminar un curso, al leerlo lo redireccinora a la plataforma web con la información del certificado del curso";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1031,9 +1043,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uss.ulearning-ios";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uss.ulearningUss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = ulearningUss_Development;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1049,12 +1063,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2436FLG37H;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = ZMFQ2Y37BD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ulearning_app_ios/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "U-Learning";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "ulearning_app_ios ocupa tu cámara de fotos solo para escanear un codigo qr del certificado que se obtiene al terminar un curso, al leerlo lo redireccinora a la plataforma web con la información del certificado del curso";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1065,9 +1083,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uss.ulearning-ios";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uss.ulearningUss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = ulearningUss_Development;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1101,6 +1121,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C1051B992B2C2981008A8003 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.1;
+			};
+		};
 		C120DD9E2ADCF642005E6CBD /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -1120,6 +1148,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C1051B9A2B2C2981008A8003 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1051B992B2C2981008A8003 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		C120DD9F2ADCF642005E6CBD /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C120DD9E2ADCF642005E6CBD /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;

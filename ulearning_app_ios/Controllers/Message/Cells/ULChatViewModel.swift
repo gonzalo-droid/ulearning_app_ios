@@ -16,7 +16,10 @@ class ULChatViewModel {
     let urlStudent = "https://student.ulearning.com.pe"
     var dataSource: [ULMessageItem]?
     var messages: ULObservable<[ULMessageItemTableCellViewModel]> = ULObservable(nil)
-
+    var messageItemResponse: ULObservable<ULMessageItem> = ULObservable(nil)
+    var setUUID: ULObservable<String> = ULObservable("")
+    
+    
     var urlTopic: String?
 
     init(data: ULConversation) {
@@ -32,6 +35,37 @@ class ULChatViewModel {
         return dataSource?.count ?? 0
     }
     
+    func sendMessageSupport(uuid:String, content:String){
+        if isLoadingData.value ?? true {
+            return
+        }
+        
+        isLoadingData.value = true
+        
+        let params: [String:Any] = [
+            "content":content,
+            "uuid":uuid,
+            "to_support": false,
+            "user_ids": [],
+        ]
+
+        MessageService.sendMessageItems(params,successBlock: { [weak self] messageItem in
+            guard let self = self else { return }
+            self.messageItemResponse.value = messageItem
+            if uuid == messageItem?.uuid {
+                setUUID.value = uuid
+                debugPrint("counts uuid \(uuid)")
+
+            }
+            isLoadingData.value = false
+            
+        }, errorBlock: { [weak self] error in
+            guard let self = self else { return }
+            isLoadingData.value = false
+        })
+        
+    }
+    
     func getMessageItems(uuid:String){
         
         if isLoadingData.value ?? true {
@@ -42,8 +76,10 @@ class ULChatViewModel {
         
         MessageService.getMessageItems(uuid: uuid,  successBlock: { [weak self] messages in
             guard let self = self else { return }
+            isLoadingData.value = false
             debugPrint("counts items \(messages?.count)")
-            self.dataSource = messages
+            self.dataSource = messages?.reversed()
+            
             self.mapData()
         }, errorBlock: { [weak self] error in
             guard let self = self else { return }

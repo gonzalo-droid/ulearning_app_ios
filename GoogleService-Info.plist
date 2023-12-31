@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>638259262496-bk817nvn64tpiq0mlhdnnsrqln3dccub.apps.googleusercontent.com</string>
+	<string>638259262496-6tmjfsj93fepllgl6cni52diiui568nb.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.638259262496-bk817nvn64tpiq0mlhdnnsrqln3dccub</string>
+	<string>com.googleusercontent.apps.638259262496-6tmjfsj93fepllgl6cni52diiui568nb</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAIOUR3XmLmjRCQhmlAG3r7WYWkEeYIUFU</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>dev.gonzcode.ulearning-app-ios</string>
+	<string>com.uss.ulearningUss</string>
 	<key>PROJECT_ID</key>
 	<string>u-learning-26210</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:638259262496:ios:c4821db85517b195bd7845</string>
+	<string>1:638259262496:ios:1afce089806cc154bd7845</string>
 </dict>
 </plist>

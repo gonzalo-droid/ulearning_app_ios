@@ -19,16 +19,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRk-hn-Izo">
-                        <rect key="frame" x="5" y="5" width="382" height="111"/>
+                        <rect key="frame" x="10" y="5" width="372" height="111"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4f-JN-Fup" userLabel="nameLabel">
-                                <rect key="frame" x="10" y="10" width="362" height="17"/>
+                                <rect key="frame" x="10" y="10" width="352" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5q-nc-dyF" userLabel="contentLabel">
-                                <rect key="frame" x="10" y="40" width="362" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5q-nc-dyF" userLabel="contentLabel">
+                                <rect key="frame" x="10" y="32" width="352" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -42,7 +42,7 @@
                             <constraint firstItem="X5q-nc-dyF" firstAttribute="leading" secondItem="gRk-hn-Izo" secondAttribute="leading" constant="10" id="Vr3-FG-Jwa"/>
                             <constraint firstItem="f4f-JN-Fup" firstAttribute="top" secondItem="gRk-hn-Izo" secondAttribute="top" constant="10" id="Yf5-w6-6X9"/>
                             <constraint firstAttribute="bottom" secondItem="X5q-nc-dyF" secondAttribute="bottom" constant="38" id="nRV-Wa-Yof"/>
-                            <constraint firstItem="X5q-nc-dyF" firstAttribute="top" secondItem="f4f-JN-Fup" secondAttribute="top" constant="30" id="nqt-lq-xSj"/>
+                            <constraint firstItem="X5q-nc-dyF" firstAttribute="top" secondItem="f4f-JN-Fup" secondAttribute="bottom" constant="5" id="wKp-Ea-eez"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -50,8 +50,8 @@
                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="gRk-hn-Izo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="A5k-t1-P5D"/>
-                    <constraint firstItem="gRk-hn-Izo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="U5s-FT-fqe"/>
-                    <constraint firstAttribute="trailing" secondItem="gRk-hn-Izo" secondAttribute="trailing" constant="5" id="ZbQ-tX-o8p"/>
+                    <constraint firstItem="gRk-hn-Izo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="U5s-FT-fqe"/>
+                    <constraint firstAttribute="trailing" secondItem="gRk-hn-Izo" secondAttribute="trailing" constant="10" id="ZbQ-tX-o8p"/>
                     <constraint firstAttribute="bottom" secondItem="gRk-hn-Izo" secondAttribute="bottom" constant="5" id="zpl-uY-tYm"/>
                 </constraints>
             </tableViewCellContentView>
@@ -62,12 +62,12 @@
                 <outlet property="contianerMessage" destination="H2p-sc-9uM" id="ZIR-Ln-9G4"/>
                 <outlet property="nameLabel" destination="f4f-JN-Fup" id="OqW-wx-9EL"/>
             </connections>
-            <point key="canvasLocation" x="193.89312977099235" y="47.535211267605639"/>
+            <point key="canvasLocation" x="192.36641221374046" y="47.535211267605639"/>
         </tableViewCell>
     </objects>
     <resources>
         <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

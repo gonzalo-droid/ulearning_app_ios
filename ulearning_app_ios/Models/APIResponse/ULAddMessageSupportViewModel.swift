@@ -11,7 +11,6 @@ class ULAddMessageSupportViewModel {
     var courseId: Int?
     var typeMessage: String?
     var userIds: [Int] = []
-    
     var conversationResponse: ULObservable<ULConversation> = ULObservable(nil)
     
     init(typeMessage: String?, courseId:Int?, userIds:[Int]) {

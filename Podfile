@@ -7,9 +7,20 @@ target 'ulearning_app_ios' do
   use_frameworks!
 
   # Pods for ulearning_app_ios
-  pod 'Alamofire'
+  pod 'Alamofire', '= 5.0.0-rc.2'
   pod 'AlamofireObjectMapper'
   pod 'SwiftyJSON'
   pod 'ObjectMapper'
   pod 'GoogleSignIn'
+  pod 'Keyboardy'
+end
+
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '5.0'
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+    end
+  end
 end

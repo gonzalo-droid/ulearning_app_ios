@@ -7,7 +7,16 @@
 
 import UIKit
 
-class ULChatViewController: UIViewController {
+class ULChatViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var progressLoading: UIActivityIndicatorView!{
+        didSet {
+            progressLoading.hidesWhenStopped = true
+        }
+    }
+    
+    
+    @IBOutlet weak var myConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,6 +32,7 @@ class ULChatViewController: UIViewController {
             )
         }
     }
+    @IBOutlet weak var inputMessageHC: NSLayoutConstraint!
     
     @IBOutlet weak var inputMessage: UITextView!{
         didSet {
@@ -48,23 +58,32 @@ class ULChatViewController: UIViewController {
             )
         }
     }
-    
-    @objc func buttonSendTapped(_ sender: UIButton) {
-       
-    }
 
     var index: IndexPath = IndexPath()
     var viewModel: ULChatViewModel
     var keyboardIsShown = false
     var messageList: [ULMessageItemTableCellViewModel] = []
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
+    var previousTextViewHeight: CGFloat = 36
     
     init(viewModel: ULChatViewModel) {
         self.viewModel = viewModel
         super.init(nibName: "ULChatViewController", bundle: nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configView()
+        bindViewModel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // registerForKeyboardNotifications(self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // unregisterFromKeyboardNotifications()
     }
     
     required init?(coder: NSCoder) {
@@ -75,12 +94,7 @@ class ULChatViewController: UIViewController {
         self.dismiss(animated: true)
         self.navigationController?.popViewController(animated: true)
     }
-        
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configView()
-        bindViewModel()
-    }
+
     
     func configView() {
         self.view.backgroundColor = .white
@@ -89,17 +103,45 @@ class ULChatViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        getMessageItems(uuid: viewModel.conversation.uuid!)
+    }
+    
+    func getMessageItems(uuid:String){
         viewModel.getMessageItems(uuid: viewModel.conversation.uuid!)
     }
     
     func bindViewModel() {
+        
+        viewModel.setUUID.bind { [weak self] uuid in
+            guard let uuid = uuid else {
+                return
+            }
+            self?.getMessageItems(uuid: uuid)
+        }
+        
+        viewModel.isLoadingData.bind { [weak self] isLoading in
+            guard let isLoading = isLoading else {
+                return
+            }
+            DispatchQueue.main.async {
+                if isLoading {
+                    self?.progressLoading.startAnimating()
+                } else {
+                    self?.progressLoading.stopAnimating()
+                }
+            }
+        }
+        
         viewModel.messages.bind { [weak self] messages in
             guard let self = self,
                   let messages = messages else {
                 return
             }
+            debugPrint("counts messages.bind")
+
             self.messageList = messages
             self.reloadTableView()
+            self.scrollToBottom()
             prepareInfo()
         }
     }
@@ -108,6 +150,18 @@ class ULChatViewController: UIViewController {
         
     }
 
+    @objc func buttonSendTapped(_ sender: UIButton) {
+        if let message = inputMessage.text, !message.isEmpty {
+            inputMessage.resignFirstResponder()
+            if let uuid = viewModel.conversation.uuid {
+                viewModel.sendMessageSupport(uuid: uuid, content: message)
+                self.inputMessage.text = ""
+                inputMessageHC.constant = 36
+                previousTextViewHeight = 36
+                self.view.layoutIfNeeded()
+            }
+        }
+    }
 
    
 
@@ -129,6 +183,26 @@ extension ULChatViewController: UITextViewDelegate {
         
             self.view.layoutIfNeeded()
         }
+        
+        
+        if textView == self.inputMessage {
+            let minHeight: CGFloat = 36
+            let maxHeight: CGFloat = 185
+            let fixedWidth = textView.frame.size.width
+            let newSize = textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
+            var newHeight = max(minHeight, newSize.height)
+            newHeight = min(maxHeight, newHeight)
+
+            inputMessageHC.constant = newHeight
+            textView.isScrollEnabled = newHeight >= maxHeight
+
+            if newHeight != previousTextViewHeight {
+                let heightDifference = newHeight - previousTextViewHeight
+                myConstraint.constant += heightDifference
+                previousTextViewHeight = newHeight
+            }
+            self.view.layoutIfNeeded()
+        }
     }
 
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -148,6 +222,18 @@ extension ULChatViewController: UITextViewDelegate {
 
 
 extension ULChatViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func scrollToBottom() {
+            if tableView.numberOfSections > 0 {
+                let lastSection = tableView.numberOfSections - 1
+                let lastRow = tableView.numberOfRows(inSection: lastSection) - 1
+
+                if lastRow >= 0 {
+                    let indexPath = IndexPath(row: lastRow, section: lastSection)
+                    tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+                }
+            }
+        }
     
     func setupTableView() {
         self.tableView.delegate = self
@@ -172,7 +258,7 @@ extension ULChatViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        150
+        120
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
