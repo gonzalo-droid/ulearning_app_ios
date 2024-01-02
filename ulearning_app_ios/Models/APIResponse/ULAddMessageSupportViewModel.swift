@@ -16,7 +16,7 @@ class ULAddMessageSupportViewModel {
     init(typeMessage: String?, courseId:Int?, userIds:[Int]) {
         self.typeMessage = typeMessage ?? ""
         self.userIds = userIds
-        self.courseId = courseId ?? 0
+        self.courseId = courseId ?? nil
     }
     
     func sendMessage(content:String) {

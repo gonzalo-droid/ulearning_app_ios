@@ -35,7 +35,9 @@ class MessageItemTableViewCell: UITableViewCell {
     func setupCell(viewModel: ULMessageItemTableCellViewModel) {
         self.nameLabel.text = viewModel.name
         self.contentLabel.text = viewModel.content
-  
+        
+        let textSize = contentLabel.sizeThatFits(CGSize(width: contentLabel.frame.width, height: CGFloat.greatestFiniteMagnitude))
+        container.frame.size.height = textSize.height
         
     }
     

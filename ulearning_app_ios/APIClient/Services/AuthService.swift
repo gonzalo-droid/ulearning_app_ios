@@ -146,5 +146,34 @@ class AuthService {
         }
     }
     
+    static func getUsers(
+        name: String,
+        courseID: Int,
+        successBlock: @escaping(_ users: [ULUser]?) -> Void,
+        errorBlock: @escaping(_ error:  String?) -> Void
+    ) {
+        
+        let pathUrl: ULAPIAuth = .getUsers(name: name, course_id: courseID, without_pagination: true)
+        
+        AF.request(pathUrl).validate(statusCode: 200..<205).responseObject {
+            (response: DataResponse<ULUsersResponse, AFError>) in
+            
+            switch response.result {
+            case .success(let value):
+                if value.message == nil {
+                    if let subs = value.data {
+                        successBlock(subs)
+                    } else {
+                        errorBlock("Data is nil")
+                    }
+                } else {
+                    errorBlock(value.message ?? "ERROR AQUI")
+                }
+            case .failure(let error):
+                errorBlock(error.localizedDescription)
+            }
+        }
+    }
+    
 }
 

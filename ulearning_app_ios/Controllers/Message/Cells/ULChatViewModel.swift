@@ -18,6 +18,7 @@ class ULChatViewModel {
     var messages: ULObservable<[ULMessageItemTableCellViewModel]> = ULObservable(nil)
     var messageItemResponse: ULObservable<ULMessageItem> = ULObservable(nil)
     var setUUID: ULObservable<String> = ULObservable("")
+    var messageItem: ULObservable<ULMessageItemTableCellViewModel> = ULObservable(nil)
     
     
     var urlTopic: String?
@@ -36,10 +37,7 @@ class ULChatViewModel {
     }
     
     func sendMessageSupport(uuid:String, content:String){
-        if isLoadingData.value ?? true {
-            return
-        }
-        
+        if isLoadingData.value ?? true { return }
         isLoadingData.value = true
         
         let params: [String:Any] = [
@@ -68,10 +66,7 @@ class ULChatViewModel {
     
     func getMessageItems(uuid:String){
         
-        if isLoadingData.value ?? true {
-            return
-        }
-        
+        if isLoadingData.value ?? true { return }
         isLoadingData.value = true
         
         MessageService.getMessageItems(uuid: uuid,  successBlock: { [weak self] messages in

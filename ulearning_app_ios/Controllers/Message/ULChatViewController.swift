@@ -138,7 +138,6 @@ class ULChatViewController: UIViewController, UITextFieldDelegate {
                 return
             }
             debugPrint("counts messages.bind")
-
             self.messageList = messages
             self.reloadTableView()
             self.scrollToBottom()

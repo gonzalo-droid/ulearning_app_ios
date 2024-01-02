@@ -12,12 +12,18 @@ enum ULAPIAuth: ULAPIConfig {
     
     
     /// GET
-    
+    // /api/users?name=&course_id=22&without_pagination=true
+    case getUsers(
+        name: String = "",
+        course_id: Int,
+        without_pagination: Bool = true
+    )
     
     case getProfile
     
     
     /// POST
+    ///
     
     case login(
         params: Parameters
@@ -55,6 +61,14 @@ enum ULAPIAuth: ULAPIConfig {
             return "login-facebook"
         case .selfAuthToken:
             return "self-auth-token"
+        case .getUsers(name: let name, course_id: let course_id, without_pagination: let without_pagination):
+            var urlComponents = URLComponents()
+            urlComponents.queryItems = [
+                URLQueryItem(name: "name", value: "\(name)"),
+                URLQueryItem(name: "course_id", value: "\(course_id)"),
+                URLQueryItem(name: "without_pagination", value: "\(without_pagination)")
+            ]
+            return "users\(urlComponents.string!)"
         }
     }
     

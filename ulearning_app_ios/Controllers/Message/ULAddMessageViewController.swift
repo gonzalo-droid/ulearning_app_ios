@@ -16,7 +16,26 @@ class ULAddMessageViewController: UIViewController {
     var viewModel: ULAddMessageSupportViewModel
     
     var delegate: ULAddMessageViewControllerProtocol?
-
+    
+    @IBOutlet weak var containerSeachUser: UIView!{
+        didSet {
+            containerSeachUser.isHidden = true
+            containerSeachUser.layer.cornerRadius = 8
+        }
+    }
+    
+    @IBOutlet weak var userLabel: UILabel!
+    
+    @IBOutlet weak var searchUserBtn: UIButton!{
+        didSet {
+            
+            searchUserBtn.addTarget(
+                self,
+                action: #selector(searchUser),
+                for: .touchUpInside
+            )
+        }
+    }
     
     @IBOutlet weak var itemBorderContainer: UIView! {
         didSet {
@@ -87,9 +106,15 @@ class ULAddMessageViewController: UIViewController {
         }
     }
     
+    @objc func searchUser() {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
+        containerSeachUser.isHidden = (viewModel.typeMessage == "support")
+        userLabel.text = (viewModel.courseId == nil) ? "Soporte plataforma" : "Selecciona un usuario"
     }
     
     func bindViewModel() {

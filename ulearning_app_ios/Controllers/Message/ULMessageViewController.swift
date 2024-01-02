@@ -27,9 +27,15 @@ class ULMessageViewController: UIViewController {
             addMessageButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         }
     }
+    @IBOutlet weak var backIcon: UIImageView!{
+        didSet {
+            backIcon.isHidden = true
+        }
+    }
     
     @IBOutlet weak var onBackPress: UIButton!{
         didSet {
+            onBackPress.isHidden = true
             onBackPress.setTitle("", for: .normal)
             onBackPress.setTitle("", for: .selected)
             onBackPress.setTitle("", for: .focused)
@@ -49,8 +55,11 @@ class ULMessageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            
-        titleLabel.text = (self.typeMessage == self.MESSAGE_SUPPORT) ? "Soporte plataforma" : "Curso"
+        debugPrint("addMessageButtonTapped viewDidLoad \(courseID) \(typeMessage)")
+        
+        titleLabel.text = (typeMessage == "support") ? "Soporte plataforma" : "Curso"
+        onBackPress.isHidden = (typeMessage == "support")
+        backIcon.isHidden = (typeMessage == "support")
         
         configView()
         bindViewModel()
@@ -69,8 +78,9 @@ class ULMessageViewController: UIViewController {
     }
     
     @objc func addMessageButtonTapped() {
+        let id: Int? = (self.typeMessage == self.MESSAGE_SUPPORT) ? nil : courseID
         DispatchQueue.main.async {
-            let viewModel = ULAddMessageSupportViewModel(typeMessage: self.MESSAGE_SUPPORT, courseId: nil, userIds: [])
+            let viewModel = ULAddMessageSupportViewModel(typeMessage: self.typeMessage, courseId: id, userIds: [])
             let controller = ULAddMessageViewController(viewModel: viewModel, delegate: self)
             self.present(controller, animated: true, completion: nil)
         }

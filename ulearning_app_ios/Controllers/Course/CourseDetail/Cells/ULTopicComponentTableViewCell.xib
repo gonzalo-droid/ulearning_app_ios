@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -96,7 +96,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gox-ug-iPF" userLabel="Container topics">
-                        <rect key="frame" x="0.0" y="150" width="320" height="500"/>
+                        <rect key="frame" x="0.0" y="130" width="320" height="520"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1Fb-DB-bUJ">
                                 <rect key="frame" x="20" y="0.0" width="280" height="433"/>
@@ -126,7 +126,7 @@
                     <constraint firstAttribute="trailing" secondItem="Gox-ug-iPF" secondAttribute="trailing" id="ZsT-9E-PZK"/>
                     <constraint firstAttribute="trailing" secondItem="CM2-yJ-0m7" secondAttribute="trailing" id="bZ6-JY-Vze"/>
                     <constraint firstItem="Gox-ug-iPF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ctA-qY-RYm"/>
-                    <constraint firstItem="Gox-ug-iPF" firstAttribute="top" secondItem="CM2-yJ-0m7" secondAttribute="bottom" constant="20" id="fhv-Wu-lUY"/>
+                    <constraint firstItem="Gox-ug-iPF" firstAttribute="top" secondItem="CM2-yJ-0m7" secondAttribute="bottom" id="fhv-Wu-lUY"/>
                     <constraint firstAttribute="bottom" secondItem="CM2-yJ-0m7" secondAttribute="bottom" constant="575" id="jNp-jd-Gw7"/>
                     <constraint firstItem="CM2-yJ-0m7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="jwg-C9-93L"/>
                 </constraints>
