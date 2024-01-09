@@ -7,8 +7,20 @@
 
 import UIKit
 
+protocol SearchUserViewControllerProtocol: AnyObject {
+    func didReceiveData(_ data: ULUser)
+}
+
 class SearchUserViewController: UIViewController {
 
+    
+    @IBOutlet weak var selectUserLabel: UILabel!{
+        didSet {
+            selectUserLabel.text = "Seleccionar usuario"
+            selectUserLabel.font = UIFont.boldSystemFont(ofSize: 24)
+            selectUserLabel.textColor = .blackUL
+        }
+    }
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,16 +30,24 @@ class SearchUserViewController: UIViewController {
         }
     }
     
+    var delegate: SearchUserViewControllerProtocol?
     var viewModel: ULSearchUserViewModel = ULSearchUserViewModel()
     var usersDataSource: [ULSearchUserTableCellViewModel] = []
 
     var courseID: Int?
 
+    init(delegate: SearchUserViewControllerProtocol) {
+        self.delegate = delegate
+        super.init(nibName: "SearchUserViewController", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configView()
-        setupNav()
         bindViewModel()
     }
     
@@ -38,52 +58,10 @@ class SearchUserViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewModel.getData(courseID: 1)
-    }
-    
-    
-    private func setupNav() {
-        if let nav = self.navigationController {
-            let backButtonImage = UIImage(systemName: "arrow.backward")
-            // navigationItem.hidesBackButton = true
 
-            navigationItem.leftBarButtonItem = UIBarButtonItem(
-                image: backButtonImage,
-                style: .plain,
-                target: self,
-                action: #selector(back(_:))
-            )
-            
-            navigationItem.title = "Selecciona un usuario"
-            
-            if #available(iOS 13.0, *) {
-                let appearance = UINavigationBarAppearance(idiom: .phone)
-                // For normal title.
-                appearance.titleTextAttributes = [
-                    .foregroundColor: UIColor.black,
-                    .font: UIFont.boldSystemFont(ofSize: 16)
-                ]
-                
-                appearance.backgroundColor = .white
-                navigationItem.standardAppearance = appearance
-                navigationItem.scrollEdgeAppearance = appearance
-            } else {
-                // For normal title.
-                let atrr2 = [
-                    NSAttributedString.Key.foregroundColor: UIColor.black,
-                    NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)
-                ]
-                nav.navigationBar.titleTextAttributes = atrr2
-            }
-            
-            
-        
+        if let courseID = courseID {
+            viewModel.getData(courseID: courseID)
         }
-        
-    }
-    
-    @objc func back(_ sender: UIBarButtonItem) {
-        self.navigationController?.popViewController(animated:true)
     }
     
     
@@ -114,9 +92,13 @@ class SearchUserViewController: UIViewController {
     }
     
     func selectUser(id: Int) {
-
+        guard let user = viewModel.retriveUser(withId: id) else {
+            return
+        }
+        delegate?.didReceiveData(user)
+        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
-
 }
 
 
@@ -137,7 +119,7 @@ extension SearchUserViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func registerCells() {
-        self.tableView.register(ULCourseTableViewCell.register(), forCellReuseIdentifier: ULCourseTableViewCell.identifier)
+        self.tableView.register(SearchUserItemTableViewCell.register(), forCellReuseIdentifier: SearchUserItemTableViewCell.identifier)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -145,7 +127,7 @@ extension SearchUserViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        150
+        60
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

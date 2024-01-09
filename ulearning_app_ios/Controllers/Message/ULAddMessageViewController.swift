@@ -14,7 +14,7 @@ protocol ULAddMessageViewControllerProtocol: AnyObject {
 class ULAddMessageViewController: UIViewController {
     
     var viewModel: ULAddMessageSupportViewModel
-    
+    var userID: Int?
     var delegate: ULAddMessageViewControllerProtocol?
     
     @IBOutlet weak var containerSeachUser: UIView!{
@@ -108,6 +108,14 @@ class ULAddMessageViewController: UIViewController {
     
     @objc func searchUser() {
         
+        
+        if let courseId = viewModel.courseId {
+            DispatchQueue.main.async {
+                let controller = SearchUserViewController(delegate: self)
+                controller.courseID = courseId
+                self.present(controller, animated: true, completion: nil)
+            }
+        }        
     }
     
     override func viewDidLoad() {
@@ -156,4 +164,12 @@ class ULAddMessageViewController: UIViewController {
     }
     
     
+}
+
+extension ULAddMessageViewController: SearchUserViewControllerProtocol {
+    func didReceiveData(_ data: ULUser) {
+        debugPrint("ULAddMessageViewController didReceiveData \(data.name)")
+        userLabel.text = data.name
+        userID = data.id
+    }
 }

@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchUserViewController" customModule="ulearning_app_ios" customModuleProvider="target">
             <connections>
                 <outlet property="progressIndicator" destination="SrL-da-1PY" id="IjN-Db-Tfm"/>
+                <outlet property="selectUserLabel" destination="axY-oD-n0v" id="BKJ-pK-aDa"/>
                 <outlet property="tableView" destination="vcs-cB-hS5" id="WEM-vF-uxA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,25 +22,32 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccionar usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axY-oD-n0v">
+                    <rect key="frame" x="20" y="79" width="353" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vcs-cB-hS5">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <rect key="frame" x="0.0" y="120" width="393" height="698"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="SrL-da-1PY">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <rect key="frame" x="178" y="420" width="37" height="37"/>
                 </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="SrL-da-1PY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1p0-Ld-FOz"/>
-                <constraint firstItem="vcs-cB-hS5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3ma-ro-vNr"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vcs-cB-hS5" secondAttribute="bottom" id="KVh-Fd-1bc"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SrL-da-1PY" secondAttribute="trailing" id="Lqs-yr-cJ0"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vcs-cB-hS5" secondAttribute="trailing" id="QXa-dw-JXc"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="SrL-da-1PY" secondAttribute="bottom" id="aAj-2Q-z6X"/>
-                <constraint firstItem="vcs-cB-hS5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sVq-LF-qCE"/>
-                <constraint firstItem="SrL-da-1PY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zOX-oV-cTQ"/>
+                <constraint firstItem="SrL-da-1PY" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="4ud-nT-DHO"/>
+                <constraint firstItem="vcs-cB-hS5" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="B3Y-Bb-cgb"/>
+                <constraint firstItem="vcs-cB-hS5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VEl-O9-YX1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="axY-oD-n0v" secondAttribute="trailing" constant="20" id="aHk-Py-xEs"/>
+                <constraint firstItem="axY-oD-n0v" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="eN1-rh-lsT"/>
+                <constraint firstItem="vcs-cB-hS5" firstAttribute="top" secondItem="axY-oD-n0v" secondAttribute="bottom" constant="20" id="emM-um-zoA"/>
+                <constraint firstItem="vcs-cB-hS5" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="gc1-UM-bst"/>
+                <constraint firstItem="SrL-da-1PY" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="ia7-Hb-oAk"/>
+                <constraint firstItem="axY-oD-n0v" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="n2P-V3-aPe"/>
             </constraints>
             <point key="canvasLocation" x="139.69465648854961" y="20.422535211267608"/>
         </view>

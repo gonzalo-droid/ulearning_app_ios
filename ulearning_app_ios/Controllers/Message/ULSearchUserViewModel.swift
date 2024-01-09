@@ -31,6 +31,8 @@ class ULSearchUserViewModel {
                 
         AuthService.getUsers(name: "", courseID: courseID, successBlock: { [weak self] users in
             guard let self = self else { return }
+            debugPrint("SearchUserViewController users \(users?.count)")
+
             self.dataSource = users
             self.mapData()
             isLoadingData.value = false

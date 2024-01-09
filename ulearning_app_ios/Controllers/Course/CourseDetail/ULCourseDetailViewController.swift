@@ -146,6 +146,7 @@ extension ULCourseDetailViewController: DetailComponentTableViewCellProtocol {
             let controller = ULMessageViewController()
             controller.typeMessage = "course"
             controller.courseID = courseID
+            controller.courseName = self.viewModel.subscription.course?.title ?? "Course"
             self.present(controller, animated: true, completion: nil)
         }
     }

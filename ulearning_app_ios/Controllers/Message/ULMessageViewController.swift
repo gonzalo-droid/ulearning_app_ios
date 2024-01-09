@@ -13,6 +13,7 @@ class ULMessageViewController: UIViewController {
     let MESSAGE_COURSE = "course"
     var courseID: Int?
     var typeMessage: String? 
+    var courseName: String?  = "Curso"
 
 
     @IBOutlet weak var titleLabel: UILabel!{
@@ -55,9 +56,8 @@ class ULMessageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        debugPrint("addMessageButtonTapped viewDidLoad \(courseID) \(typeMessage)")
-        
-        titleLabel.text = (typeMessage == "support") ? "Soporte plataforma" : "Curso"
+        let name = (typeMessage == "support") ? "Soporte plataforma" : courseName
+        titleLabel.text = (typeMessage == "support") ? "Soporte plataforma" : courseName
         onBackPress.isHidden = (typeMessage == "support")
         backIcon.isHidden = (typeMessage == "support")
         

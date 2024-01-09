@@ -37,7 +37,6 @@ class ULPackageDetailViewModel {
             self.dataSource = data
 
             let items = data?.learningPackage?.items
-            debugPrint("percentage items \(items)")
             if items?.count == 0 {
                 
                 self.dataObservable.value = self.dataSource
