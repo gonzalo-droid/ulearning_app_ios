@@ -19,18 +19,23 @@ class ULAddMessageSupportViewModel {
         self.courseId = courseId ?? nil
     }
     
-    func sendMessage(content:String) {
+    func sendMessage(content:String, toSupport:Bool = true, courseID:String? = nil) {
         if isLoadingData.value ?? true {
             return
         }
         
         isLoadingData.value = true
-        
-        let params: [String:Any] = [
+
+        var params: [String:Any] = [
             "content":content,
-            "to_support": true,
+            "to_support": toSupport,
             "user_ids": userIds,
+            "course_id": courseID,
         ]
+        
+        if(toSupport){
+            params.removeValue(forKey: "course_id")
+        }
         
         MessageService.sendMessageSupport(params,successBlock: { [weak self] conversation in
             guard let self = self else { return }

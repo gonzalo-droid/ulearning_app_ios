@@ -95,27 +95,49 @@ class ULAddMessageViewController: UIViewController {
     }
     
     @objc func sendMessageBtn() {
+        if(viewModel.typeMessage == "support"){
+            validateForm()
+        }else{
+            if(userID != nil){
+                validateForm()
+            }else{
+                self.showAlert(message: "Seleccione un usuario")
+            }
+        }
+        
+    }
+    
+    func validateForm(){
         if let textFieldText = inputSendMessage.text {
             if !textFieldText.isEmpty {
-                viewModel.sendMessage(content: textFieldText)
+                validateSendMessage(message:textFieldText)
             } else {
-                self.showAlert()
+                self.showAlert(message: "Ingrese un mensaje")
             }
         } else {
-            self.showAlert()
+            self.showAlert(message: "Ingrese un mensaje")
+        }
+    }
+    
+    func validateSendMessage(message:String){
+        if(viewModel.typeMessage == "support"){
+            viewModel.sendMessage(content: message)
+        } else{
+            if let id = userID{
+                viewModel.userIds.append(id)
+            }
+            viewModel.sendMessage(content: message, toSupport: false,courseID: String(viewModel.courseId ?? 0))
         }
     }
     
     @objc func searchUser() {
-        
-        
         if let courseId = viewModel.courseId {
             DispatchQueue.main.async {
                 let controller = SearchUserViewController(delegate: self)
                 controller.courseID = courseId
                 self.present(controller, animated: true, completion: nil)
             }
-        }        
+        }
     }
     
     override func viewDidLoad() {
@@ -151,9 +173,9 @@ class ULAddMessageViewController: UIViewController {
         }
     }
     
-    @IBAction func showAlert() {
+    @IBAction func showAlert(message:String) {
         // Create an alert controller
-        let alertController = UIAlertController(title: "", message: "Ingrese un mensaje", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
         
         // Add an action (button) to the alert
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
