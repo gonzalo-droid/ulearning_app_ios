@@ -13,6 +13,18 @@ protocol SearchUserViewControllerProtocol: AnyObject {
 
 class SearchUserViewController: UIViewController {
 
+    @IBOutlet weak var backBtn: UIButton!{
+        didSet {
+            backBtn.setTitle("", for: .normal)
+            backBtn.setTitle("", for: .selected)
+            backBtn.setTitle("", for: .focused)
+            backBtn.addTarget(
+                self,
+                action: #selector(closeButtonPress),
+                for: .touchUpInside
+            )
+        }
+    }
     
     @IBOutlet weak var selectUserLabel: UILabel!{
         didSet {
@@ -96,6 +108,11 @@ class SearchUserViewController: UIViewController {
             return
         }
         delegate?.didReceiveData(user)
+        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func closeButtonPress() {
         self.dismiss(animated: true)
         self.navigationController?.popViewController(animated: true)
     }
